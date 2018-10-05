@@ -1,0 +1,42 @@
+<section id="add-fund" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <div class="d-flx al-i-c j-c-sb pb-h border-bottom">
+            <h3 class="m-0 fw-normal after-border">Fund Account</h3>
+            <button class="uk-modal-close-default without-abs-pos" type="button">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </button>
+        </div>
+
+        <div class="d-flx al-i-c j-c-sb mt-1h">
+            <h3 class="m-0 nano-caps co-primary">Select a bank to fund from</h3>
+            <a href="#add-bank" class="btn btn-badge btn-badge-standard btn-dark prefix is-xsmall" uk-toggle>
+                {%- include tools/icons.html icon="plus" -%}
+                Add Bank
+            </a>
+        </div>
+
+        <ul class="none m-0 fw-medium">
+            <li class="pt-2 py-1h border-bottom d-flx al-i-c">
+                <input type="radio" name="accounts" id="account-one" class="uk-radio" checked/>
+                <label for="account-one" class="primary-caps co-sweet-gray mr-h d-flx flx-dir-c">
+                    Sholanke Kayode Joseph
+                    <span>GTBANK<sup>******</sup>2217</span>
+                </label>
+            </li>
+            <li class="pt-1 d-flx al-i-c">
+                <input type="radio" name="accounts" id="account-two" class="uk-radio"/>
+                <label for="account-two" class="primary-caps co-sweet-gray mr-h d-flx flx-dir-c">
+                    Sholanke Kayode Joseph
+                    <span>FIRSTBANK<sup>******</sup>4253</span>
+                </label>
+            </li>
+        </ul>
+
+        <div class="d-flx j-c-fe pt-2">
+            <a href="" class="btn btn-standard btn-dark">NEXT</a>
+        </div>
+    </div>
+</section>
+
+{%- include components/modals/fund-account/add-bank.html -%}

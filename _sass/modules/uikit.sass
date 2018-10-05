@@ -1,0 +1,107 @@
+// 
+    // UI Kit
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+    
+.uk-tab
+    background: rgba(153, 32, 50, 0.03)
+    a
+        color: $readablegray
+    &::before
+        left: 0
+    .uk-active
+        &.tab
+            background: white
+            text-decoration: none
+            border-right: 1px solid #e5e5e5
+            border-left: 1px solid #e5e5e5
+        a
+            color: $primarycolor
+            border: none
+.uk-button
+    color: $readablegray
+    padding: 0 .5rem 0 1rem 
+    font-size: .875rem
+    text-align: left
+    text-decoration: none
+    text-transform: none
+    border: none
+
+.uk-dropdown
+    display: none
+    top: 1rem
+    left: 0
+    z-index: 3
+    min-width: 100%
+    color: $readablegray
+    box-shadow: 0 5px 12px rgba(0,0,0,.15)
+    padding: 0
+    .uk-nav a
+        padding: .5rem 1rem
+        &.co-red
+            color: #ff0000
+        &:focus, &:hover
+            color: $sweetgray
+            background: $platinum
+
+.uk-modal-dialog
+    width: 550px
+    min-height: 300px
+    display: flex
+    align-self: center
+    flex-direction: column
+    justify-content: center
+
+[class*=uk-modal-close-] 
+    position: absolute
+    z-index: 1010
+    top: 20px
+    right: 20px
+    padding: 5px
+    svg
+        width: 20px
+        height: 20px
+    &.without-abs-pos
+        position: static
+
+.uk-table 
+    & thead tr
+        border-bottom: 1px solid #e5e5e5
+    & td
+        padding: 0.5rem 1.2rem
+        color: $sweetgray
+        font-size: .875rem
+    & th
+        padding: 1rem 1.2rem
+        color: $readablegray
+        text-transform: none
+        font-family: $headingfont
+.table-y-overflow
+    max-height: 300px
+
+.uk-radio
+    box-sizing: border-box
+    height: 20px
+    width: 20px
+    margin-top: 0
+    background-color: transparent
+    border: 1px solid $sweetgray
+    border-radius: 50%
+    transition: none
+    margin-right: 15px
+    &:checked
+        background-image: none
+        background-color: $primarycolor !important
+        border: 3px solid #fff
+        box-shadow: 0 0 0 2px $primarycolor
+    &::selection
+        background-color: none
+    
+
+        
+    
+
+
+
+

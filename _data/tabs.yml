@@ -1,0 +1,28 @@
+# Tabs
+recieve-payment:
+  - tab-item: Product
+  - tab-item: Amount only
+
+make-payment:
+  - tab-item: To phone
+  - tab-item: To bank
+  - tab-item: Pay bills
+  - tab-item: History
+
+transactions: 
+  - tab-item: From business
+  - tab-item: From products
+  
+account:
+  - tab-item: Account settings
+  - tab-item: Users
+  - tab-item: Danger zone
+
+single-business:
+  - tab-item: Overview
+  - tab-item: Branches
+  - tab-item: Products
+  - tab-item: History
+  
+  
+  

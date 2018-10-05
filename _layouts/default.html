@@ -1,0 +1,16 @@
+<!Doctype html>
+<html lang="en">
+    {%- include shell/head.html -%}
+    <body>
+        <a class="skip-link sr" href="#mainContent">
+            Skip to main kl;jcontent
+        </a>
+        <h1 class="sr">
+            {{ site.title }}
+        </h1>
+        <main class="main {% if page.layout == 'onboarding' %}bg-white{% else %}bg-platinum{% endif %}">
+            {{ content }}
+        </main>
+        {%- include shell/foot.html -%}
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<section class="is-to-phone">
+    <div class="grid is-multi-col mostly-3">
+        {%- include components/input-fields.html input_fields="required-amount-input-with-focus" -%}  
+        <div class="d-flx flx-dir-c">
+            <label for="account-name" class="mt-h mb-h picotext">Account name</label>
+            <div class="uk-inline input pos-rel" id="account-name">
+                <button class="uk-button input d-flx al-i-c j-c-sb px-h inline-shadow preferred-radius" type="button">
+                    Enter Account name
+                    <a href="" class="co-sweet-gray">
+                        {%- include tools/icons.html icon="chevron-down" -%}
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="d-flx flx-dir-c">
+            <label for="phone-number" class="mt-h mb-h picotext">Account number <sup class="co-red pl-h">*</sup></label>
+            <input type="tel" name="phone-number" id="phone-number" value="3060860425" class="px-h">
+        </div>
+    </div>
+    <a href="#select-beneficiary" class="primarytext py-1 d-blk" uk-toggle>Select from beneficiary</a>
+
+
+    <div class="d-flx flx-dir-c pb-1">
+        <label for="transaction-remarks" class="mt-h mb-h">Transaction Remarks</label>
+        <input type="text" name="transaction-remarks" id="transaction-remarks" class="px-h" autofocus placeholder="Enter remarks...">
+    </div>
+
+    <div class="d-flx j-c-fe pt-2 pb-1">
+        <a href="#enter-pin" class="btn btn-standard btn-dark" uk-toggle>{{ page.button_value }}</a>
+    </div>
+</section>
+
+{%- include components/modals/select-beneficiary.html -%}

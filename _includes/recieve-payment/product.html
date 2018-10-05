@@ -1,0 +1,74 @@
+
+<!-- without the close button -->
+<!-- <div class="pb-1h">
+    <div class="grid is-multi-col mostly-3 pb-1">
+        <div class="d-flx flx-dir-c">
+            <label for="product" class="mt-h mb-h">Select product</label>
+            {%- include components/dropdown.html dropdown="select-product"-%}
+        </div>
+    
+        {%- include components/input-fields.html input_fields="amount-input-with-focus" -%}
+        
+        <div class="d-flx flx-dir-c">
+            <label for="quantity" class="mt-h mb-h">Quantity</label>
+            <input type="text" name="quantity" id="quantity" class="px-h">
+        </div>
+    </div>
+    <button class="m-0 p-0 co-primary d-flx al-i-c picotext">
+        <span class="prefix is-xsmall">{%- include tools/icons.html icon="plus-circle" -%} </span>
+        Add Product
+    </button> 
+</div> -->
+
+<!-- with close button -->
+<div class="pb-1h">
+    <!-- first set -->
+    <div class="grid mostly-4-with-auto pb-1">
+        <div class="d-flx flx-dir-c">
+            <label for="product" class="mt-h mb-h">Select product</label>
+            {%- include components/dropdown.html dropdown="select-product"-%}
+        </div>
+    
+        {%- include components/input-fields.html input_fields="amount-input-with-focus" -%}
+        
+        <div class="d-flx flx-dir-c">
+            <label for="quantity" class="mt-h mb-h">Quantity</label>
+            <input type="text" name="quantity" id="quantity" class="px-h">
+        </div>
+    
+        <div class="abs-close-button show-largeup">
+            {%- include tools/icons.html icon="close-circle" -%}
+        </div>
+    </div>
+
+    <!-- second set -->
+    <div class="grid mostly-4-with-auto pb-1">
+        <div class="d-flx flx-dir-c">
+            <label for="product" class="mt-h mb-h">Select product</label>
+            {%- include components/dropdown.html dropdown="select-product"-%}
+        </div>
+    
+        {%- include components/input-fields.html input_fields="amount-input-with-focus" -%}
+        
+        <div class="d-flx flx-dir-c">
+            <label for="quantity" class="mt-h mb-h">Quantity</label>
+            <input type="text" name="quantity" id="quantity" class="px-h">
+        </div>
+    
+        <div class="abs-close-button show-largeup">
+            {%- include tools/icons.html icon="close-circle" -%}
+        </div>
+    </div>
+
+
+    <button class="m-0 p-0 co-primary d-flx al-i-c picotext">
+        <span class="prefix is-xsmall">{%- include tools/icons.html icon="plus-circle" -%} </span>
+        Add Product
+    </button> 
+</div>
+
+{%- include components/input-fields.html input_fields="phone-input" -%}  
+
+<div class="d-flx j-c-fe pt-2">
+    {%- include components/buttons.html buttons="payment-received-modal" -%}
+</div>

@@ -1,0 +1,24 @@
+<nav class="bg-white is-raised nanotext pos-rel z-depth-3">
+    <h2 class="sr">Desktop Navigation</h2>
+    <div class="d-flx maxwidth-tb mx-auto j-c-sb al-i-c wrapper-x">
+        <a href=" {{ site.url }}" class="logo-holder pl-0">
+           {%- include tools/icons.html icon="logo" -%}
+        </a> 
+        <div class="d-flx al-i-c j-c-sb">
+            <div class="nav">
+                <a href="{{site.url}}" class="co-readable-gray mr-1h">
+                    Go back
+                </a>
+            </div>
+            <a href="#buy-premium" class="btn btn-standard btn-dark btn-premium btn-dark prefix is-standard" uk-toggle>
+                {%- include tools/icons.html icon="external-link" -%}
+                BUY NOW
+            </a>
+        </div>
+    </div>
+</nav>
+
+{%- include components/modals/buy-premium.html -%}
+
+
+

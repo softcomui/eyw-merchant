@@ -1,0 +1,49 @@
+# User Accounts
+user-accounts:
+  - name: Sesan Peter
+    store: Obiweezy store Ikeja
+  - name: Chioma Nkem-Eze
+    store: Obiweezy store Ikeja
+
+activity-timeline:
+  - new_branch: You created a new branch Obiweezy store Lekki
+    time_frame: 4 hours ago
+  - new_branch: You created a new branch Obiweezy store Lekki
+    time_frame: 4 hours ago
+  - new_branch: You created a new branch Obiweezy store Lekki
+    time_frame: 4 hours ago
+  - new_branch: You created a new branch Obiweezy store Lekki
+    time_frame: 4 hours ago
+  - new_branch: You created a new branch Obiweezy store Lekki
+    time_frame: 4 hours ago
+  - new_branch: You created a new branch Obiweezy store Lekki
+    time_frame: 4 hours ago
+
+history:
+  - name: To Kayode Sholanke
+    payment_time: Payment sent - Feb 3, 1:50pm
+    amount: 3,530,000
+  - name: To Olusesan Peter
+    payment_time: Payment sent - Feb 3, 1:50pm
+    amount: 3,530,000
+  - name: To +2348101149643
+    payment_time: Payment sent - Feb 3, 1:50pm
+    amount: 3,530,000
+  - name: MTN VTU to +2348101149643
+    payment_time: Payment sent - Feb 3, 1:50pm
+    amount: 3,530,000
+
+pay-bills-recent:
+  - image: /uploads/mtn.png
+  - image: /uploads/mtn.png
+  - image: /uploads/mtn.png
+  - image: /uploads/mtn.png
+  - image: /uploads/mtn.png
+
+pay-bills-airtime:
+  - image: /uploads/mtn.png
+  - image: /uploads/mtn.png
+  - image: /uploads/mtn.png
+
+
+

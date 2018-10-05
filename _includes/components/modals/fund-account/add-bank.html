@@ -1,0 +1,34 @@
+<section id="add-bank" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <div class="d-flx al-i-c j-c-sb pb-h border-bottom">
+            <h3 class="m-0 fw-normal after-border">Add Bank</h3>
+            <button class="uk-modal-close-default without-abs-pos" type="button">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </button>
+        </div>
+        
+        <div class="grid is-multi-col al-i-c mostly-2 pt-1h">
+            <div class="d-flx flx-dir-c">
+                <label for="business-name" class="mt-h mb-h">Account number</label>
+                <input type="text" name="business-name" id="business-name" class="px-h" placeholder="Enter business name" autofocus>
+            </div>
+
+            <div class="d-flx flx-dir-c">
+                <label for="select-bank" class="mt-h mb-h">Select Bank</label>
+                <div class="uk-inline input pos-rel" id="select-bank">
+                    <button class="uk-button d-flx al-i-c j-c-sb px-h input co-sweet-gray picotext inline-shadow preferred-radius" type="button">
+                        Access Bank PLC
+                        <a href="" class="co-sweet-gray">
+                            {%- include tools/icons.html icon="chevron-down" -%}
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flx j-c-fe pt-2">
+            <a href="" class="btn btn-standard btn-dark">VERIFY</a>
+        </div>
+    </div>
+</section>

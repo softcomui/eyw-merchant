@@ -1,0 +1,41 @@
+<section id="add-user" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <div class="d-flx al-i-c j-c-sb pb-h border-bottom">
+            <h3 class="m-0 fw-normal after-border">Create User</h3>
+            <button class="uk-modal-close-default without-abs-pos" type="button">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </button>
+        </div>
+        
+        <div class="grid is-multi-col al-i-c mostly-2 pt-1h">
+            <div class="d-flx flx-dir-c">
+                <label for="phone-number" class="mt-h mb-h">User's number</label>
+                <input type="tel" name="phone-number" id="phone-number" class="px-h" placeholder="Enter number here" autofocus>
+            </div>
+
+            <div class="d-flx flx-dir-c">
+                <label for="role" class="mt-h mb-h">Assign role</label>
+                <div id="role" class="uk-inline input pos-rel">
+                    <button class="uk-button d-flx al-i-c j-c-sb px-h input co-sweet-gray" type="button">
+                        Select role
+                        <a href="" class="co-readable-gray">
+                            {%- include tools/icons.html icon="chevron-down" -%}
+                        </a>
+                    </button>
+                    <div uk-dropdown="mode: click">
+                        <ul class="uk-nav uk-dropdown-nav">
+                        {% for entry in site.data.dropdown.user-roles %}
+                            <li><a href="#">{{ entry.item }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flx j-c-fe pt-2">
+            <a href="" class="btn btn-standard btn-dark">SAVE</a>
+        </div>
+    </div>
+</section>

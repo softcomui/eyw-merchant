@@ -1,0 +1,98 @@
+// 
+    // Text Decorations
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+
+// Texts
+.tx-c
+    text-align:         center
+.underline
+    text-decoration:    underline
+
+.text-shadow-light
+    text-shadow:        0 1px 2px rgba( 0, 0, 0, 0.3 )
+    
+.lh-1-1h
+    line-height:        1.15
+.lh-1-2h
+    line-height:        1.25
+.lh-1-3h
+    line-height:        1.35
+
+.lead
+    font-size:          1.275rem
+    color:              $readablegray
+    padding-left:       $space-sm
+    border-left:        4px solid $primarycolor
+    @media #{ $smallup }
+        font-size:      1.45rem
+.lead-credit
+    margin-top:         $space-sm
+    margin-bottom:      $space
+    img
+        width:          64px
+        height:         64px
+        margin-right:   $space-xs
+        border-radius:  50%
+.lead-summary
+    padding-left:       $space
+    border-left:        4px solid $primarycolor
+
+.micro-caps
+    +text-treatment( $microfont, uppercase, 2px )
+.nano-caps
+    +text-treatment( $nanofont, uppercase, 1px )
+.primary-caps
+    +text-treatment( $primaryfont, uppercase, 1px )
+.pico-caps
+    +text-treatment( $picofont, uppercase, 1px )
+
+
+// Sizes
+.picotext
+    font-size:          $picofont
+.primarytext
+    font-size:          $primaryfont
+.nanotext
+    font-size:          $nanofont
+.microtext
+    font-size:          $microfont
+.smalltext
+    font-size:          $smallfont
+.mediumtext
+    font-size:          $mediumfont
+.largetext
+    font-size:          2rem
+
+// Headings
+h1, h2, h3, h4, .h1, .h2, .h3, .h4
+    margin-top:         $space-sm
+    margin-bottom:      $space-xs
+    font-weight:        $bold
+    line-height:        $headinglh
+    font-family:        $headingfont
+h1, .h1
+    font-size:          1.75rem
+    @media #{ $smallup }
+        font-size:      1.95rem
+h2, .h2
+    font-size:          1.65rem
+    @media #{ $smallup }
+        font-size:      1.85rem
+h3, .h3
+    font-size:          1.42rem
+h4, .h4
+    font-size:          1.00rem
+
+// Fonts
+.fw-bold
+    font-weight:        $bold
+.fw-medium
+    font-weight:        $medium
+.fw-normal
+    font-weight:        $normal
+.ff-body
+    font-family:        $bodyfont
+.ff-heading
+    font-family:        $headingfont

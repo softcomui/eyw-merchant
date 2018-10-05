@@ -1,0 +1,29 @@
+<section>
+    <div class="grid is-multi-col mostly-2 al-i-c">
+            
+        <a href="" class="picotext prefix is-xsmall d-flx al-i-c">
+            {%- include tools/icons.html icon="downloads" -%}
+            Export CSV
+        </a>
+
+        {%- include components/input-fields.html input_fields="search-input" -%}
+    </div>
+
+    <ul class="mt-1 none m-0 section-with-overflow">
+        {%- for entry in site.data.options.history -%}
+        <li class="border-bottom py-1 d-flx al-i-c j-c-sb pos-rel">
+            <div class="d-flx al-i-c">
+                {%- include tools/icons.html icon="payment-sent" -%}
+                <p class="fw-medium microtext m-0 ml-1"> {{ entry.name }}<span class="d-blk co-sweet-gray fw-normal picotext"> {{ entry.payment_time }}</span></p>
+            </div>
+
+            <p class="m-0 co-red d-flx al-i-c pos-rel">
+                <span class="prefix is-standard d-flx al-i-c red">
+                    {%- include tools/icons.html icon="naira" -%}
+                </span>
+                {{ entry.amount }}
+            </p>
+        </li>
+        {%- endfor -%}
+    </ul>
+</section>

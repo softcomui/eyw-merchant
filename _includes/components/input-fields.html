@@ -1,0 +1,140 @@
+{%- case include.input_fields -%}
+
+    {%- when 'one' -%}
+    <div class="d-flx flx-dir-c">
+        <label for="{{page.input_name}}" class="mt-h mb-h">{{page.input_name}}</label>
+        <input type="{{page.input_type}}" name="{{page.input_name}}" id="{{page.input_name}}" class="px-h" autofocus placeholder="{{page.input_placeholder}}">
+    </div>
+
+
+    {%- when 'two' -%}
+    <div class="d-flx flx-dir-c">
+        <label for="{{page.input_name}}" class="mt-h mb-h">{{page.input_name}}</label>
+        <input type="{{page.input_type}}" name="{{page.input_name}}" id="{{page.input_name}}" class="px-h" autofocus placeholder="{{page.input_placeholder}}">
+    </div>
+    <div class="d-flx flx-dir-c pt-1">
+        <label for="{{page.second_input_name}}" class="mt-h mb-h">{{page.second_input_name}}</label>
+        <input type="{{page.second_input_type}}" name="{{page.second_input_name}}" id="{{page.second_input_name}}" class="px-h" placeholder="{{page.second_input_placeholder}}">
+    </div> 
+    {%- when 'two with uploads' -%}  
+    <div class="d-flx flx-dir-c">
+        <label for="{{page.input_name}}" class="mt-h mb-h">{{page.input_name}}</label>
+        <input type="{{page.input_type}}" name="{{page.input_name}}" id="{{page.input_name}}" class="px-h" autofocus placeholder="{{page.input_placeholder}}">
+    </div>
+    <div class="d-flx flx-dir-c pt-1">
+        <label for="{{page.second_input_name}}" class="mt-h mb-h">{{page.second_input_name}}</label>
+        <input type="{{page.second_input_type}}" name="{{page.second_input_name}}" id="{{page.second_input_name}}" class="px-h" placeholder="{{page.second_input_placeholder}}">
+    </div> 
+    <div class="d-flx flx-dir-c pt-1">
+        <label for="{{page.third_input_name}}" class="mt-h mb-h">{{page.third_input_name}}</label>
+        <div class="js-upload uploads dashed-border" uk-form-custom>
+            <input type="file" multiple>
+            <button class="uk-button flex-center-center bg-platinum width-100-pc" type="button" tabindex="-1">
+                {%- include tools/icons.html icon="uploads" -%}
+                <span class="ml-h">Upload file...</span>
+            </button>
+        </div>
+    </div> 
+    {%- when 'two with awaiting-uploads' -%}  
+    <div class="d-flx flx-dir-c">
+        <label for="{{page.input_name}}" class="mt-h mb-h">{{page.input_name}}</label>
+        <input type="{{page.input_type}}" name="{{page.input_name}}" id="{{page.input_name}}" class="px-h" autofocus placeholder="{{page.input_placeholder}}">
+    </div>
+    <div class="d-flx flx-dir-c pt-1">
+        <label for="{{page.second_input_name}}" class="mt-h mb-h">{{page.second_input_name}}</label>
+        <input type="{{page.second_input_type}}" name="{{page.second_input_name}}" id="{{page.second_input_name}}" class="px-h" placeholder="{{page.second_input_placeholder}}">
+    </div> 
+    <div class="pt-1">
+        <section class="awaiting-uploads d-flx py-1">
+            <img src="/uploads/onboarding.jpeg" alt="">
+            <div class="ml-h d-flx flx-dir-c j-c-sb">
+                <!-- UI Component for awaiting uploads -->
+                <div class="d-flx al-i-c j-c-sb">
+                    <label for="{{page.third_input_name}}" class="nanotext m-0">image.jpg</label>
+                    {%- include tools/icons.html icon="close-circle" -%}
+                </div>
+                <div role="progressbar" class="progress-bar" id = "{{page.third_input_name}}"  aria-valuemin="0" aria-valuemax="100">
+                    <span class="progress-value d-blk"></span>
+                </div>
+            </div>
+        </section>
+    </div> 
+    
+
+    {%- when 'amount-input' -%} 
+    <div class="d-flx flx-dir-c">
+        <label for="amount" class="mt-h mb-h">Enter amount</label>
+        <div class="pos-rel naira">
+            {%- include tools/icons.html icon="naira" -%}
+            <input type="text" name="amount" id="amount" class="pl-1h pr-1">
+        </div>
+    </div>
+    {%- when 'amount-input-with-focus' -%} 
+    <div class="d-flx flx-dir-c">
+        <label for="amount" class="mt-h mb-h">Enter amount</label>
+        <div class="pos-rel naira">
+            {%- include tools/icons.html icon="naira" -%}
+            <input type="text" name="amount" id="amount" class="pl-1h pr-1" autofocus>
+        </div>
+    </div>
+    {%- when 'required-amount-input' -%} 
+    <div class="d-flx flx-dir-c">
+        <label for="amount" class="mt-h mb-h">Amount <sup class="co-red pl-h">*</sup></label>
+        <div class="pos-rel naira">
+            {%- include tools/icons.html icon="naira" -%}
+            <input type="text" name="amount" id="amount" class="pl-1h pr-1">
+        </div>
+    </div>
+    {%- when 'required-amount-input-with-focus' -%} 
+    <div class="d-flx flx-dir-c">
+        <label for="amount" class="mt-h mb-h picotext">Amount<sup class="co-red pl-h">*</sup></label>
+        <div class="pos-rel naira">
+            {%- include tools/icons.html icon="naira" -%}
+            <input type="text" name="amount" id="amount" class="pl-1h pr-1" autofocus>
+        </div>
+    </div>
+
+
+    {%- when 'phone-input' -%} 
+    <div class="d-flx flx-dir-c">
+        <label for="phone-number" class="mt-h mb-h">Enter phone number</label>
+        <div class="pos-rel input-icons">
+            <span>+234</span>
+            <input type="tel" name="phone-number" id="phone-number" class="pl-3 pr-1">
+        </div>
+    </div>
+    {%- when 'phone-input-with-focus' -%} 
+    <div class="d-flx flx-dir-c">
+        <label for="phone-number" class="mt-h mb-h">Enter phone number</label>
+        <div class="pos-rel input-icons">
+            <div class="px-h">
+                <span>+234</span>
+            </div>
+            <input type="tel" name="phone-number" id="phone-number" class="pl-3 pr-1" autofocus>
+        </div>
+    </div>
+    {%- when 'required-phone-input' -%} 
+    <div class="d-flx flx-dir-c">
+        <label for="phone-number" class="mt-h mb-h">Phone number <sup class="co-red pl-h">*</sup></label>
+        <div class="pos-rel input-icons">
+            <div class="px-h">
+                <span>+234</span>
+            </div>
+            <input type="tel" name="phone-number" id="phone-number" class="pl-3 pr-1" autofocus>
+        </div>
+    </div>
+
+    {%- when 'dropdown-search-input' -%} 
+    <div class="d-flx flx-dir-c">
+        <div class="pos-rel input-icons dropdown-search-input px-1">
+            {%- include tools/icons.html icon="search" -%}
+            <input type="tel" name="search" id="search" class="pl-2 pr-1" placeholder="Search product">
+        </div>
+    </div>
+
+    {%- when 'search-input' -%} 
+    <div class="pos-rel input-icons search-input my-h">
+        {%- include tools/icons.html icon="search" -%}
+        <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search history">
+    </div>
+{%- endcase -%}

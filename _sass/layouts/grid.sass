@@ -1,0 +1,129 @@
+// 
+    // Directory for the Grid
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+
+// Widths
+.width-100-pc
+    width:              100%
+.maxwidth-xl
+    max-width:          $maxwidth-xl
+.maxwidth-lt
+    max-width:          $maxwidth-lt
+.maxwidth-tb
+    max-width:          $maxwidth-tb
+.maxwidth-sm
+    max-width:          $maxwidth-sm
+.maxwidth-xs
+    max-width:          $maxwidth-xs
+.maxwidth-500
+    max-width:          $maxwidth-500
+
+
+// Heights
+.height-100-pc
+    height:             100%
+.height-40-px
+    height:             40px
+
+.grid-col-2fr-from-start
+    grid-column:           1 / span 2
+.grid-col-2fr-from-end
+    grid-column:           span 2 / -1
+.grid-col-2fr-from-end-largeup
+    @media #{ $largeup}
+        grid-column:           span 2 / -1
+// The Grid
+.grid
+    display:                     grid
+    grid-gap:                    $space-sm
+    &.is-multi-col.mostly-2
+        @media #{ $largeup }
+            grid-template-columns:   repeat(2, 1fr) 
+    &.is-multi-col.mostly-3
+        @media #{ $largeup }
+            grid-template-columns:   repeat(3, 1fr)
+    &.mostly-3-with-auto
+        @media #{ $largeup }
+            grid-template-columns:   1fr 1fr auto
+    &.is-multi-col.mostly-4
+        grid-template-columns:   repeat(auto-fit, minmax(244px, 1fr))
+    &.mostly-4-with-auto
+        @media #{ $largeup }
+            grid-template-columns:   1fr 1fr 1fr auto
+    &.is-multi-col.mostly-6
+        grid-template-columns:   repeat(3, 1fr)
+        @media #{ $smallup }
+            grid-template-columns:   repeat(6, 1fr)
+x
+    .col:not(:last-of-type)
+        margin-bottom:           $space-sm
+    .col-12
+        grid-column:             1 / 13
+
+    @media #{ $smallup }
+        .col-4-sm
+            grid-column:        1 / 5
+            &.offset-4-cols-from-left
+                grid-column:    5 / 13
+        .col-5-sm
+            grid-column:        1 / 6
+            &.offset-5-cols-from-left
+                grid-column:    6 / 13
+        .col-6-sm
+            grid-column:        1 / 7
+            &.offset-6-cols-from-left
+                grid-column:    7 / 13
+        .col-7-sm
+            grid-column:        1 / 8
+            &.offset-7-cols-from-left
+                grid-column:    8 / 13
+        .col-8-sm
+            &.offset-8-cols-from-left
+                grid-column:    9 / 13
+        .col-9-sm
+            grid-column:        1 / 10
+
+    @media #{ $mediumup }
+        .col-4-md
+            grid-column:        1 / 5
+            &.offset-4-cols-from-left
+                grid-column:    5 / 13
+        .col-5-md
+            grid-column:        1 / 6
+            &.offset-5-cols-from-left
+                grid-column:    6 / 13
+        .col-6-md
+            grid-column:        1 / 7
+            &.offset-6-cols-from-left
+                grid-column:    7 / 13
+        .col-7-md
+            grid-column:        1 / 8
+            &.offset-7-cols-from-left
+                grid-column:    8 / 13
+
+.is-page
+    @media #{ $largeup}
+        display: grid
+        grid-gap: $space-md
+        grid-template-columns: 2fr 1fr
+    .activity-wrapper
+        position: sticky
+        display: none
+        overflow-y: auto
+        width: 100%
+        height: 100vh
+        @media #{ $largeup}
+            display: block
+    .content-wrap 
+        margin: 0 auto
+        width: 100% 
+        @media #{ $smallup} 
+            max-width: $maxwidth-sm 
+        @media #{ $largeup} 
+            max-width: 100% 
+            overflow-y: auto
+            height: 100vh 
+
+

@@ -1,0 +1,20 @@
+{%- case include.buttons -%}
+    {%- when 'active' -%}
+    <button class="btn btn-standard btn-dark p-0">{{ page.button_value }}</button>
+
+    {%- when 'active-big' -%}
+    <button class="btn btn-standard btn-big btn-dark p-0">{{ page.button_value }}</button>
+
+    {%- when 'modal-btn' -%}
+    <a href="#modal-center" class="btn btn-standard btn-dark" uk-toggle>{{ page.button_value }}</a>
+
+    {%- when 'payment-received-modal' -%}
+    <a href="#receive-payment" class="btn btn-standard btn-dark" uk-toggle>{{ page.button_value }}</a>
+
+    {%- when 'inactive' -%}
+    <button class="btn btn-standard btn-dark btn-is-disabled p-0">{{ page.button_value }}</button>
+    <!-- Use Case: Button has been disabled till input is filled... Please add an event listener -->
+    
+    {%- when 'premium' -%}
+    <a href="{{site.url}}/go-premium/" class="btn btn-standard btn-premium btn-dark">Go premium</a>
+{%- endcase -%}

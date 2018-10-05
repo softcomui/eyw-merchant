@@ -1,0 +1,38 @@
+<section>
+    <h3 class="m-0 label fw-medium">Most Recent Bills</h3>
+    <ul class="none m-0 grid is-multi-col mostly-6 mt-1">
+        {%- for entry in site.data.options.pay-bills-recent -%}
+        <li class="borderline inline-shadow preferred-radius grid-center-center p-1">
+            <a class="" href="#">
+                <img src="{{ entry.image }}" alt="" class="">
+            </a>
+        </li>
+        {%- endfor -%}
+    </ul>
+
+    <h3 class="m-0 label fw-medium pb-1 mt-1h border-bottom">All supported services</h3>
+    <ul uk-accordion="collapsible: true" class="mt-1">
+        <li class="border-bottom pb-1h uk-open">
+            <a class="uk-accordion-title nanotext" href="#">Buy Airtime/ Data Bundle</a>
+            <div class="uk-accordion-content mt-h">
+                <ul class="none m-0 grid is-multi-col mostly-6 mt-1">
+                    {%- for entry in site.data.options.pay-bills-airtime -%}
+                    <li class="borderline inline-shadow preferred-radius grid-center-center p-1">
+                        <a class="" href="#">
+                            <img src="{{ entry.image }}" alt="" class="">
+                        </a>
+                    </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+        </li>
+        <li class="border-bottom pb-1h">
+            <a class="uk-accordion-title nanotext" href="#">Cable Subscription</a>
+        </li>
+        <li class="border-bottom pb-1h">
+            <a class="uk-accordion-title nanotext" href="#">Buy Movie Ticket</a>
+        </li>
+    </ul>
+</section>
+
+{%- include make-payment/single-bill.html -%}

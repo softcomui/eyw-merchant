@@ -1,0 +1,22 @@
+<ul uk-tab class="m-0 tabs">
+{% for entry in site.data.tabs.make-payment %}
+    <li class="tab px-1 pt-1 pb-h">
+        <a href="tab px-1h py-1">{{ entry.tab-item }}</a>
+    </li>
+{% endfor %}
+</ul>
+
+<ul class="uk-switcher px-1h py-1h">
+    <li class="">
+    {%- include make-payment/to-phone.html -%}
+    </li>
+    <li>
+    {%- include make-payment/to-bank.html -%}
+    </li>
+    <li>
+        {%- include make-payment/pay-bills.html -%}
+    </li>
+    <li>
+        {%- include make-payment/history.html -%}
+    </li>
+</ul>

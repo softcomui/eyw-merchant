@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<section class="is-onboarding">
+    <div class="pos-rel">
+        <img src="{{site.url}}{{page.featured_image}}" alt="" class="featured-image-desktop">
+        <div class="absolute-middle logo-wrapper grid-center-center">
+            {%- include tools/icons.html icon="logo" -%}
+        </div>
+    </div>
+    <div class="pos-rel">
+        {%- include shell/nav/onboarding-nav.html -%}
+
+        <img src="{{site.url}}{{page.featured_image}}" alt="" class="featured-image-mobile">
+
+        <section class="maxwidth-sm mx-auto wrapper microtext onboarding-content">
+            {%- if page.back_to_previous -%}
+                <a href="http://eyowo.com/" class= "pb-h d-flx al-i-c mt-2 smalltext co-sweet-gray">
+                    {%- include tools/icons.html icon="arrow-left" -%}
+                    <span class="ml-h">Back</span>
+                </a>
+            {%- endif -%}
+
+            {%- if page.step_progress_bar -%}
+                {%- include components/progress-meter.html  -%}
+            {%- endif -%}
+
+            {%- if page.progress_indicator -%}
+                <p class="m-0 mediumtext co-primary fw-medium mt-3 pb-h">{{ page.progress_indicator }}</p>
+            {%- endif -%}
+            
+            <h2 class="m-0 largetext co-rich-black onboarding-title">{{ page.onboarding_title }}</h2>
+            {%- if page.onboarding_description -%}
+                <p class="m-0 onboarding-description pt-h microtext">{{ page.onboarding_description }}</p>
+            {%- endif -%}
+            <form action="#" method="post" class="onboarding-form pt-1">
+            {%- if page.input_field == 1 -%}
+                {%- include components/input-fields.html input_fields="one" -%}
+            {%- elsif page.input_field == 2 -%}
+                {%- include components/input-fields.html input_fields="two" -%}
+            {%- elsif page.input_field == "2 with uploads" -%}
+                {%- include components/input-fields.html input_fields="two with uploads" -%}  
+            {%- else -%}
+                {%- include components/input-fields.html input_fields="two with awaiting-uploads" -%}       
+            {%- endif -%}
+
+            {%- if page.input_helper_text -%}
+            <div class="input-helper-text pt-h">
+                {{ page.input_helper_text | markdownify }}
+            </div>
+            {%- endif -%}
+            </form>
+            <div class="d-flx al-i-c j-c-fe pt-2">
+            {%- if page.skip_to_dashboard == true -%}
+            <a href="#" class= "mr-1 co-sweet-gray">Skip this step</a>
+            {%- endif -%} 
+
+            {%- if page.active_button == true -%}
+            {%- include components/buttons.html buttons="active" -%}
+            {%- else -%}
+                {%- include components/buttons.html buttons="inactive" -%}
+            {%- endif -%}
+            </div>
+        </section>
+    </div>
+</section>

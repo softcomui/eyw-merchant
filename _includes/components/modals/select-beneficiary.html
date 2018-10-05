@@ -1,0 +1,40 @@
+<section id="select-beneficiary" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <div class="d-flx al-i-c j-c-sb pb-h border-bottom">
+            <h3 class="m-0 fw-normal after-border">Select Beneficiary</h3>
+            <button class="uk-modal-close-default without-abs-pos" type="button">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </button>
+        </div>
+
+        <h3 class="m-0 primary-caps co-primary fw-normal mt-1h">Select a beneficiary to pay to</h3>
+
+        <ul class="none m-0 fw-medium">
+            <li class="radio-list-item pt-2 py-1h border-bottom">
+                <input type="radio" name="accounts" id="account-one" class="radio-btn" checked/>
+                <label for="account-one" class="radio-btn-label">
+                    <p class="m-0 primary-caps co-sweet-gray mr-h d-flx flx-dir-c">
+                        Sholanke Kayode Joseph
+                        <span>GTBANK<sup>******</sup>2217</span>
+                    </p>
+                </label>
+            </li>
+            <li class="radio-list-item pt-1">
+                <input type="radio" name="accounts" id="account-two" class="radio-btn"/>
+                <label for="account-two" class="radio-btn-label">
+                    <p class="m-0 primary-caps co-sweet-gray mr-h d-flx flx-dir-c">
+                        Sholanke Kayode Joseph
+                        <span>FIRSTBANK<sup>******</sup>4253</span>
+                    </p>
+                </label>
+            </li>
+        </ul>
+
+        <div class="d-flx j-c-fe pt-2">
+            <a href="" class="btn btn-standard btn-dark">NEXT</a>
+        </div>
+    </div>
+</section>
+
+{%- include components/modals/fund-account/add-bank.html -%}

@@ -1,0 +1,69 @@
+<section class="is-to-phone">
+    <a href="#" class="btn btn-badge btn-dark d-iflx">Schedule Payment</a>
+
+    <!-- <section>
+        <a href="" class="pb-1 d-blk">
+            {%- include tools/icons.html icon="arrow-left" -%}
+            Back
+        </a>
+        
+        <div class="d-flx flx-dir-c">
+            <label for="schedule-payment">Schedule payment for: </label> 
+            
+            <div class="pt-h grid is-multi-col mostly-2">
+                <div class="grid is-multi-col mostly-2" id="schedule-payment">
+                    {%- include components/dropdown.html dropdown="date-picker" -%}
+                    {%- include components/dropdown.html dropdown="date-picker" -%}
+                </div> 
+            </div>
+        </div>
+    </section> -->
+
+    <!-- First set...  -->
+    <section class="section-with-overflow">
+        <!-- without the close button -->
+        <!-- <div class="grid is-multi-col mostly-2 pt-1">
+            {%- include components/input-fields.html input_fields="required-amount-input-with-focus" -%}
+            {%- include components/input-fields.html input_fields="required-phone-input" -%} 
+        </div> -->
+        
+        <!-- with the close button -->
+        <div class="grid mostly-3-with-auto pt-1">
+            {%- include components/input-fields.html input_fields="required-amount-input-with-focus" -%}
+            {%- include components/input-fields.html input_fields="required-phone-input" -%} 
+            <div class="abs-close-button show-largeup">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </div>
+        </div>
+
+        <!-- Second set once add new recipients is clicked  -->
+        <div class="grid mostly-3-with-auto pt-1">
+            {%- include components/input-fields.html input_fields="required-amount-input-with-focus" -%}
+            {%- include components/input-fields.html input_fields="required-phone-input" -%} 
+            <div class="abs-close-button show-largeup">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </div>
+        </div>
+    </section>
+
+    <div class="picotext pt-1 m-0 d-flx al-i-c flx-wrap">
+        <button class="m-0 p-0 co-primary d-flx al-i-c">
+            <span class="prefix is-xsmall">{%- include tools/icons.html icon="plus-circle" -%} </span>
+            Add New Recipients
+        </button> 
+        <span class="px-h">or</span>
+        <button class="m-0 p-0 co-primary d-flx al-i-c">
+            <span class="prefix is-xsmall">{%- include tools/icons.html icon="uploads" -%} </span>
+            Upload Recipients
+        </button>
+        <span class="px-h">(Download sample CSV)</span>
+    </div>
+    <div class="d-flx flx-dir-c py-1">
+        <label for="transaction-remarks" class="mt-h mb-h picotext">Transaction Remarks</label>
+        <input type="text" name="transaction-remarks" id="transaction-remarks" class="px-h" autofocus placeholder="Enter remarks...">
+    </div>
+
+    <div class="d-flx j-c-fe pt-2 pb-1">
+        <a href="#enter-pin" class="btn btn-standard btn-dark" uk-toggle>{{ page.button_value }}</a>
+    </div>
+</section>

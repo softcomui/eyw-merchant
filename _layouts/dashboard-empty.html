@@ -1,0 +1,92 @@
+---
+layout: page
+---
+
+<section class="section">
+    <h3 class="mediumtext m-0 fw-medium">Summary from all Business</h3>
+
+    <section class="borderline inline-shadow preferred-radius section with-padding bg-white">
+        <label for="business-summary">Show transactions from: </label>
+
+        <div class="pt-h grid is-multi-col mostly-2">
+            <div class="d-flx al-i-c" id="business-summary">
+                {%- include components/dropdown.html dropdown="date-picker" -%}
+                <span class="px-1 tx-c">to</span>
+                {%- include components/dropdown.html dropdown="date-picker" -%}
+            </div> 
+        </div>
+
+        <div class="pt-2 grid is-multi-col mostly-3">
+            <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius">
+                <p class="fw-medium m-0 largetext">
+                    0
+                    <span>{%- include tools/icons.html icon="decline" -%}</span>
+                </p>
+                <p class="m-0 co-sweet-gray pico-caps">Transactions</p>
+            </div>
+
+            <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius">
+                <p class="fw-medium m-0 largetext">0</p>
+                <p class="m-0 co-sweet-gray pico-caps">Business Added</p>
+            </div>
+
+            <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius">
+                <p class="fw-medium m-0 largetext">0</p>
+                <p class="m-0 co-sweet-gray pico-caps">Branches Added</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="borderline inline-shadow preferred-radius section with-padding bg-white">
+        <h3 class="mediumtext m-0 pb-1 fw-medium">All Business</h3>
+        {%- include components/input-fields.html input_fields="search-input" -%}
+        <div class="mt-h flex-center-center flx-dir-c pt-1">
+            {%- include tools/icons.html icon="business-illustration" -%}
+            <p class="tx-c co-sweet-gray primarytext m-0 mt-1">You have not created any business yet, <span class="d-blk primarytext">Click the button below to create a business</span></p>
+            <a href="#modal-center" class="btn btn-standard btn-big btn-dark mt-1 mb-h prefix is-standard" uk-toggle>
+                {%- include tools/icons.html icon="plus" -%}
+                ADD BUSINESS
+            </a>
+        </div>
+    </section>
+    </section>
+
+
+    <section id="modal-center" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <div class="d-flx al-i-c j-c-sb pb-h border-bottom">
+            <h3 class="m-0 fw-normal after-border">Create Business</h3>
+            <button class="uk-modal-close-default without-abs-pos" type="button">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </button>
+        </div>
+        
+        <div class="grid is-multi-col al-i-c mostly-2 pt-1h">
+            <div class="d-flx flx-dir-c">
+                <label for="business-name" class="mt-h mb-h">Business name</label>
+                <input type="text" name="business-name" id="business-name" class="px-h" placeholder="Enter business name" autofocus>
+            </div>
+
+            <div class="d-flx flx-dir-c">
+                <label for="business-mail" class="mt-h mb-h">Business mail</label>
+                <input type="email" name="business-mail" id="business-mail" class="px-h" placeholder="Enter mail here" autofocus>
+            </div>
+
+            <div class="d-flx flx-dir-c">
+                <label for="business-mail" class="mt-h mb-h">Business logo</label>
+                <div class="js-upload uploads dashed-border" uk-form-custom>
+                    <input type="file" multiple>
+                    <button class="uk-button flex-center-center bg-platinum width-100-pc" type="button" tabindex="-1">
+                        {%- include tools/icons.html icon="uploads" -%}
+                        <span class="ml-h">Upload file...</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flx j-c-fe pt-2">
+            <a href="" class="btn btn-standard btn-dark">SAVE</a>
+        </div>
+    </div>
+</section>

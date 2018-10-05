@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{%- include shell/nav/mainnav.html -%}
+{%- include shell/logobar.html -%}
+
+<section class="maxwidth-xl mx-auto is-page wrapper-x">
+    <div class="content-wrap">
+        {{ content }}
+    </div>
+    <aside class="bg-white activity-wrapper">
+        <div class="pt-2 pb-1h px-2 border-bottom">
+            <h3 class="microtext fw-normal m-0 "> Activities </h3>
+        </div>
+        {%- if page.url == "/" -%}
+        {%- include components/activity-timeline.html activity-timeline="dashboard-filled" -%}
+        {%- elsif page.url == "/empty-index/" -%}
+        {%- include components/activity-timeline.html activity-timeline="dashboard-empty" -%}
+        {%- else -%}
+        {%- include components/activity-timeline.html activity-timeline="site-wide" -%}      
+        {%- endif -%}
+    </aside>
+</section>

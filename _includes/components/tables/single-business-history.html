@@ -1,0 +1,27 @@
+<div class="uk-overflow-auto table-y-overflow preferred-radius borderline">
+        <table class="uk-table uk-table-striped">
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Phone number</th>
+                    <th>Amount</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%- for entry in site.data.table.single-business -%}
+                <tr>
+                    <td>{{ entry.id }}</td>
+                    <td>{{ entry.phone_number }}</td>
+                    <td>
+                        <div class=" d-flx al-i-c prefix is-standard grey">
+                            {%- include tools/icons.html icon="naira" -%}
+                            {{ entry.amount }}
+                        </div>
+                    </td>
+                    <td>{{ entry.time }}</td>
+                </tr>
+                {%- endfor -%}
+            </tbody>
+        </table>
+    </div>

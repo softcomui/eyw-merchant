@@ -1,0 +1,34 @@
+<nav class="bg-white show-largeup is-raised nanotext pos-rel z-depth-3 desktopnav">
+    <h2 class="sr">Desktop Navigation</h2>
+    <div class="d-flx maxwidth-xl mx-auto j-c-sb al-i-c wrapper-x">
+        <a href=" {{ site.url }}" class="logo-holder">
+           {%- include tools/icons.html icon="logo" -%}
+        </a> 
+        <ul class="nav none m-0 d-iflx pos-rel desktop-nav">
+        {%- for entry in site.data.mainnav -%}
+        {%- assign class = nil -%}
+        {%- assign url = page.url | remove: 'index.html' -%}
+        {%- assign entryName = entry.name | downcase | slugify -%}
+        {%- if url contains entryName -%}
+            {%- assign class = class | append: 'is-active' -%}
+        {%- elsif entry.name == 'Your Business' and url == '/' -%}
+            {%- assign class = class | append: ' is-active' -%}
+        {%- endif -%}
+            <li class="pos-rel d-iflx al-i-c">
+                <a href="{{ entry.slug | prepend: site.url }}" class="{{ class }} co-readable-gray">
+                    {%- unless entry.name == 'Account' -%}
+                        {{ entry.name }}
+                    {%- endunless -%}
+                    {%- if entry.name == 'Account' -%}
+                    <div class="d-flx al-i-c ">
+                        {%- include tools/icons.html icon="settings" -%}
+                        <span class="suffix p-0">{{entry.name}}</span>
+                    </div>
+                    {%- endif -%}
+                </a>
+            </li>
+        {%- endfor -%}
+        </ul>
+        {%- include components/buttons.html buttons="premium"-%}
+    </div>
+</nav>

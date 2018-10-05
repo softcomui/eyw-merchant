@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+{%- include shell/nav/premiumnav.html -%}
+
+<div class="wrapper-x maxwidth-tb mx-auto section">
+    <section class="bg-white borderline inline-shadow preferred-radius co-sweet-gray premium-wrapper">
+        <h3 class="m-0 co-readable-gray mediumtext pb-h">Go Premium</h3>
+        <p class="m-0 nanotext maxwidth-sm">You can now upgrade from the basic Eyowo business plan to a premium plan to unlock more exciting features</p>
+    
+        <ul class="none m-0">
+            <li>
+                <div class="d-flx al-i-c pb-h mt-2">
+                    {%- include tools/icons.html icon="destination" -%}
+                    <h4 class="m-0 ml-1 smalltext"> List Your Business On 'Nearby'</h4>
+                </div>
+                <p class="m-0 nanotext ml-2h">Anyone on Eyowo can now find your products, sales points and USSD menu when you list your business on our 'Nearby' feature</p>
+            </li>
+            <li>
+                <div class="d-flx al-i-c pb-h mt-2">
+                    {%- include tools/icons.html icon="USSD-menu" -%}
+                    <h4 class="m-0 ml-1 smalltext"> Customized USSD Menu </h4>
+                </div>
+                <p class="m-0 nanotext ml-2h">Get paid instantly and directly via a customized USSD code. All your customer needs to do is dial <span class=""><sup>*</sup>4255<sup>*</sup>Your-Unique-Code<sup>*</sup>Amount<sup>*</sup>Customer-PIN# e.g<sup class="picotext">*</sup>4255<sup class="picotext">*</sup>25<sup class="picotext">*</sup>1000<sup class="picotext">*</sup>654321#</span></p>
+            </li>
+            <li>
+                <div class="d-flx al-i-c pb-h mt-2">
+                    {%- include tools/icons.html icon="favorites" -%}
+                    <h4 class="m-0 ml-1 smalltext"> Get Featured </h4>
+                </div>
+                <p class="m-0 nanotext ml-2h">Let more Eyowo users find out about your business or product when it is pinned to the top of the app.</p>
+            </li>
+        </ul>
+    
+        <h3 class="m-0 co-readable-gray mediumtext mt-2">Pricing</h3>
+        <p class="m-0 nanotext mb-1"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum molestias facere voluptates temporibus asperiores adipisci laboriosam laudantium.</p>
+    
+        <ul class="none m-0 grid is-multi-col mostly-2 primarytext co-readable-gray tx-c">
+            <li class="borderline p-2 pricing-card pos-rel mt-3">
+                <p class="m-0 pico-caps bg-primary co-white tag preferred-radius left-standard">Basic</p>
+                {%- include tools/icons.html icon="basic-track" -%}
+                <p class="largetext fw-medium m-0 py-1 flex-center-center">
+                    <span class="prefix is-big readable-gray al-i-c">{%- include tools/icons.html icon="naira" -%}</span>
+                    500<sup class="mediumtext">/month</sup>
+                </p>
+                <ul class="none m-0 fw-medium mb-1 nanotext">
+                    <li>Personal Account</li>
+                    <li>50 products on nearby</li>
+                    <li>10 uploads per day</li>
+                </ul>
+                <button class="nano-caps px-2 py-h bg-primary co-white pricing-button">Purchase</button>
+            </li>
+    
+            <li class="borderline p-2 pricing-card pos-rel mt-3">
+                <p class="m-0 pico-caps bg-primary co-white tag preferred-radius left-shorter">Premium</p>
+                {%- include tools/icons.html icon="premium-track" -%}
+                <p class="largetext fw-medium m-0 py-1 flex-center-center">
+                    <span class="prefix is-big readable-gray al-i-c">{%- include tools/icons.html icon="naira" -%}</span>
+                    75000<sup class="mediumtext">/month</sup>
+                </p>
+                <ul class="none m-0 fw-medium mb-1 nanotext">
+                    <li>Shared Account</li>
+                    <li>Unlimited products on nearby</li>
+                    <li>Unlimited uploads per day</li>
+                </ul>
+                <button class="nano-caps px-2 py-h bg-primary co-white pricing-button">Purchase</button>
+            </li>
+        </ul>
+    </section>
+</div>
+
+{%- include components/modals/buy-premium.html -%}

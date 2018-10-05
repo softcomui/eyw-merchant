@@ -1,0 +1,140 @@
+// 
+    // Input Fields
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+
+label, .label
+    font-size: $picofont
+    text-transform: uppercase
+    font-family: $headingfont
+    color: $readablegray
+
+input, .input
+    height: 40px
+    border-radius:  $preferredradius 
+    background:      transparent  
+    border: 1px solid #e5e5e5
+    width: 100%
+    font-size: .875rem
+    color: $readablegray
+    &.with-icon
+        padding-left: 35px
+    &:active, &:focus
+        border: 1px solid $primarycolor
+        outline:    none
+        box-shadow: $subtleboxshadow
+    &::placeholder
+        color: $sweetgray
+        font-size: 0.875rem
+        font-weight: $normal
+ 
+.input-icons
+    svg
+        width: 27px
+        height: 27px
+        position: absolute
+        top: 9px
+        left: 0
+.input-icons
+    span
+        font-size: .875rem
+        position: absolute
+        top: 10px
+        left: 7px
+
+
+.dropdown-search-input 
+    background: $platinum
+    padding: 1rem 0
+    svg
+        width: 18px
+        height: 18px
+        top: 26px
+        left: 20px
+        color: $sweetgray
+    input
+        background: #fff
+        &:active, &:focus
+        border: none
+
+.search-input 
+    width: 100%
+    svg
+        width: 18px
+        height: 18px
+        top: 11px
+        left: 13px
+        color: $sweetgray
+       
+.date-picker
+    svg
+        width: 15px
+        height: 15px
+        position: absolute
+        top: 15px
+        right: 22px
+
+
+
+.onoffswitch 
+    position: relative 
+    width: 23px
+    -webkit-user-select: none 
+    -moz-user-select: none
+    -ms-user-select: none
+
+.onoffswitch-checkbox 
+    display: none
+
+.onoffswitch-label 
+    display: block 
+    overflow: hidden 
+    cursor: pointer
+    height: 12px 
+    padding: 0 
+    line-height: 30px
+    border: 2px solid #E5E5E5 
+    border-radius: 30px
+    background-color: #EEEEEE
+    transition: background-color 0.3s ease-in
+
+.onoffswitch-label:before 
+    content: ""
+    display: block 
+    width: 13px 
+    margin: 0px
+    background: #FFFFFF
+    position: absolute 
+    top: 0 
+    bottom: 0
+    right: 13px
+    border: 2px solid #E5E5E5 
+    border-radius: 30px
+    transition: all 0.3s ease-in 0s 
+
+.onoffswitch-checkbox:checked + .onoffswitch-label 
+    background-color: #992032
+
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before 
+    border-color: #992032
+
+.onoffswitch-checkbox:checked + .onoffswitch-label:before 
+    right: 0
+
+
+
+
+
+      
+    
+  
+
+
+
+
+
+
+
+
+

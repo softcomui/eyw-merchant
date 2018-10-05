@@ -1,0 +1,22 @@
+<div class="d-flx al-i-c j-c-sb pb-1">
+    <label for="transaction-filter">Show summary from: </label> 
+    <a href="" class="picotext tx-c prefix is-xsmall d-flx al-i-c">
+        {%- include tools/icons.html icon="downloads" -%}
+        Export CSV
+    </a>
+</div>
+
+<div class="grid is-multi-col mostly-2 al-i-c">
+    <div class="d-flx al-i-c" id="business-summary">
+        {%- include components/dropdown.html dropdown="date-picker" -%}
+        <span class="px-1 tx-c">to</span>
+        {%- include components/dropdown.html dropdown="date-picker" -%}
+    </div>  
+</div>
+
+
+<div class="py-1 mb-1">
+    {%- include components/input-fields.html input_fields="search-input" -%}
+</div> 
+
+{%- include components/tables/single-business-history.html-%}

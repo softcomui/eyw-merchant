@@ -1,0 +1,20 @@
+<ul uk-tab class="m-0 tabs">
+{% for entry in site.data.tabs.transactions %}
+    <li class="tab px-1 pt-1 pb-h">
+        <a href="tab px-1h py-1">{{ entry.tab-item }}</a>
+    </li>
+{% endfor %}
+</ul>
+
+<ul class="uk-switcher px-1h py-1h">
+    <li class="">
+        {%- include transactions/transaction-filter.html-%} 
+
+        {%- include components/tables/transaction-business.html-%}
+    </li>
+    <li>
+        {%- include transactions/transaction-filter.html-%} 
+        
+        {%- include components/tables/transaction-products.html-%}
+    </li>
+</ul>

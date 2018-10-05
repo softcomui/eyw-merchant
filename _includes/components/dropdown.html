@@ -1,0 +1,88 @@
+{%- case include.dropdown -%}
+    {%- when 'select-product' -%}
+    <div class="uk-inline input pos-rel">
+        <button class="uk-button d-flx al-i-c j-c-sb px-h input inline-shadow preferred-radius" type="button">
+            Iphone X (Gold)
+            <a href="" class="co-readable-gray">
+                {%- include tools/icons.html icon="chevron-down" -%}
+            </a>
+        </button>
+        <div uk-dropdown="mode: click">
+            <ul class="uk-nav uk-dropdown-nav">
+                <li>
+                    {%- include components/input-fields.html input_fields="dropdown-search-input" -%}
+                </li>
+            {% for entry in site.data.dropdown.select-product %}
+                <li><a href="#">{{ entry.item }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    {%- when 'billing-method' -%}
+    <div class="uk-inline input pos-rel">
+        <button class="uk-button d-flx al-i-c j-c-sb px-h input inline-shadow preferred-radius" type="button">
+            Merchant Device
+            <a href="" class="co-readable-gray">
+                {%- include tools/icons.html icon="chevron-down" -%}
+            </a>
+        </button>
+        <div uk-dropdown="mode: click">
+            <ul class="uk-nav uk-dropdown-nav">
+            {% for entry in site.data.dropdown.billing-method %}
+                <li><a href="#">{{ entry.item }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    {%- when 'all-branches' -%}
+    <div class="uk-inline input pos-rel">
+        <button class="uk-button d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
+            All branches
+            <a href="" class="co-sweet-gray">
+                {%- include tools/icons.html icon="chevron-down" -%}
+            </a>
+        </button>
+    </div>
+
+    {%- when 'date-picker' -%}
+    <div class="uk-inline input pos-rel">
+        <button class="uk-button d-flx al-i-c j-c-sb px-h input co-sweet-gray picotext inline-shadow preferred-radius" type="button">
+            DD/MM/YY
+            <a href="" class="co-sweet-gray">
+                {%- include tools/icons.html icon="chevron-down" -%}
+            </a>
+        </button>
+    </div>
+
+    {%- when 'user-roles' -%}
+    <div class="uk-inline input pos-rel">
+        <button class="uk-button d-flx al-i-c j-c-sb px-h input inline-shadow preferred-radius" type="button">
+            Admin
+            <a href="" class="co-readable-gray">
+                {%- include tools/icons.html icon="chevron-down" -%}
+            </a>
+        </button>
+        <div uk-dropdown="mode: click">
+            <ul class="uk-nav uk-dropdown-nav">
+            {% for entry in site.data.dropdown.user-roles %}
+                <li><a href="#">{{ entry.item }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    {%- when 'business-dropdown' -%}
+    <div class="pos-rel">
+        <button class="" type="button">
+                {%- include tools/icons.html icon="business-dropdown" -%}
+        </button>
+        <div uk-dropdown="pos: bottom-right; mode: click" class="">
+            <ul class="uk-nav uk-dropdown-nav">
+                <li><a href="#" class="border-bottom">Edit Business</a></li>
+                <li class="co-red"><a href="#" class="co-red">Delete Business</a></li>
+            </ul>
+        </div>
+    </div>
+{%- endcase -%}

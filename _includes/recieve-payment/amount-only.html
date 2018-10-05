@@ -1,0 +1,16 @@
+<div class="grid is-multi-col mostly-3 pb-1">
+
+    {%- include components/input-fields.html input_fields="amount-input" -%}  
+
+    {%- include components/input-fields.html input_fields="phone-input-with-focus" -%} 
+
+    <div class="d-flx flx-dir-c">
+        <label for="product" class="mt-h mb-h">Select product</label>
+        {%- include components/dropdown.html dropdown="select-product"-%}
+    </div>
+
+</div>
+
+<div class="d-flx j-c-fe pt-2">
+    {%- include components/buttons.html buttons="payment-received-modal" -%}
+</div>

@@ -1,0 +1,89 @@
+// 
+    // Icons
+
+    // @package eyw
+    // @author  Kabolobari Benakole <i@kb.life>
+.prefix 
+    svg
+        margin-right:       5px
+        display:            inline-flex
+        align-items:        center
+    &.is-xsmall svg
+        width:              12px
+        height:             12px
+    &.is-standard svg
+        width:              15px
+        height:             15px
+    &.is-big svg
+        width:              26px
+        height:             26px
+    &.grey svg
+        fill:               #707070
+    &.red svg
+        fill:               #ff0000
+    &.readable-gray svg
+        fill:               $readablegray
+
+
+
+.suffix
+    margin-left:            6px
+    padding-top:            0.15rem
+    &.is-wider
+        margin-left:        15px
+    &.is-even-wider
+        margin-left:        24px
+.vertical-divider
+    display:                block
+    height:                 $space-sm
+    border-right:           1.5px solid rgba( 255, 255, 255, 0.4 )
+
+.slats
+    pointer-events:         none
+    &::before, &::after
+        content:            ''
+        top:                0
+        left:               0
+    &::before
+        transform:          translateY(-6px)
+    &::after
+        transform:          translateY(6px)
+.slats, .slats::before, .slats::after
+    position:               absolute
+    width:                  22px
+    height:                 2px
+    left:                   0
+    riht:                   0
+    background-color:       $primarycolor
+    transition:             background 250ms ease, transform 250ms ease-in
+.is-clicked
+    .slats
+        background-color:   transparent
+        &::before
+            transform:      rotate(-45deg)
+        &::after
+            transform:      rotate(45deg)
+
+.naira svg
+    width: 14px
+    height: 14px
+    position: absolute
+    top: 13px
+    left: 7px
+    fill: $readablegray
+    &.in-card svg
+        width: 25px
+        height: 25px
+        position: static
+        margin-top: -5px
+        margin-right: 5px
+    &.in-card-small svg
+        position: static
+        width: 13px
+        height: 13px
+        margin: 0
+        margin-right: 3px
+    &.grey svg
+        fill: #8a8a8a
+    &.red svg
+        fill: #ff0000

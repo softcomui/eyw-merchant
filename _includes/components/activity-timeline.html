@@ -1,0 +1,24 @@
+{%- case include.activity-timeline -%}
+    {%- when 'site-wide' -%}
+    <ul class="none activity-timeline">
+        {%- for entry in site.data.options.activity-timeline -%}
+        <li class="co-readable-gray pt-1h pl-1h activity-points"> 
+            <p class="mb-h">{{ entry.new_branch }}</p>
+            <span class="m-0 co-sweet-gray">{{ entry.time_frame }}</span>
+        </li>
+        {%- endfor -%}
+    </ul>
+    {%- when 'dashboard-filled' -%}
+    <ul class="none activity-timeline">
+        <li class="co-readable-gray pt-1h pl-1h activity-points"> 
+            <p class="mb-h">You created a new Business <span class="d-blk m-0">Obiweezy Gadgets Limited</span></p>
+            <span class="m-0 co-sweet-gray">4 hours ago</span>
+        </li>
+    </ul>
+    {%- when 'dashboard-empty' -%}
+    <ul class="none activity-timeline">
+        <li class="co-readable-gray pt-1h pl-1h activity-points"> 
+            <p class="mb-h">No business yet. <span class="d-blk m-0">Create a Business to see your activity logs</span></p>
+        </li>
+    </ul>
+{%- endcase -%}

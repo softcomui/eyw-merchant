@@ -1,0 +1,113 @@
+// 
+    // Obiweezy Gadget styles
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+
+.overflow-wrapper
+    max-width: 585.316px
+    max-height: 350px
+.ussd-code-box
+    height:   40px
+    border-right: 2px solid $primarycolor
+    padding: 0 $space-xs
+    display: flex
+    flex-direction: column
+    justify-content: center
+    border-bottom-left-radius: $preferredradius
+    border-top-left-radius: $preferredradius
+.branch-card
+    border-top-right-radius: $preferredradius
+    border-top-left-radius: $preferredradius
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    max-width: $maxwidth-xs
+    margin: 0 auto
+    width: 100%
+    .branch-card-image-wrap
+        position: relative
+        background: $platinum
+        border-top-right-radius: $preferredradius
+        border-top-left-radius: $preferredradius
+        height: 180px
+        @media #{ $largeup}
+            height: 100px
+        .photo-icon
+            z-index: 3
+            svg
+                width: 24px
+                height: 24px
+    .branch-card-content-top
+        padding: 1.5rem
+        padding-bottom: 1rem
+        flex-grow: 1
+        @media #{ $largeup}
+            padding: 1rem
+            padding-bottom: .5rem
+        h3
+            font-size: $microfont
+            @media #{ $largeup}
+                font-size: $nanofont
+        p
+            font-size: $nanofont
+            @media #{ $largeup}
+                font-size: $picofont
+    .branch-trend-wrapper
+        padding: 1rem 1.5rem
+        @media #{ $largeup}
+            padding: .5rem 1rem
+    .branch-trend
+        font-size: .625rem
+        svg
+            width: 10px
+            height: 10px
+        &.decline
+            color: #ff0000
+        &.growth
+            color: #33C179
+    img
+        width: 100%
+        height: 100%
+        border-top-right-radius: $preferredradius
+        border-top-left-radius: $preferredradius
+        position: absolute
+
+.is-single-branch
+    .store-banner
+        position: relative
+        background: $platinum
+        border-top-right-radius: $preferredradius
+        border-top-left-radius: $preferredradius
+        .store-banner-image
+            position: relative
+            background: $platinum
+            img
+                border-top-right-radius: $preferredradius
+                border-top-left-radius: $preferredradius
+                height: 150px
+            svg
+                position: absolute
+                width: 50px
+                height: 50px
+                bottom: -25px
+                left: 45% 
+        .store-banner-content
+            background: #fff
+            border: $borderline
+            border-top: none
+.till-overview
+    @media #{ $largeup}
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+.product-card-wrapper
+    .product-card-img-wrap
+        border-top-right-radius: $preferredradius
+        border-top-left-radius: $preferredradius
+        img
+            max-height: 180px
+            border-top-right-radius: $preferredradius
+            border-top-left-radius: $preferredradius

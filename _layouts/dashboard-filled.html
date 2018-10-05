@@ -1,0 +1,72 @@
+---
+layout: page
+---
+
+<section class="borderline inline-shadow preferred-radius section with-padding bg-white">
+    <h3 class="mediumtext m-0 pb-h fw-medium">Summary from all Business</h3>
+    <label for="business-summary">Show transactions from: </label>
+
+    <div class="pt-h grid is-multi-col mostly-2">
+        <div class="d-flx al-i-c" id="business-summary">
+            {%- include components/dropdown.html dropdown="date-picker" -%}
+            <span class="px-1 tx-c">to</span>
+            {%- include components/dropdown.html dropdown="date-picker" -%}
+        </div> 
+    </div>
+
+    <div class="pt-2 grid is-multi-col mostly-3 overflow-auto">
+        <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius">
+            <p class="fw-medium m-0 largetext d-flx al-i-c">
+                <span class="prefix is-big readable-gray">{%- include tools/icons.html icon="naira" -%}</span>
+                3,530,000
+                <span class="ml-h">{%- include tools/icons.html icon="growth" -%}</span>
+            </p>
+            <p class="m-0 co-sweet-gray pico-caps">Transactions</p>
+        </div>
+
+        <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius">
+            <p class="fw-medium m-0 largetext">3</p>
+            <p class="m-0 co-sweet-gray pico-caps">Business Added</p>
+        </div>
+
+        <div class="inline-shadow borderline pb-1 pt-h px-1 mb-h preferred-radius">
+            <p class="fw-medium m-0 largetext">10</p>
+            <p class="m-0 co-sweet-gray pico-caps">Branches Added</p>
+        </div>
+    </div>
+</section>
+
+<section class="borderline inline-shadow preferred-radius section with-padding bg-white">
+    <h3 class="mediumtext m-0 pb-1 fw-medium">All Business</h3>
+    <div class="grid is-multi-col mostly-3 al-i-c ">
+        <span class="grid-col-2fr-from-start">{%- include components/input-fields.html input_fields="search-input" -%}</span>
+        <a href="#add-business" class="btn btn-badge btn-badge-long btn-dark j-s-end prefix is-xsmall" uk-toggle>
+            {%- include tools/icons.html icon="plus" -%}
+            ADD BUSINESS
+        </a>
+    </div>
+    <ul class="none m-0 pt-2 grid is-multi-col mostly-3 overflow-auto">
+        <li class="inline-shadow borderline py-1 px-h mb-h d-flx al-i-c flx-dir-c preferred-radius">
+            <a href="{{ site.url }}/single-business" class="d-flx al-i-c flx-dir-c co-readable-gray">
+                <img src="/uploads/onboarding.jpeg" alt="" class="avatar is-nano mb-1">
+                <p class="m-0 fw-medium tx-c nanotext">Obiweezy Gadgets LTD</p>
+            </a>
+        </li>
+
+        <li class="inline-shadow borderline py-1 px-h mb-h d-flx al-i-c flx-dir-c preferred-radius">
+            <a href="{{ site.url }}/single-business" class="d-flx al-i-c flx-dir-c co-readable-gray">
+                <img src="/uploads/onboarding.jpeg" alt="" class="avatar is-nano mb-1">
+                <p class="m-0  fw-medium tx-c nanotext">Obiweezy Furnitures LTD</p>
+            </a>
+        </li>
+
+        <li class="inline-shadow borderline py-1 px-h mb-h d-flx al-i-c flx-dir-c preferred-radius">
+            <a href="{{ site.url }}/single-business" class="d-flx al-i-c flx-dir-c co-readable-gray">
+                <img src="/uploads/onboarding.jpeg" alt="" class="avatar is-nano mb-1">
+                <p class="m-0 fw-medium tx-c nanotext">Obiweezy Ice Cream LTD</p>
+            </a>
+        </li>
+    </ul>
+</section>
+
+{%- include components/modals/add-business.html -%}

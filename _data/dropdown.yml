@@ -1,0 +1,15 @@
+#Dropdown
+select-product:
+  - item: Iphone X (gold)
+  - item: Iphone X (space grey)
+  - item: Iphone X (silver)
+
+billing-method:
+  - item: Merchant Device
+  - item: USSD
+  - item: Push Notification
+
+user-roles:
+  - item: Admin
+  - item: Super admin
+  - item: User

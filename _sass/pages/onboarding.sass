@@ -1,0 +1,49 @@
+// 
+    // Onboarding Layout for the splash pages
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+    // @version 1.0.0
+
+.is-onboarding
+    height:   100vh
+    @media #{$largeup}
+        display:  grid
+        grid-template-columns: repeat(2, 1fr)
+    .featured-image-desktop
+        display: none
+        @media #{$largeup}
+            display: block
+            height:  100%
+    .featured-image-mobile
+        height: 40vh
+        width:  100%
+        object-position: top
+        @media #{$largeup}
+            display: none
+    .logo-wrapper
+        display: none
+        @media #{$largeup}
+            display: grid
+            background:  rgba(255, 255, 255, 0.9)
+            width: 200px
+            height: 200px
+            border-radius: $preferredradius
+    .onboarding-content
+        @media #{ $largeup}
+            position:           absolute
+            top:                50%
+            left:               50%
+            transform:          translate(-50%, -50%)
+            width:              100%
+    .onboarding-title
+        max-width:      450px
+    .onboarding-description
+        max-width:      400px
+    .onboarding-form
+        input
+            height:         46px  
+    .input-helper-text p
+        margin:         0
+        font-size:      $picofont
+

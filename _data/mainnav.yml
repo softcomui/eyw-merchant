@@ -1,0 +1,10 @@
+- name: Your Business
+  slug: /
+- name: Receive Payment
+  slug: /receive-payment/
+- name: Make Payment
+  slug: /make-payment/
+- name: Transactions
+  slug: /transactions/
+- name: Account
+  slug: /account/

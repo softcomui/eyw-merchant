@@ -1,0 +1,50 @@
+<section>
+    <div class="d-flx al-i-c j-c-sb">
+        <h3 class="fw-normal smalltext m-0 pb-1">General Information</h3>
+        <a href="{{site.url}}/login" class="co-red picotext prefix is-xsmall d-flx al-i-c">
+            {%- include tools/icons.html icon="logout" -%}
+            Logout
+        </a>
+    </div>
+    <p class="nanotext m-0">Here you can edit your business information.
+        <span class="d-blk">Contact us at <a href="mailto:support@eyowo.com">support@eyowo.com</a> incase you need any help.</span>
+    </p>
+
+    <div class="grid is-multi-col mostly-3 py-1">
+        <div class="d-flx flx-dir-c">
+            <label for="business-name" class="mt-h mb-h picotext">Business name</label>
+            <input type="text" name="business-name" id="business-name" value="ObiweezyGadget Ltd" class="px-h">
+        </div>
+        {%- include components/input-fields.html input_fields="phone-input" -%} 
+        <div class="d-flx flx-dir-c">
+            <label for="email-address" class="mt-h mb-h picotext">Email address</label>
+            <input type="email" name="email-address" id="email-address" value="obiweezy@phone.com" class="px-h">
+        </div>
+        <div class="d-flx flx-dir-c">
+            <label for="business-address" class="mt-h mb-h picotext">Business address</label>
+            <input type="text" name="business-address" id="business-address" value="43 computer village, Ikeja Lagos" class="px-h">
+        </div>
+        <div class="d-flx flx-dir-c">
+            <label for="user-role" class="mt-h mb-h picotext">User role</label>
+            <input type="text" name="user-role" id="user-role" value="Super Admin" class="px-h" disabled>
+        </div>
+    </div>
+
+    <div>
+        <h3 class="fw-normal smalltext m-0 pt-h pb-1">Security</h3>
+        <div class="grid is-multi-col mostly-2 pb-1">
+            <div class="d-flx flx-dir-c">
+                <label for="current-pin" class="mt-h mb-h picotext">Current pin</label>
+                <input type="text" name="current-pin" id="current-pin" class="px-h" autofocus placeholder="Enter current pin">
+            </div>
+            <div class="d-flx flx-dir-c">
+                <label for="new-pin" class="mt-h mb-h picotext">New pin</label>
+                <input type="tel" name="new-pin" id="new-pin" class="px-h" placeholder="Enter new pin">
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flx j-c-fe pt-2 pb-1">
+        {%- include components/buttons.html buttons="active-big" -%}
+    </div>
+</section>

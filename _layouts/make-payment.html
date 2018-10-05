@@ -1,0 +1,38 @@
+---
+layout: page
+---
+
+<section class="bg-white borderline inline-shadow section">
+    {%- include components/tabs/make_payment_tab.html -%}
+</section>
+
+<section class="grid is-multi-col mostly-3">
+    <div class="inline-shadow borderline py-1 px-1 preferred-radius bg-white pos-rel">
+        <div class="d-flx al-i-c j-c-fe">
+            <a href="#add-fund" class="btn btn-badge btn-dark mb-h prefix is-xsmall" uk-toggle>
+                {%- include tools/icons.html icon="plus" -%}
+                Fund
+            </a>
+        </div>
+        <p class="fw-medium m-0 largetext d-flx al-i-c">
+            <span class="prefix is-big readable-gray d-flx al-i-c">{%- include tools/icons.html icon="naira" -%}</span>
+            3,530,000
+        </p>
+        <p class="m-0 co-sweet-gray pico-caps">Balance</p>
+    </div>
+
+    <div class="inline-shadow borderline py-1 px-1 preferred-radius bg-white">
+        <div class="d-flx al-i-c j-c-fe">
+            <a href="" class="btn btn-badge btn-dark mb-h prefix is-xsmall">
+                {%- include tools/icons.html icon="plus" -%}
+                Add
+            </a>
+        </div>
+        <p class="fw-medium m-0 largetext">2</p>
+        <p class="m-0 co-sweet-gray pico-caps">Accounts</p>
+    </div>
+</section>
+
+{%- include components/modals/fund-account/add-fund.html -%}
+{%- include components/modals/fund-account/fund-account.html -%}
+{%- include components/modals/enter-pin.html -%}

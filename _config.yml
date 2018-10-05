@@ -1,0 +1,68 @@
+# Site settings
+title:        Eyowo Merchant App
+shortname:    eyowo-merchant
+description:  >-
+  Payments, Anytime, Anywhere
+url:          'http://app.eyowo.com'
+charset:      'UTF-8'
+typekit_id:   lbi1rxk
+timezone:     Africa/Lagos
+
+
+# Build settings
+markdown: kramdown
+
+
+# Collections
+collections:
+  uploads:
+    title:  Uploads (Media & Files)
+  onboarding:
+    title:  Onboarding
+    output: true
+  # login:
+  #   title:  LogIn
+  #   output: true
+  login:
+    title:  Receive payment
+    output: true
+
+    
+# Defaults
+defaults:
+  - scope:
+      type: onboarding
+    values:
+      layout: onboarding
+      permalink: /onboarding/:name/
+  - scope:
+      type: login
+    values:
+      layout: onboarding
+      permalink: /login/:name/
+  - scope:
+      type: recieve-payment
+    values:
+      layout: page
+      permalink: /recieve-payment/:name/
+
+# Include folders
+include:
+  - _pages
+
+
+# Handling Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

@@ -1,0 +1,135 @@
+// 
+    // Links
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+
+
+// Style for the step progress bar on the onboarding pages...
+.progress-points
+    position: relative
+    left: -15px
+    max-width: 450px
+    @media #{ $smallup}
+        max-width: 480px
+.progress-point
+    border-radius:  50%
+    height: 35px
+    width: 35px
+    display: grid
+    justify-content: center
+    align-items: center
+    border: 2px solid #fff
+    box-shadow: 0 0 0 1px $sweetgray
+    margin:     0 15px
+    position: relative
+    &.modal-point
+        height: 45px
+        width: 45px
+    &::before, &::after
+        content:    ''
+        position:   absolute
+        height:     1px
+        width:      20px
+        background-color: $sweetgray
+        @media #{ $smallup}
+            width:      25px
+    &::before
+        left:       -37px
+        @media #{ $smallup}
+            left:       -37px
+    &::after
+        right:       -36px
+        @media #{ $smallup}
+            right:      -36px
+    &:first-of-type::before, &:last-of-type::after
+        content: none
+    &.enter-state
+        background: $primarycolor
+        color: #fff
+        box-shadow: 0 0 0 2px $primarycolor
+    &.in-progress-state
+        background: $primarycolor
+        color: #fff
+        box-shadow: 0 0 0 2px $primarycolor
+        &::after
+            background-color: $primarycolor
+    &.completed-state
+        box-shadow: 0 0 0 2px $primarycolor
+        &.past       
+            background: $primarycolor
+            color: #fff     
+            &::after, &::before
+                background-color: $primarycolor  
+            & .check-icon 
+                width: 14px
+                height: 8px
+                border-bottom: 2px solid #fff
+                border-left: 2px solid #fff
+                -webkit-transform: rotate(-45deg)
+                        transform: rotate(-45deg)  
+                margin-bottom: .2rem
+            & .step-number
+                display: none   
+        &.current     
+            background: transparent
+            color: $primarycolor
+            &::before
+                background-color: $primarycolor  
+        
+
+
+
+// progress meter for the awaiting uploads UI component
+.awaiting-uploads
+    img
+        width:      40px
+        height:     40px
+    .progress-bar
+        width: 150px
+        height: 5px
+        display: block
+        -webkit-appearance: none
+        border: none
+        background: #f6f6f6
+        border-radius: 50px
+        > .progress-value
+            width: 70%
+            height: 100%
+            border-radius: 50px
+            background: -webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, $primarycolor, $primarycolor)
+            background-size: 25px 14px, 100% 100%, 100% 100%
+    
+
+//activity-timeline
+.activity-timeline
+    position:                       relative
+    margin:                        0 2.5rem
+    &::before
+        content:                    ''
+        position:                   absolute
+        width:                      1px
+        height:                     100%
+        background-color:           #e5e5e5
+        top:                        2.1rem
+        &:first-of-type
+            content:                none
+    .activity-points
+        max-width:                  250px
+        position:                   relative
+        &::after
+            content:                    ''
+            position:                   absolute
+            width:                      12px
+            height:                     12px
+            left:                       -6px
+            background-color:           $platinum
+            box-shadow:                 0 0 0 6px #fff
+            border:                     1px solid $primarycolor
+            top:                        1.5rem
+            border-radius:              50%
+        p, span
+            font-size: .825rem
+        
+    
+
