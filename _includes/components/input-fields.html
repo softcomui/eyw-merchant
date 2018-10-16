@@ -16,6 +16,8 @@
         <label for="{{page.second_input_name}}" class="mt-h mb-h">{{page.second_input_name}}</label>
         <input type="{{page.second_input_type}}" name="{{page.second_input_name}}" id="{{page.second_input_name}}" class="px-h" placeholder="{{page.second_input_placeholder}}">
     </div> 
+
+
     {%- when 'two with uploads' -%}  
     <div class="d-flx flx-dir-c">
         <label for="{{page.input_name}}" class="mt-h mb-h">{{page.input_name}}</label>
@@ -35,6 +37,34 @@
             </button>
         </div>
     </div> 
+
+
+    {%- when 'add-workspace-url' -%}  
+    <div class="d-flx flx-dir-c">
+        <label for="{{page.input_name}}" class="mt-h mb-h">{{page.input_name}}</label>
+        <input type="{{page.input_type}}" name="{{page.input_name}}" id="{{page.input_name}}" class="px-h" autofocus placeholder="{{page.input_placeholder}}">
+    </div>
+    <div class="d-flx flx-dir-c pt-1">
+        <label for="{{page.second_input_name}}" class="mt-h mb-h">{{page.second_input_name}}</label>
+        <input type="{{page.second_input_type}}" name="{{page.second_input_name}}" id="{{page.second_input_name}}" class="px-h" placeholder="{{page.second_input_placeholder}}">
+    </div> 
+    <div class="d-flx flx-dir-c pt-1">
+        <label for="{{page.third_input_name}}" class="mt-h mb-h">{{page.third_input_name}}</label>
+        <input type="{{page.third_input_type}}" name="{{page.third_input_name}}" id="{{page.third_input_name}}" class="px-h" placeholder="{{page.third_input_placeholder}}">
+        <p class="picotext m-0 mt-h">Example: Your portal will be <span class="fw-bold">"your-preferred-business-name.eyowo.com"</span></p>
+    </div> 
+    <div class="d-flx flx-dir-c pt-1">
+        <label for="{{page.third_input_name}}" class="mt-h mb-h">{{page.fourth_input_name}}</label>
+        <div class="js-upload uploads dashed-border" uk-form-custom>
+            <input type="file" multiple>
+            <button class="uk-button flex-center-center bg-platinum width-100-pc" type="button" tabindex="-1">
+                {%- include tools/icons.html icon="uploads" -%}
+                <span class="ml-h">Upload file...</span>
+            </button>
+        </div>
+    </div> 
+
+
     {%- when 'two with awaiting-uploads' -%}  
     <div class="d-flx flx-dir-c">
         <label for="{{page.input_name}}" class="mt-h mb-h">{{page.input_name}}</label>

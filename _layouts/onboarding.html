@@ -40,7 +40,9 @@ layout: default
             {%- elsif page.input_field == 2 -%}
                 {%- include components/input-fields.html input_fields="two" -%}
             {%- elsif page.input_field == "2 with uploads" -%}
-                {%- include components/input-fields.html input_fields="two with uploads" -%}  
+                {%- include components/input-fields.html input_fields="two with uploads" -%} 
+            {%- elsif page.input_field == "add-workspace-url" -%}
+                {%- include components/input-fields.html input_fields="add-workspace-url" -%}   
             {%- else -%}
                 {%- include components/input-fields.html input_fields="two with awaiting-uploads" -%}       
             {%- endif -%}
