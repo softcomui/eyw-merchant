@@ -1,0 +1,29 @@
+
+# Your Business
+business:
+  - name: Transactions
+    slug: /transactions/
+  - name: Branches
+    slug: /branches/
+  - name: Tills
+    slug: /tills/
+  - name: Products
+    slug: /products/
+  - name: Customers
+    slug: /customers/
+  - name: Reports
+    slug: /reports/
+
+
+# Merchant Tools
+merchant-tools:
+- name: Bill by Product
+  slug: /bill-by-product/
+- name: Bill by Amount
+  slug: /bill-by-amount/
+  
+
+# Accounts
+accounts:
+  - name: Settings
+    slug: /account/

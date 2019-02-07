@@ -1,0 +1,60 @@
+// 
+    // Page Layout for the splash pages
+
+    // @package eyw-merchant
+    // @author  Jessica Eze <jessica@softcom.ng>
+    // @version 1.0.0
+
+.page-layout
+    @media #{ $mediumup}
+        display: flex
+
+.uk-offcanvas-bar
+    h2
+        color: $richblack
+        
+.sidebar-navigation
+    max-width: 250px
+    width: 100%
+    padding-top: 0
+    height: 100vh
+    position: sticky
+    top: 0
+    background: #ffffff
+    z-index: 1
+
+    .your-business
+        max-height: 70px
+        height: 100%
+        background: $platinum
+        padding: 0 $space-sm
+
+    .navigation-section
+        & h3
+            font-size: .9rem
+            color: #999
+            font-weight: $medium
+            text-transform: uppercase
+            padding: 0 $space-sm
+
+        & a          
+            font-size: .95rem
+            color: $readablegray
+            padding: .5rem $space-md
+            display: flex
+            align-items: center
+            max-width: 225px
+
+            &.is-active,
+                color: $primarycolor
+                background: lighten(#992032, 60%)
+                border-top-right-radius: 20px
+                border-bottom-right-radius: 20px
+
+            &:hover
+                color: $primarycolor
+
+.main-content
+    @media #{ $mediumup}
+        // width: calc(100% - 250px)
+        width: 100%

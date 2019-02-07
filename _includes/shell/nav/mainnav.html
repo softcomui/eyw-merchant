@@ -1,10 +1,32 @@
-<nav class="bg-white show-largeup is-raised nanotext pos-rel z-depth-3 desktopnav">
+<nav class="bg-white show-largeup is-raised nanotext z-depth-3 navigation">
     <h2 class="sr">Desktop Navigation</h2>
     <div class="d-flx maxwidth-xl mx-auto j-c-sb al-i-c wrapper-x">
         <a href=" {{ site.url }}" class="logo-holder">
            {%- include tools/icons.html icon="logo" -%}
         </a> 
-        <ul class="nav none m-0 d-iflx pos-rel desktop-nav">
+
+        <div class="d-flx al-i-c">
+            {%- include components/buttons.html buttons="premium"-%}
+            <button class="d-flx al-i-c p-0 suffix is-even-wider">
+                <div class="avatar is-nano">
+                    <img src="{{ site.url }}/uploads/onboarding.jpeg" alt="" class="width-100-pc height-100-pc avatar is-nano">
+                </div>
+                
+                <div class="d-iflx al-i-c co-readable-gray nanotext suffix">
+                    Jaykay S.
+                    <span class="suffix">{%- include tools/icons.html icon="arrow-dropdown" -%}</span>
+                </div>
+            </button>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+ <!-- <ul class="nav none m-0 d-iflx pos-rel desktop-nav">
         {%- for entry in site.data.mainnav -%}
         {%- assign class = nil -%}
         {%- assign url = page.url | remove: 'index.html' -%}
@@ -28,7 +50,4 @@
                 </a>
             </li>
         {%- endfor -%}
-        </ul>
-        {%- include components/buttons.html buttons="premium"-%}
-    </div>
-</nav>
+        </ul> -->

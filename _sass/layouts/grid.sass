@@ -17,6 +17,8 @@
     max-width:          $maxwidth-sm
 .maxwidth-xs
     max-width:          $maxwidth-xs
+.maxwidth-xxs
+    max-width:          120px
 .maxwidth-500
     max-width:          $maxwidth-500
 
@@ -56,7 +58,7 @@
         grid-template-columns:   repeat(3, 1fr)
         @media #{ $smallup }
             grid-template-columns:   repeat(6, 1fr)
-x
+
     .col:not(:last-of-type)
         margin-bottom:           $space-sm
     .col-12
@@ -104,17 +106,18 @@ x
                 grid-column:    8 / 13
 
 .is-page
-    @media #{ $largeup}
+    @media #{ $xlargeup}
         display: grid
         grid-gap: $space-md
         grid-template-columns: 2fr 1fr
     .activity-wrapper
-        position: sticky
         display: none
-        overflow-y: auto
-        width: 100%
+        top: 0
+        position: sticky
         height: 100vh
-        @media #{ $largeup}
+        overflow: auto
+        width: 100%
+        @media #{ $xlargeup}
             display: block
     .content-wrap 
         margin: 0 auto
@@ -123,7 +126,6 @@ x
             max-width: $maxwidth-sm 
         @media #{ $largeup} 
             max-width: 100% 
-            overflow-y: auto
-            height: 100vh 
+            
 
 

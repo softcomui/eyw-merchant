@@ -17,12 +17,6 @@ account:
   - tab-item: Account settings
   - tab-item: Users
   - tab-item: Danger zone
-
-single-business:
-  - tab-item: Overview
-  - tab-item: Branches
-  - tab-item: Products
-  - tab-item: History
   
   
   

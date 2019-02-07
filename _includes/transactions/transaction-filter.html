@@ -1,18 +1,13 @@
-<div class="d-flx al-i-c j-c-sb pb-1">
-    <label for="transaction-filter">Show transactions from: </label> 
+<div class="d-flx al-i-c j-c-sb">
+    <label for="transaction-filter" class="co-rich-black">Filter: </label> 
     <a href="" class="picotext tx-c prefix is-xsmall d-flx al-i-c">
         {%- include tools/icons.html icon="downloads" -%}
-        Export CSV
+        <span class="suffix">Export CSV</span>
     </a>
 </div>
 
-<div class="grid is-multi-col mostly-3" id="transaction-filter">
-    {%- include components/dropdown.html dropdown="all-branches" -%}
-    <div class="d-flx al-i-c grid-col-2fr-from-end">
-        {%- include components/dropdown.html dropdown="date-picker" -%}
-        <span class="px-1 tx-c">to</span>
-        {%- include components/dropdown.html dropdown="date-picker" -%}
-    </div> 
+<div class="mt-h pb-1" id="transaction-filter">
+    {%- include components/dropdown.html dropdown="date-picker" -%}
 </div>
 
 

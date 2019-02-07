@@ -1,0 +1,126 @@
+---
+layout: page
+---
+
+
+    
+<section class="section">
+    <h3 class="mediumtext m-0 fw-medium">Branches</h3>
+    
+    <div class="borderline inline-shadow preferred-radius mt-1 bg-white">
+
+        
+        <div class="px-2 py-2">
+            <div class="grid is-multi-col mostly-3 al-i-c ">
+                <span class="grid-col-2fr-from-start">{%- include components/input-fields.html input_fields="search-input" -%}</span>
+                <a href="#add-branch" class="btn btn-badge btn-badge-standard btn-dark j-s-end prefix" uk-toggle>
+                    {%- include tools/icons.html icon="plus" -%}
+                    ADD BRANCH
+                </a>
+            </div>
+            <ul class="none m-0 pt-2 grid is-multi-col mostly-3 overflow-auto">
+                <li class="inline-shadow borderline mb-h branch-card">
+                    <a href="" class="d-blk">
+                        <div>
+                            <div class="branch-card-image-wrap background-is-filtered black-filtering">
+                                <img src="/uploads/onboarding.jpeg" alt="" class="">
+                                <span class="photo-icon absolute-middle">
+                                    {%- include tools/icons.html icon="photo-camera" -%}
+                                </span>
+                            </div>
+            
+                            <div class="branch-card-content-top">
+                                <h3 class="m-0 fw-normal co-readable-gray">Lekki</h3>
+                                <p class="m-0 co-sweet-gray">Nigeria</p>
+                            </div>
+                        </div>
+            
+                        <div class="branch-card-content-bottom">
+                            <div class="d-flx al-i-c j-c-sb border-top branch-trend-wrapper">
+                                <p class="m-0 d-flx al-i-c nanotext co-readable-gray prefix is-standard readable-gray">
+                                    {%- include tools/icons.html icon="naira" -%}
+                                    510,000
+                                </p>
+                                <p class="d-flx al-i-c picotext m-0 branch-trend decline">
+                                    {%- include tools/icons.html icon="arrow-down" -%}
+                                    3.8%
+                                </p>
+                            </div>
+                            <a href="" class="btn btn-standard btn-full-width btn-dark">View</a>
+                        </div>
+                    </a>
+                </li>
+            
+                <li class="inline-shadow borderline mb-h branch-card">
+                    <a href="" class="d-blk">
+                        <div>
+                            <div class="branch-card-image-wrap background-is-filtered black-filtering">
+                                <span class="photo-icon absolute-middle">
+                                    {%- include tools/icons.html icon="photo-camera" -%}
+                                </span>
+                            </div>
+            
+                            <div class="branch-card-content-top">
+                                <h3 class="m-0 fw-normal co-readable-gray">Obiweezy Store Lekki</h3>
+                                <p class="m-0 co-sweet-gray">43 admiralty road, opp studio 24 Lekki Lagos, Nigeria 43 admiralty road, opp studio 24 Lekki Lagos, </p>
+                            </div>
+                        </div>
+            
+                        <div class="branch-card-content-bottom">
+                            <div class="d-flx al-i-c j-c-sb border-top branch-trend-wrapper">
+                                <p class="m-0 d-flx al-i-c nanotext co-readable-gray prefix is-standard readable-gray">
+                                    {%- include tools/icons.html icon="naira" -%}
+                                    450,254
+                                </p>
+                                <p class="d-flx al-i-c picotext m-0 branch-trend growth">
+                                    {%- include tools/icons.html icon="arrow-up" -%}
+                                    3.8%
+                                </p>
+                            </div>
+                            <a href="" class="btn btn-standard btn-full-width btn-dark">View</a>
+                        </div>
+                    </a>
+                </li>
+            
+                <li class="inline-shadow borderline mb-h branch-card">
+                    <a href="" class="d-blk">
+                        <div>
+                            <div class="branch-card-image-wrap background-is-filtered black-filtering">
+                                <span class="photo-icon absolute-middle">
+                                    {%- include tools/icons.html icon="photo-camera" -%}
+                                </span>
+                            </div>
+            
+                            <div class="branch-card-content-top">
+                                <h3 class="m-0 fw-normal co-readable-gray">Obiweezy Store Lekki</h3>
+                                <p class="m-0 co-sweet-gray">43 admiralty road, opp studio 24 Lekki Lagos, Nigeria</p>
+                            </div>
+                        </div> 
+            
+                        <div class="branch-card-content-bottom">
+                            <div class="d-flx al-i-c j-c-sb border-top branch-trend-wrapper">
+                                <p class="m-0 d-flx al-i-c nanotext co-readable-gray prefix is-standard readable-gray">
+                                    {%- include tools/icons.html icon="naira" -%}
+                                    230,440
+                                </p>
+                                <p class="d-flx al-i-c picotext m-0 branch-trend decline">
+                                    {%- include tools/icons.html icon="arrow-down" -%}
+                                    6.5%
+                                </p>
+                            </div>
+                            <a href="" class="btn btn-standard btn-full-width btn-dark">View</a>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            
+            {%- include components/modals/add-branch.html -%}
+            
+            {%- include single-business/branches/single-branch/index.html -%}
+            
+            {%- include single-business/branches/single-branch/single-till.html -%}
+        </div>
+        
+    </div>
+</section>
+

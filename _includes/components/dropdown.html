@@ -47,11 +47,14 @@
     </div>
 
     {%- when 'date-picker' -%}
-    <div class="uk-inline input pos-rel">
-        <button class="uk-button d-flx al-i-c j-c-sb px-h input co-sweet-gray picotext inline-shadow preferred-radius" type="button">
-            DD/MM/YY
-            <a href="" class="co-sweet-gray">
-                {%- include tools/icons.html icon="chevron-down" -%}
+    <div class="uk-inline input pos-rel maxwidth-xxs d-flx j-c-center">
+        <button class="uk-button d-flx al-i-c j-c-sb px-h input co-sweet-gray primarytext inline-shadow preferred-radius" type="button">
+           <div class="d-flx al-i-c">
+               <span class="mb-hh">{%- include tools/icons.html icon="calender" -%}</span>
+                <span class="suffix">Today</span>
+           </div>
+            <a href="" class="co-sweet-gray mb-hhh">
+                {%- include tools/icons.html icon="dropdown" -%}
             </a>
         </button>
     </div>

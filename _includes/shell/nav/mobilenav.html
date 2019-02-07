@@ -1,19 +1,97 @@
-<nav class="mobilenav hide-largeup" toggle-nav>
-    <h2 class="sr">Mobile Navigation Drawer &amp; Links</h2>
-    <section>
-        <h2 class="sr">List of Pages on {{ site.title }}</h2>
-        <ul class="nav mobile-nav none m-0">
-            {% for entry in site.data.mainnav %}
-            {% assign class = nil %}
-            {% if entry.slug == page.url %}
-                {% assign class = class | append: ' is-active' %}
-            {% endif %}
-                <li>
-                    <a href="{{ site.url }}{{ entry.slug }}" class="{{ class }} co-readable-gray">
-                        {{ entry.name }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </section>
+<nav id="offcanvas-slide" uk-offcanvas="mode: slide; overlay: true" class="hide-largeup">
+    <div class="uk-offcanvas-bar sidebar-navigation p-0"> 
+        <div class="d-flx al-i-c j-c-sb co-rich-black your-business">
+            <h2 class="m-0 smalltext fw-medium">Obiwezy Gadgets</h2>
+            {%- include tools/icons.html icon="chevron-down" -%}
+        </div>
+        
+        <div class="pt-2 pb-2">
+            <div class="navigation-section">
+                {%- assign class = nil -%}
+                {%- assign url = page.url | remove: 'index.html' -%}
+                {%- if url == '/overview/' -%}
+                    {%- assign class = class | append: 'is-active' -%}
+                {%- endif -%}
+                <a href="{{ site.url }}/overview/" class="{{ class }} co-readable-gray">
+                    {%- include tools/icons.html icon="overview" -%}
+                    <span class="suffix d-blk width-100-pc">Overview</span>
+                </a>
+            </div>
+
+            <div class="navigation-section mt-2">
+                <h3 class="m-0">YOUR BUSINESS</h3>
+                <ul class="none m-0 mt-h">
+                    {%- for entry in site.data.nav.business -%}
+                    {%- assign class = nil -%}
+                    {%- assign url = page.url | remove: 'index.html' -%}
+                    {%- if url == entry.slug -%}
+                        {%- assign class = class | append: 'is-active' -%}
+                    {%- endif -%}
+                        <li class="">
+                            <a href="{{ entry.slug | prepend: site.url }}" class="{{ class }} co-readable-gray">
+                                {%- if entry.name == 'Transactions' -%}
+                                    {%- include tools/icons.html icon="transactions" -%}
+                                {%- elsif entry.name == 'Branches' -%}
+                                    {%- include tools/icons.html icon="branches" -%}
+                                    {%- elsif entry.name == 'Tills' -%}
+                                    {%- include tools/icons.html icon="tills" -%}
+                                {%- elsif entry.name == 'Products' -%}
+                                    {%- include tools/icons.html icon="products" -%}
+                                {%- elsif entry.name == 'Customers' -%}
+                                    {%- include tools/icons.html icon="customers" -%}
+                                {%- elsif entry.name == 'Reports' -%}
+                                    {%- include tools/icons.html icon="reports" -%}
+                                {%- endif -%}
+                                <span class="suffix d-blk width-100-pc">{{ entry.name }}</span>
+                            </a>
+                        </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+        
+            <div class="navigation-section mt-2">
+                <h3 class="m-0">MERCHANT TOOLS</h3>
+                <ul class="none m-0 mt-h">
+                    {%- for entry in site.data.nav.merchant-tools -%}
+                    {%- assign class = nil -%}
+                    {%- assign url = page.url | remove: 'index.html' -%}
+                    {%- if url == entry.slug -%}
+                        {%- assign class = class | append: 'is-active' -%}
+                    {%- endif -%}
+                        <li class="">
+                            <a href="{{ entry.slug | prepend: site.url }}" class="{{ class }} co-readable-gray">
+                                {%- if entry.name == 'Bill by Product' -%}
+                                    {%- include tools/icons.html icon="bill-by-product" -%}
+                                {%- elsif entry.name == 'Bill by Amount' -%}
+                                    {%- include tools/icons.html icon="bill-by-amount" -%}
+                                {%- endif -%}
+                                <span class="suffix d-blk width-100-pc">{{ entry.name }}</span>
+                            </a>
+                        </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+        
+            <div class="navigation-section mt-2">
+                <h3 class="m-0">ACCOUNT</h3>
+                <ul class="none m-0 mt-h">
+                    {%- for entry in site.data.nav.accounts -%}
+                    {%- assign class = nil -%}
+                    {%- assign url = page.url | remove: 'index.html' -%}
+                    {%- if url == entry.slug -%}
+                        {%- assign class = class | append: 'is-active' -%}
+                    {%- endif -%}
+                        <li class="">
+                            <a href="{{ entry.slug | prepend: site.url }}" class="{{ class }} co-readable-gray">
+                                {%- if entry.name == 'Settings' -%}
+                                    {%- include tools/icons.html icon="settings" -%}
+                                {%- endif -%}
+                                <span class="suffix d-blk width-100-pc">{{ entry.name }}</span>
+                            </a>
+                        </li>
+                    {%- endfor -%}
+                </ul>
+            </div>
+        </div>
+    </div>
 </nav>

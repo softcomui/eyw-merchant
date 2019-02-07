@@ -3,15 +3,15 @@
         Site Branding &amp; Navigation Tools
     </h2>
     <div class="d-flx al-i-c j-c-sb maxwidth-sm mx-auto pos-rel">
-        <a class="logo-holder d-blk" href="{{ site.url }}">
-            {% include tools/icons.html icon="logo" %}
-        </a>
-        <div class="d-flx al-i-c j-c-sb">
-            {%- include components/buttons.html buttons="premium"-%}
-            <button class="hide-largeup pos-rel toggle-mobile-nav ml-1" aria-label="Toggle Navigation" nav-toggler>
+        <div class="d-flx al-i-c ">
+            <button class="hide-mediumup pos-rel toggle-mobile-nav prefix is-wider" aria-label="Toggle Navigation" uk-toggle="target: #offcanvas-slide">
                 <span class="slats"></span>
             </button>
+            <a class="logo-holder d-blk" href="{{ site.url }}">
+                {% include tools/icons.html icon="logo" %}
+            </a>
         </div>
+        {%- include components/buttons.html buttons="premium"-%}
         {% include shell/nav/mobilenav.html %}
     </div>
 </section>
