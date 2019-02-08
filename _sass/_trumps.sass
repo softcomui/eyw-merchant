@@ -252,6 +252,11 @@
     @media #{ $mediumup }
         display:        block
 
+.hide-smallup
+    display:            block
+    @media #{ $smallup }
+        display:        none
+
 .show-largeup
     display:            none
     @media #{ $largeup }
@@ -261,9 +266,13 @@
     @media #{ $largeup }
         display:        none
 
-.hide-smallup
+.show-xlargeup
+    display:            none
+    @media #{ $xlargeup }
+        display:        block
+.hide-xlargeup
     display:            block
-    @media #{ $smallup }
+    @media #{ $xlargeup }
         display:        none
 
 .hide-mediumup
