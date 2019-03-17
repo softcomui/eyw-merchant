@@ -105,22 +105,34 @@ layout: default
         {%- include shell/logobar.html -%}
         <main>
             <div class="is-page">
-                <div class="content-wrap">
-                    <div class="width-100-pc bg-primary">
+                <div class="content-wrap with-activity-bar">
+                    <!-- <div class="width-100-pc bg-primary">
                         <div class="mx-auto maxwidth-sl wrapper-x">
                             <div class="d-flx al-i-c j-c-sb py-1h">
-                                <!-- <p class="microtext co-white m-0 maxwidth-500 lh-1-1h">The highest limit you can have on this account is NGN 1,000,000. To increase limit, kindly contact us at support@eyowo.com</p> -->
+                                <p class="microtext co-white m-0 maxwidth-500 lh-1-1h">The highest limit you can have on this account is NGN 1,000,000. To increase limit, kindly contact us at support@eyowo.com</p>
                                 <a href=" " class="d-blk">
                                     {%- include tools/icons.html icon="x" -%}
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div>
                         {{ content }}
                     </div>
                 </div>
+                <aside class="bg-white activity-wrapper">
+                    <div class="pt-2 pb-1h px-2 border-bottom">
+                        <h3 class="microtext fw-normal m-0 "> Activities </h3>
+                    </div>
+                    {%- if page.url == "/" -%}
+                    {%- include components/activity-timeline.html activity-timeline="dashboard-filled" -%}
+                    {%- elsif page.url == "/empty-index/" -%}
+                    {%- include components/activity-timeline.html activity-timeline="dashboard-empty" -%}
+                    {%- else -%}
+                    {%- include components/activity-timeline.html activity-timeline="site-wide" -%}      
+                    {%- endif -%}
+                </aside>
             </div>
         </main>
     </div>

@@ -1,0 +1,53 @@
+<section>
+    <div class="d-flx al-i-c j-c-sb">
+        <label for="business-summary">Show summary from: </label> 
+        {%- include components/dropdown.html dropdown="business-dropdown" -%}
+    </div>
+
+    <div class="pt-1 grid is-multi-col mostly-2 al-i-c">
+        <div class="d-flx al-i-c" id="business-summary">
+            {%- include components/dropdown.html dropdown="date-picker" -%}
+            <span class="px-1 tx-c">to</span>
+            {%- include components/dropdown.html dropdown="date-picker" -%}
+        </div> 
+        <div class="borderline j-s-end ussd-code-box">
+            <p class="primarytext m-0 fw-medium">
+                Business USSD Code: 
+                <span class="co-primary">
+                    <sup>*</sup>4255<sup>*</sup>10#
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <div class="pt-1h grid is-multi-col mostly-3 overflow-auto">
+        <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius">
+            <p class="fw-medium m-0 largetext d-flx al-i-c">
+                <span class="prefix is-big readable-gray">{%- include tools/icons.html icon="naira" -%}</span>
+                3,530,000
+                <span class="ml-h">{%- include tools/icons.html icon="growth" -%}</span>
+            </p>
+            <p class="m-0 co-sweet-gray pico-caps">Transactions</p>
+        </div>
+
+        <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius">
+            <p class="fw-medium m-0 largetext d-flx al-i-c">
+                500
+                <span class="ml-h">{%- include tools/icons.html icon="decline" -%}</span>
+            </p>
+            <p class="m-0 co-sweet-gray pico-caps">Business Added</p>
+        </div>
+
+        <div class="inline-shadow borderline pb-1 pt-h px-1 mb-h preferred-radius">
+            <p class="fw-medium m-0 largetext d-flx al-i-c">
+                23
+                <span class="ml-h">{%- include tools/icons.html icon="growth" -%}</span>
+            </p>
+            <p class="m-0 co-sweet-gray pico-caps">Branches Added</p>
+        </div>
+    </div>
+
+    <div class="mt-1h inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius overflow-auto overflow-wrapper">
+        <!-- {%- include tools/icons.html icon="business-stats" -%} -->
+    </div>
+</section>
