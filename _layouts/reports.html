@@ -1,0 +1,137 @@
+---
+layout: page
+---
+
+
+    
+<section class="section">
+    <h3 class="mediumtext m-0 fw-medium">Reports</h3>
+
+    
+    <div class="borderline inline-shadow preferred-radius mt-1 bg-white">
+
+        <ul uk-tab class="m-0 tabs">
+        {% for entry in site.data.tabs.reports %}
+            <li class="tab px-1 pt-1 pb-h">
+                <a href="tab px-1h py-1">{{ entry.tab-item }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+            
+        <ul class="uk-switcher px-1h pb-1h">
+            <li>
+                <ul class="none three-grid-float overflow-auto">
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext d-flx al-i-c">
+                            <span class="co-readable-gray mt--p3">{%- include tools/icons.html icon="naira-big" -%}</span>
+                            1,530,000
+                            <span class="ml-h">{%- include tools/icons.html icon="growth" -%}</span>
+                        </p>
+                        <p class="m-0 co-sweet-gray pico-caps">TOTAL SALES</p>
+                    </li>
+
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext d-flx al-i-c">
+                            35
+                            <span class="ml-h">{%- include tools/icons.html icon="growth" -%}</span>
+                        </p>
+                        <p class="m-0 co-sweet-gray pico-caps">TRANSACTIONS</p>
+                    </li>
+            
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext d-flx al-i-c tt-uppercase">
+                            Wednesday
+                            <span class="ml-h">{%- include tools/icons.html icon="growth" -%}</span>
+                        </p>
+                        <p class="m-0 co-sweet-gray pico-caps">MOST PAID DAY</p>
+                    </li>
+            
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext d-flx al-i-c">
+                            <span class="co-readable-gray mt--p3">{%- include tools/icons.html icon="naira-big" -%}</span>
+                            1,530,000
+                            <span class="ml-h">{%- include tools/icons.html icon="growth" -%}</span>
+                        </p>
+                        <p class="m-0 co-sweet-gray pico-caps">TOTAL EYOWO CHANGE</p>
+                    </li>
+
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext d-flx al-i-c">
+                            35
+                            <span class="ml-h">{%- include tools/icons.html icon="growth" -%}</span>
+                        </p>
+                        <p class="m-0 co-sweet-gray pico-caps">TOTAL CASH CHANGE</p>
+                    </li>
+                </ul>
+
+                <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
+                    <div class="d-flx al-i-c">
+                        <label for="business-summary" class="co-rich-black">Filter: </label> 
+                        <span class="d-blk suffix is-wider">{%- include components/dropdown.html dropdown="date-picker" -%}</span>
+                    </div>
+                    
+                </div>
+                
+                <section class="mt-1h">
+                    {%- include components/tables/reports.html-%}
+                </section>
+            </li>
+            <li>
+                <ul class="none three-grid-float overflow-auto">
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext d-flx al-i-c">Wednesday</p>
+                        <p class="m-0 co-sweet-gray pico-caps">BUSIEST DAY OF THE WEEK</p>
+                    </li>
+
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext d-flx al-i-c">12pm - 3pm</p>
+                        <p class="m-0 co-sweet-gray pico-caps">TRANSACTIONS</p>
+                    </li>
+                </ul>
+
+                <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
+                    
+                </div>
+
+                <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
+                    
+                </div>
+
+                <section class="mt-1h">
+                    {%- include components/tables/reports-branches.html-%}
+                </section>
+            </li>
+            <li>
+
+                <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
+                    
+                </div>
+
+                <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
+                    
+                </div>
+
+                <section class="mt-1h">
+                    {%- include components/tables/reports-tills.html -%}
+                </section>
+            </li>
+            <li>
+
+                <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
+                    
+                </div>
+
+                <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
+                    
+                </div>
+
+                <section class="mt-1h">
+                    {%- include components/tables/reports-products.html -%}
+                </section>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+

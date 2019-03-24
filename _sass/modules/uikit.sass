@@ -16,6 +16,8 @@
             text-decoration: none
             border-right: 1px solid #e5e5e5
             border-left: 1px solid #e5e5e5
+            &:first-child
+                border-left: none
         a
             color: $primarycolor
             border: none
@@ -66,14 +68,21 @@
         position: static
 
 .uk-table 
+    table-layout: fixed
     & thead tr
         border-bottom: 1px solid #e5e5e5
     & td
         padding: 0.5rem 1.2rem
         color: $sweetgray
-        font-size: .875rem
+        font-size: 14px
         vertical-align: middle
-        min-width: 200px
+        font-weight: 300
+        &.black
+            color: #000
+        &.light
+            color: #999
+        &.thicker
+            font-weight: 500
     & th
         padding: 1rem 1.2rem
         color: $readablegray
@@ -83,6 +92,7 @@
         top: 0px
         background: #fff
         z-index: 2
+        border-bottom: 1px solid #dadada
 
 .table-y-overflow
     max-height: 500px
@@ -105,6 +115,16 @@
         box-shadow: 0 0 0 2px $primarycolor
     &::selection
         background-color: none
+
+
+.uk-accordion-title
+    &::after
+        position: relative
+        left: 0
+        content: none
+
+.uk-accordion>:nth-child(n+2)
+    margin-top: 0
     
 
         

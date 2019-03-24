@@ -17,6 +17,12 @@ products:
   - tab-item: Product Library
   - tab-item: Discount
   - tab-item: Taxes
+
+reports:
+  - tab-item: Sales
+  - tab-item: Branches
+  - tab-item: Tills
+  - tab-item: Products
   
 account:
   - tab-item: Account settings

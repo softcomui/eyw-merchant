@@ -87,18 +87,35 @@
         display: block
         clear: both
 
-.float-item
-    min-width: 210px
-    width: 100%
-    float: left
-    margin: 0 0 20px 0
-    @media #{ $mediumup}
-        margin: 0 10px
-        width: auto
-    &:last-child
-        margin: 0
+    .float-item
+        min-width: 210px
+        width: 100%
+        float: left
+        margin: 0 0 20px 0
         @media #{ $mediumup}
             margin: 0 10px
-    &.button
-        width: 150px
+            width: auto
+        &:last-child
+            margin: 0
+            @media #{ $mediumup}
+                margin: 0 10px
+        &.button
+            width: 150px
 
+.three-grid-float
+    margin: 20px 0
+    @media #{ $mediumup}
+        margin: 0 -10px
+    &:after
+        content: ""
+        display: block
+        clear: both
+    .float-item
+        margin-top: 1.5rem
+        @media #{ $mediumup}
+            float: left
+            width: calc(50% - 20px)
+            margin: 0 10px
+            margin-top: 1.5rem
+        @media #{ $largeup}
+            width: calc(33.33% - 20px)
