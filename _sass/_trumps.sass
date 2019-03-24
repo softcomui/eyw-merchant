@@ -33,6 +33,20 @@
     display:            inline-block 
 .d-flx
     display:            flex
+.d-flx-md
+    @media #{ $mediumup}
+        display:            flex
+    &.with-pt
+        @media #{ $mediumup}
+            padding-top: 1.5rem
+        @media #{ $xlargeup}
+            padding-top: 0
+.d-flx-xlg
+    @media #{ $xlargeup}
+        display:            flex
+    &.with-pt
+        @media #{ $xlargeup}
+            padding-top: 1.5rem
 .d-iflx
     display:            inline-flex
 .flx-wrap

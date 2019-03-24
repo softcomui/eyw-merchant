@@ -1,0 +1,41 @@
+<div class="uk-overflow-auto table-y-overflow preferred-radius borderline">
+    <table class="uk-table uk-table-striped">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>In Stock</th>
+                <th>Price</th>
+                <th>USSD Code</th>
+                <th>Nearby</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%- for entry in site.data.table.transaction-products -%}
+            <tr>
+                <td>
+                    <div class=" d-flx al-i-c prefix is-standard grey">
+                        <span class="thumbnail is-nano">
+                            <img src="{{site.url}}/uploads/galaxy-s8-plus.png" alt="" class="height-100-pc obj-fit-contain">
+                        </span>
+                        <span class="suffix">Samsung S8 (Ash)</span>
+                    </div>
+                </td>
+                <td>23</td>
+                <td>
+                    <div class=" d-flx al-i-c prefix is-standard grey">
+                        {%- include tools/icons.html icon="naira" -%}
+                        <span>{{ entry.amount }}</span>
+                    </div>
+                </td>
+                <td>*4255*50*5*2#</td>
+                <td>
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="product1" checked>
+                        <label class="onoffswitch-label" for="product1"></label>
+                    </div>
+                </td>
+            </tr>
+            {%- endfor -%}
+        </tbody>
+    </table>
+</div>

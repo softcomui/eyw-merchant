@@ -12,6 +12,11 @@ make-payment:
 transactions: 
   - tab-item: From business
   - tab-item: From products
+
+products:
+  - tab-item: Product Library
+  - tab-item: Discount
+  - tab-item: Taxes
   
 account:
   - tab-item: Account settings

@@ -72,13 +72,21 @@
         padding: 0.5rem 1.2rem
         color: $sweetgray
         font-size: .875rem
+        vertical-align: middle
+        min-width: 200px
     & th
         padding: 1rem 1.2rem
         color: $readablegray
         text-transform: none
         font-family: $headingfont
+        position: sticky
+        top: 0px
+        background: #fff
+        z-index: 2
+
 .table-y-overflow
-    max-height: 300px
+    max-height: 500px
+    overflow: auto
 
 .uk-radio
     box-sizing: border-box
