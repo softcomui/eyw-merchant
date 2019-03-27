@@ -11,6 +11,10 @@
     height: 100%
     top: 0
 
+    .mainnav
+        @media #{ $xlargeup} 
+            margin: 0 50px
+
 
 .toggle-mobile-nav
     background:             transparent // Because button element
@@ -18,7 +22,7 @@
     width: 25px
 
 .logo-holder
-    padding: 1.5rem $space 
+    padding: $space 
     padding-left: 0
     svg
         width: 100px

@@ -10,20 +10,25 @@
         
         <div class="grid is-multi-col al-i-c mostly-2 pt-1h">
             <div class="d-flx flx-dir-c">
-                <label for="business-name" class="mt-h mb-h">Branch name</label>
-                <input type="text" name="business-name" id="business-name" class="px-h" placeholder="Enter business name" autofocus>
+                <label for="branch-name" class="mt-h mb-h">Branch Name</label>
+                <input type="text" name="branch-name" id="branch-name" class="px-h" placeholder="Enter business name..." autofocus>
             </div>
 
             <div class="d-flx flx-dir-c">
-                <label for="business-mail" class="mt-h mb-h">Branch mail</label>
-                <input type="email" name="business-mail" id="business-mail" class="px-h" placeholder="Enter mail here" autofocus>
+                <label for="branch-location" class="mt-h mb-h">Branch Location</label>
+                <input type="text" name="branch-location" id="branch-location" class="px-h" placeholder="Enter address">
             </div>
 
             <div class="d-flx flx-dir-c">
-                <label for="business-mail" class="mt-h mb-h">Branch logo</label>
+                <label for="branch-email" class="mt-h mb-h">Email Address of the Branch</label>
+                <input type="email" name="branch-email" id="branch-email" class="px-h" placeholder="Enter email address here">
+            </div>
+
+            <div class="d-flx flx-dir-c">
+                <label for="business-mail" class="mt-h mb-h">Branch image</label>
                 <div class="js-upload uploads dashed-border" uk-form-custom>
                     <input type="file" multiple>
-                    <button class="uk-button flex-center-center bg-platinum width-100-pc" type="button" tabindex="-1">
+                    <button class="flex-center-center width-100-pc" type="button" tabindex="-1">
                         {%- include tools/icons.html icon="uploads" -%}
                         <span class="ml-h">Upload file...</span>
                     </button>
@@ -31,8 +36,8 @@
             </div>
         </div>
 
-        <div class="d-flx j-c-fe pt-2">
-            <a href="" class="btn btn-standard btn-dark">SAVE</a>
+        <div class="pt-2">
+            <a href="" class="btn btn-standard btn-dark">Create New Branch</a>
         </div>
     </div>
 </section>

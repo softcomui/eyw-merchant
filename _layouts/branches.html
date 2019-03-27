@@ -11,15 +11,15 @@ layout: page
 
         
         <div class="px-2 py-2">
-            <div class="grid is-multi-col mostly-3 al-i-c ">
-                <span class="grid-col-2fr-from-start">{%- include components/input-fields.html input_fields="search-input" -%}</span>
-                <a href="#add-branch" class="btn btn-badge btn-badge-standard btn-dark j-s-end prefix" uk-toggle>
-                    {%- include tools/icons.html icon="plus" -%}
-                    ADD BRANCH
-                </a>
+            <!-- <div class="d-flx al-i-c j-c-sb">
+                <span>{%- include components/input-fields.html input_fields="search-input" -%}</span>
+                <button class="btn btn-badge btn-dark p-0 d-flx al-i-c" uk-toggle="target: #add-branch">
+                    <span class="prefix">{%- include tools/icons.html icon="plus" -%}</span>
+                    <span>CREATE BRANCH</span>
+                </button>
             </div>
-            <ul class="none m-0 pt-2 grid is-multi-col mostly-3 overflow-auto">
-                <li class="inline-shadow borderline mb-h branch-card">
+            <ul class="none five-grid-float overflow-auto">
+                <li class="inline-shadow borderline mb-h branch-card float-item">
                     <a href="" class="d-blk">
                         <div>
                             <div class="branch-card-image-wrap background-is-filtered black-filtering">
@@ -46,12 +46,12 @@ layout: page
                                     3.8%
                                 </p>
                             </div>
-                            <a href="" class="btn btn-standard btn-full-width btn-dark">View</a>
+                            <a href="" class="btn btn-full-width btn-dark">View</a>
                         </div>
                     </a>
                 </li>
             
-                <li class="inline-shadow borderline mb-h branch-card">
+                <li class="inline-shadow borderline mb-h branch-card float-item">
                     <a href="" class="d-blk">
                         <div>
                             <div class="branch-card-image-wrap background-is-filtered black-filtering">
@@ -62,7 +62,7 @@ layout: page
             
                             <div class="branch-card-content-top">
                                 <h3 class="m-0 fw-normal co-readable-gray">Obiweezy Store Lekki</h3>
-                                <p class="m-0 co-sweet-gray">43 admiralty road, opp studio 24 Lekki Lagos, Nigeria 43 admiralty road, opp studio 24 Lekki Lagos, </p>
+                                <p class="m-0 co-sweet-gray">43 admiralty road, opp studio 24 Lekki Lagos, Nigeria...</p>
                             </div>
                         </div>
             
@@ -77,12 +77,12 @@ layout: page
                                     3.8%
                                 </p>
                             </div>
-                            <a href="" class="btn btn-standard btn-full-width btn-dark">View</a>
+                            <a href="" class="btn btn-full-width btn-dark">View</a>
                         </div>
                     </a>
                 </li>
             
-                <li class="inline-shadow borderline mb-h branch-card">
+                <li class="inline-shadow borderline mb-h branch-card float-item">
                     <a href="" class="d-blk">
                         <div>
                             <div class="branch-card-image-wrap background-is-filtered black-filtering">
@@ -108,17 +108,16 @@ layout: page
                                     6.5%
                                 </p>
                             </div>
-                            <a href="" class="btn btn-standard btn-full-width btn-dark">View</a>
+                            <a href="" class="btn btn-full-width btn-dark">View</a>
                         </div>
                     </a>
                 </li>
-            </ul>
+            </ul> -->
             
             {%- include components/modals/add-branch.html -%}
             
             {%- include single-business/branches/single-branch/index.html -%}
-            
-            {%- include single-business/branches/single-branch/single-till.html -%}
+
         </div>
         
     </div>

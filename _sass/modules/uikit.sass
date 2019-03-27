@@ -23,12 +23,15 @@
             border: none
 .uk-button
     color: $readablegray
-    padding: 0 .5rem 0 1rem 
     font-size: .875rem
-    text-align: left
     text-decoration: none
     text-transform: none
-    border: none
+    border-radius: 3px
+    max-width: 120px
+    max-height: 35px
+    width: 100%
+    height: 100%
+    border: 1px solid #dadada
 
 .uk-dropdown
     display: none
@@ -50,6 +53,7 @@
 .uk-modal-dialog
     width: 550px
     min-height: 300px
+    border-radius: 10px
     display: flex
     align-self: center
     flex-direction: column
@@ -68,7 +72,7 @@
         position: static
 
 .uk-table 
-    table-layout: fixed
+    table-layout: auto
     & thead tr
         border-bottom: 1px solid #e5e5e5
     & td
@@ -77,6 +81,9 @@
         font-size: 14px
         vertical-align: middle
         font-weight: 300
+        min-width: 200px
+        @media #{ $xlargeup}
+            min-width: 120px
         &.black
             color: #000
         &.light
@@ -85,7 +92,7 @@
             font-weight: 500
     & th
         padding: 1rem 1.2rem
-        color: $readablegray
+        color: #000000
         text-transform: none
         font-family: $headingfont
         position: sticky
@@ -116,6 +123,17 @@
     &::selection
         background-color: none
 
+.uk-checkbox
+    width: 18px
+    height: 18px
+    min-width: 0
+    border: 2px solid #dadada
+    &:checked
+        background-color: $primarycolor
+        &:focus
+            background-color: $primarycolor
+    &:focus
+        border: 2px solid $primarycolor
 
 .uk-accordion-title
     &::after

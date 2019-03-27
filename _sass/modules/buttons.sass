@@ -12,7 +12,7 @@
     border:                 1.5px solid
     border-radius:          5px
     font-family:            $headingfont
-    font-size:              $primaryfont
+    font-size:              13px
     padding:                0.9rem $space
     outline:                none
     &.btn-is-disabled   
@@ -20,8 +20,17 @@
         pointer-events:     none
         opacity:            0.7
     &.btn-standard
-        height:             35px
+        height:             40px
         min-width:          120px
+        max-width:          200px
+        font-size:          15px
+        box-shadow:         0 1px 2px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.3)
+    &.btn-badge
+        height:             35px
+        min-width:          170px
+        max-width:          170px
+        font-size:          12px
+        text-transform:     uppercase
         box-shadow:         0 1px 2px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.3)
     &.btn-full-width
         border-radius:      0
@@ -41,12 +50,27 @@
     &.btn-cta-light
         background-color:   rgba( 255, 182, 0, 0.6 )
         border:             transparent
+    &.btn-dropdown
+        height: 35px
+        width: 120px
+        border: 1px solid #dadada
+        color: #707070
+        padding: 0 .75rem
+    &.btn-nostling
+        font-weight:        500
+        background-color:   transparent
+        border:             none
+        font-size:          14px
+        padding:            1rem 0
+        &:hover
+            color:           $primarycolor
     &:active, &focus, &:hover
         opacity: .9
 
 .uploads
     z-index: 3
-    height: 45px
+    height: 35px
+    font-size: 13px
     button
         height: 100%
         color: $primarycolor

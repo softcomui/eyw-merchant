@@ -15,8 +15,16 @@ layout: page-with-sidebar
                 {%- include components/dropdown.html dropdown="business-dropdown" -%}
             </div>
         
-            <div class="pt-h grid is-multi-col mostly-2 al-i-c">
-                {%- include components/dropdown.html dropdown="date-picker" -%}
+            <div class="pt-h d-flx j-c-sb al-i-c">
+                <div class="d-flx al-i-c j-c-sb">
+                    {%- include components/dropdown.html dropdown="date-picker-filter" -%}
+                    <!-- <div class="suffix is-even-wider d-flx al-i-c co-readable-gray">
+                        <span>{%- include components/dropdown.html dropdown="date-picker" -%}</span>
+                        <span class="prefix suffix is-wider">to</span>
+                        <span>{%- include components/dropdown.html dropdown="date-picker" -%}</span>
+                    </div> -->
+                </div>
+
                 <div class="borderline j-s-end ussd-code-box">
                     <p class="primarytext m-0 fw-medium">
                         Business USSD Code: 
@@ -27,8 +35,8 @@ layout: page-with-sidebar
                 </div>
             </div>
         
-            <div class="pt-1h grid is-multi-col mostly-3 overflow-auto">
-                <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius">
+            <div class="three-grid-float overflow-auto">
+                <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
                     <p class="fw-medium m-0 largetext d-flx al-i-c">
                         <span class="prefix co-readable-gray mb-hh">{%- include tools/icons.html icon="naira-big" -%}</span>
                         3,530,000
@@ -37,7 +45,7 @@ layout: page-with-sidebar
                     <p class="m-0 co-sweet-gray pico-caps">Transactions</p>
                 </div>
         
-                <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius">
+                <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
                     <p class="fw-medium m-0 largetext d-flx al-i-c">
                         500
                         <span class="ml-h">{%- include tools/icons.html icon="decline" -%}</span>
@@ -45,7 +53,7 @@ layout: page-with-sidebar
                     <p class="m-0 co-sweet-gray pico-caps">Business Added</p>
                 </div>
         
-                <div class="inline-shadow borderline pb-1 pt-h px-1 mb-h preferred-radius">
+                <div class="inline-shadow borderline pb-1 pt-h px-1 mb-h preferred-radius float-item classic-card">
                     <p class="fw-medium m-0 largetext d-flx al-i-c">
                         23
                         <span class="ml-h">{%- include tools/icons.html icon="growth" -%}</span>

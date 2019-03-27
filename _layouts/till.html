@@ -1,0 +1,112 @@
+---
+layout: page
+---
+
+
+<section class="section">
+    <h3 class="mediumtext m-0 fw-medium">Tills</h3>
+
+    
+    <div class="borderline inline-shadow preferred-radius mt-1 bg-white px-2 py-2">
+
+        <!-- <div>
+            <div class="d-flx al-i-c flx-wrap j-c-sb">
+                <div class="pos-rel input-icons search-input mt-h mb-1">
+                    {%- include tools/icons.html icon="search" -%}
+                    <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search till">
+                </div>
+                <button class="btn btn-badge btn-dark p-0 mb-1" uk-toggle="target: #create-till">
+                    + CREATE TILL
+                </button>
+            </div>
+            
+            <div class="pt-1">
+                {%- include components/tables/transactions.html-%}
+            </div>
+        </div> -->
+
+
+        <div>
+            <div class="d-flx al-i-c j-c-sb">
+                <a href="" class="primarytext d-flx al-i-c">
+                    {%- include tools/icons.html icon="arrow-left" -%}
+                    <span class="suffix">Back</span>
+                </a>
+                <div class="pos-rel">
+                    <button class="" type="button">
+                            {%- include tools/icons.html icon="business-dropdown" -%}
+                    </button>
+                    <div uk-dropdown="pos: bottom-right; mode: click">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li class="co-red"><a href="#" class="co-red">Deactivate Till</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="four-grid-float overflow-auto">
+                <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                    <p class="m-0 co-black mediumtext fw-normal">AHB-OBI8</p>
+                    <p class="m-0 co-sweet-gray pico-caps">USERNAME</p>
+                </div>
+
+                <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                    <p class="m-0 co-black mediumtext fw-normal">83TR3HE</p>
+                    <p class="m-0 co-sweet-gray pico-caps">PASSWORD</p>
+                </div>
+        
+                <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                    <p class="m-0 co-black mediumtext fw-normal">Maryland Mall</p>
+                    <p class="m-0 co-sweet-gray pico-caps">BRANCH</p>
+                </div>
+
+                <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                    <p class="m-0 co-black mediumtext fw-normal">1,530,000</p>
+                    <p class="m-0 co-sweet-gray pico-caps">TOTAL SALES</p>
+                </div>
+            </div>
+
+            <section class="mt-2">
+                <label for="business-summary" class="">Filter: </label>
+                <div class="d-flx-xlg al-i-c j-c-sb">
+                    <div class="d-flx mb-1">
+                        <div class="prefix is-wider">{%- include components/dropdown.html dropdown="date-picker-filter" -%}</div>
+                        <div class="pos-rel input-icons search-input">
+                            {%- include tools/icons.html icon="search" -%}
+                            <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search transactions">
+                        </div>
+                    </div>
+                    
+                    <div class="d-flx-md al-i-c mb-1">
+                        <div class="button d-flx al-i-c mt-h-for-filter">
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="product1" checked>
+                                <label class="onoffswitch-label" for="product1"></label>
+                            </div>
+                            <span class="suffix prefix is-wider co-black d-flx al-i-c">
+                                <span class="prefix">{%- include tools/icons.html icon="helper-circle" -%}</span>
+                                Switch to two-step verification
+                            </span>
+                        </div>
+                        
+                        <button class="btn btn-badge btn-dark p-0 mt-h d-flx al-i-c ">
+                            <span class="prefix">{%- include tools/icons.html icon="downloads" -%}</span>
+                            <span>EXPORT CSV</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            {%- include single-business/branches/single-branch/branch-table.html -%}
+        </div>
+        
+    </div>
+</section>
+
+{%- include components/modals/create-till.html -%}
+{%- include components/modals/created-till.html -%}
+    
+    
+    
+    

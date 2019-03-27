@@ -41,22 +41,79 @@
         <button class="uk-button d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
             All branches
             <a href="" class="co-sweet-gray">
-                {%- include tools/icons.html icon="chevron-down" -%}
+                {%- include tools/icons.html icon="dropdown" -%}
             </a>
         </button>
     </div>
 
-    {%- when 'date-picker' -%}
-    <div class="uk-inline input pos-rel maxwidth-xxs d-flx j-c-center">
-        <button class="uk-button d-flx al-i-c j-c-sb px-h input co-sweet-gray primarytext inline-shadow preferred-radius" type="button">
-           <div class="d-flx al-i-c">
-               <span class="mb-hh">{%- include tools/icons.html icon="calender" -%}</span>
-                <span class="suffix">Today</span>
+    {%- when 'date-picker-filter' -%}
+    <div class="pos-rel">
+        <button class="btn btn-dropdown" type="button">
+           <div class="d-flx al-i-c j-c-sb height-100-pc width-100-pc">
+               <div class="d-flx al-i-c">
+                    <span class="mb-hh">{%- include tools/icons.html icon="calender" -%}</span>
+                    <span class="suffix">Today</span>
+                </div>
+               
+                <a href="" class="co-sweet-gray mb-hhh">
+                    {%- include tools/icons.html icon="dropdown" -%}
+                </a>
            </div>
-            <a href="" class="co-sweet-gray mb-hhh">
-                {%- include tools/icons.html icon="dropdown" -%}
-            </a>
         </button>
+
+        <div uk-dropdown="pos: bottom-left; mode: click">
+            <div class="d-flx al-i-c date-picker">
+                <div class="calender">
+                    
+                </div>
+                <ul class="days none m-0">
+                    <li>
+                        <button>Today</button>
+                    </li>
+                    <li>
+                        <button>Yesterday</button>
+                    </li>
+                    <li>
+                        <button>This week</button>
+                    </li>
+                    <li>
+                        <button>Last week</button>
+                    </li>
+                    <li>
+                        <button>This month</button>
+                    </li>
+                    <li>
+                        <button>Last month</button>
+                    </li>
+                    <li>
+                        <button>This year</button>
+                    </li>
+                    <li>
+                        <button>Last year</button>
+                    </li>
+                    <li>
+                        <button>Custom</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {%- when 'date-picker' -%}
+    <div class="pos-rel">
+        <button class="btn btn-dropdown" type="button">
+           <div class="d-flx al-i-c j-c-sb height-100-pc width-100-pc">
+                <p class="m-0 primarytext">DD/MM/YY</p>
+               
+                <a href="" class="co-sweet-gray mb-hhh">
+                    {%- include tools/icons.html icon="dropdown" -%}
+                </a>
+           </div>
+        </button>
+
+        <div uk-dropdown="pos: bottom-center; mode: click">
+         
+        </div>
     </div>
 
     {%- when 'user-roles' -%}
@@ -81,11 +138,13 @@
         <button class="" type="button">
                 {%- include tools/icons.html icon="business-dropdown" -%}
         </button>
-        <div uk-dropdown="pos: bottom-right; mode: click" class="">
+        <div uk-dropdown="pos: bottom-right; mode: click">
             <ul class="uk-nav uk-dropdown-nav">
                 <li><a href="#" class="border-bottom">Edit Business</a></li>
                 <li class="co-red"><a href="#" class="co-red">Delete Business</a></li>
             </ul>
         </div>
     </div>
+
+
 {%- endcase -%}

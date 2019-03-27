@@ -56,6 +56,99 @@ transaction-business:
     branch: Ikeja
     time: 2:34pm
 
+transactions:
+  - status: Success
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+  - status: Failed
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+  - status: Pending
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+  - status: Success
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+  - status: Failed
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+  - status: Pending
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+  - status: Success
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+  - status: Failed
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+  - status: Pending
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+  - status: Success
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+  - status: Failed
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+  - status: Pending
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+  - status: Success
+    reference: i21ddc25x0mxhdu
+    mobile: +2348100583876
+    branch: Ikeja
+    amount: ₦56,000
+    channel: Card
+    date: February 7, 2019 6:40 PM
+
 transaction-products:
   - id: 34784
     phone_number: +23481542366

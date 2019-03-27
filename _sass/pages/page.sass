@@ -29,7 +29,16 @@
         max-height: 70px
         height: 100%
         background: $platinum
-        padding: 0 $space-sm
+        button
+            outline: none
+        .your-business-dropdown
+            ul
+                max-height: 500px
+                overflow: auto   
+
+            li
+                &:hover
+                    color: $primarycolor   
 
     .navigation-section
         & h3

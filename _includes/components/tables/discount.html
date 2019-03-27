@@ -1,0 +1,28 @@
+<div class="uk-overflow-auto preferred-radius borderline">
+    <table class="uk-table uk-table-striped">
+        <thead>
+            <tr>
+                <th>Discount Name</th>
+                <th>Branch</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%- for entry in site.data.table.transaction-products -%}
+            <tr>
+                <td>Christmas</td>
+                <td>3 Stores</td>
+                <td>10%</td>
+                <td class="d-flx al-i-c">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="product1" checked>
+                        <label class="onoffswitch-label" for="product1"></label>
+                    </div>
+                    <span class="ml-h">Active</span>
+                </td>
+            </tr>
+            {%- endfor -%}
+        </tbody>
+    </table>
+</div>

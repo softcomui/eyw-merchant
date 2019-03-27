@@ -39,7 +39,7 @@
 // The Grid
 .grid
     display:                     grid
-    grid-gap:                    $space-sm
+    grid-gap:                    1rem
     &.is-multi-col.mostly-2
         @media #{ $largeup }
             grid-template-columns:   repeat(2, 1fr) 
@@ -122,13 +122,30 @@
             display: block
     .content-wrap 
         width: 100% 
-        
+        @media #{ $xlargeup} 
+            margin: 0 50px
         &.with-activity-bar
             width: 100% 
             @media #{ $xlargeup} 
                 max-width: calc(100% - 475px)
                 width: 100%
-                margin: 0 50px
-            
 
+
+// Transaction Layout         
+.transactions-single-layout
+    @media #{ $xlargeup}
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+    .transaction-details
+        width: 100%
+        @media #{ $xlargeup}
+            width: calc(55% - 50px)
+    .transaction-overview
+        width: 100%
+        margin-top: 2rem
+        @media #{ $xlargeup}
+            width: 45%
+            margin-top: 0
+        
 

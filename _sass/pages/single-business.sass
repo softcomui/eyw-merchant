@@ -8,7 +8,7 @@
     max-width: 585.316px
     max-height: 350px
 .ussd-code-box
-    height:   40px
+    height:   35px
     border-right: 2px solid $primarycolor
     padding: 0 $space-xs
     display: flex
@@ -23,9 +23,13 @@
     display: flex
     flex-direction: column
     justify-content: space-between
-    max-width: $maxwidth-xs
     margin: 0 auto
     width: 100%
+    max-width: 100%
+    min-height: 430px
+    @media #{ $largeup}
+        min-height: 300px
+        margin: 0
     .branch-card-image-wrap
         position: relative
         background: $platinum
@@ -87,16 +91,18 @@
                 border-top-right-radius: $preferredradius
                 border-top-left-radius: $preferredradius
                 height: 150px
-            svg
-                position: absolute
-                width: 50px
-                height: 50px
-                bottom: -25px
-                left: 45% 
+
         .store-banner-content
             background: #fff
             border: $borderline
             border-top: none
+            position: relative
+            .photo-icon svg
+                width: 50px
+                height: 50px
+                margin: -70px 0 1rem
+                position: relative
+                z-index: 2
 .till-overview
     @media #{ $largeup}
         display: flex

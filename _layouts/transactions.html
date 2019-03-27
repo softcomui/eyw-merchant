@@ -2,6 +2,146 @@
 layout: page
 ---
 
-<section class="bg-white borderline inline-shadow section">
-    {%- include components/tabs/transactions_tab.html -%} 
+
+<section class="section">
+    <h3 class="mediumtext m-0 fw-medium">Transactions</h3>
+
+    
+    <div class="borderline inline-shadow preferred-radius mt-1 bg-white px-2 py-2">
+
+            <div>
+                <section>
+                    <label for="business-summary" class="">Filter: </label>
+                    <div class="d-flx-xlg al-i-c j-c-sb">
+                        <div class="d-flx mt-h">
+                            <div class="prefix is-wider">{%- include components/dropdown.html dropdown="date-picker-filter" -%}</div>
+                            <div class="pos-rel input-icons search-input">
+                                {%- include tools/icons.html icon="search" -%}
+                                <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search transactions">
+                            </div>
+                        </div>
+                
+                        <button class="btn btn-badge btn-dark p-0 mt-h d-flx al-i-c ">
+                            <span class="prefix">{%- include tools/icons.html icon="downloads" -%}</span>
+                            <span>EXPORT CSV</span>
+                        </button>
+                    </div>
+                </section>
+                
+                
+                <ul class="none three-grid-float overflow-auto">
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext d-flx al-i-c">
+                            344
+                            <span class="ml-h">{%- include tools/icons.html icon="growth" -%}</span>
+                        </p>
+                        <p class="m-0 co-sweet-gray pico-caps">TRANSACTIONS</p>
+                    </li>
+                
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext d-flx al-i-c">
+                            <span class="co-readable-gray mt--p3">{%- include tools/icons.html icon="naira-big" -%}</span>
+                            1,530,000
+                            <span class="ml-h">{%- include tools/icons.html icon="growth" -%}</span>
+                        </p>
+                        <p class="m-0 co-sweet-gray pico-caps">TOTAL SALES</p>
+                    </li>
+                
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext d-flx al-i-c">
+                            <span class="co-readable-gray mt--p3">{%- include tools/icons.html icon="naira-big" -%}</span>
+                            1,530,000
+                            <span class="ml-h">{%- include tools/icons.html icon="growth" -%}</span>
+                        </p>
+                        <p class="m-0 co-sweet-gray pico-caps">TOTAL CHANGE DISBURSED</p>
+                    </li>
+                </ul>
+                
+                <section class="mt-2">
+                    {%- include components/tables/transactions.html-%}
+                </section>
+            </div>
+            
+            <!-- <div>
+                <a href="" class="primarytext d-flx al-i-c">
+                    {%- include tools/icons.html icon="arrow-left" -%}
+                    <span class="suffix">Back</span>
+                </a>
+
+                <div class="pt-1h transactions-single-layout">
+                    <ul class="m-0 none transaction-details">
+                        <li class="d-flx al-i-c j-c-sb pb-1h">
+                            <div class="d-flx flx-dir-c">
+                                <h3 class="m-0 fw-medium nanotext">Total Amount</h3>
+                                <p class="m-0 fw-medium largetext mt-h">NG 56,000.00</p>
+                            </div>
+                    
+                            <div class="d-flx flx-dir-c">
+                                <h3 class="m-0 fw-medium nanotext">Status</h3>
+                                <div class="d-flx al-i-c fw-normal nanotext mt-h">
+                                    <span class="d-blk">{%- include tools/icons.html icon="success" -%}</span>
+                                    <span class="d-blk suffix co-green">Successful</span>
+                                </div>
+                            </div>
+                        </li>
+                    
+                        <li class="py-1 d-flx al-i-c j-c-sb flx-wrap border-top co-sweet-gray">
+                            <p class="m-0">Reference</p>
+                            <p class="m-0 co-black fw-medium">21ddc25x0mxhdu</p>
+                        </li>
+                    
+                        <li class="py-1 d-flx al-i-c j-c-sb flx-wrap border-top co-sweet-gray">
+                            <p class="m-0">Channel</p>
+                            <p class="m-0 co-black fw-medium">Card</p>
+                        </li>
+                    
+                        <li class="py-1 d-flx al-i-c j-c-sb flx-wrap border-top co-sweet-gray">
+                            <p class="m-0">Till</p>
+                            <p class="m-0 co-black fw-medium">Adeniji Bola</p>
+                        </li>
+                    
+                        <li class="py-1 d-flx al-i-c j-c-sb flx-wrap border-top co-sweet-gray">
+                            <p class="m-0">Customer mobile</p>
+                            <p class="m-0 co-black fw-medium">08100834742</p>
+                        </li>
+                    
+                        <li class="py-1 d-flx al-i-c j-c-sb flx-wrap border-top co-sweet-gray">
+                            <p class="m-0">Branch</p>
+                            <p class="m-0 co-black fw-medium">Maryland Mall</p>
+                        </li>
+                    
+                        <li class="py-1 d-flx al-i-c j-c-sb flx-wrap border-top co-sweet-gray">
+                            <p class="m-0">Time</p>
+                            <p class="m-0 co-black fw-medium">Thursday, February 7, 2019 6:40 PM</p>
+                        </li>
+                    
+                        <li class="py-1 d-flx al-i-c j-c-sb flx-wrap border-top co-sweet-gray">
+                            <p class="m-0">Amount received</p>
+                            <p class="m-0 co-black fw-medium">11,900</p>
+                        </li>
+                    
+                        <li class="py-1 d-flx al-i-c j-c-sb border-top co-sweet-gray">
+                            <p class="m-0">Change amount</p>
+                            <p class="m-0 co-black fw-medium">500</p>
+                        </li>
+                    
+                        <li class="py-1 d-flx al-i-c j-c-sb border-top co-sweet-gray">
+                            <p class="m-0">Change type</p>
+                            <p class="m-0 co-black fw-medium">Eyowo</p>
+                        </li>
+                    </ul>
+
+                    <div class="borderline inline-shadow preferred-radius mt-1 bg-white pt-1h transaction-overview">
+                        <h3 class="m-0 none co-black mediumtext fw-normal pt-h pb-1 px-1h bg-white">Items Purchased</h3>
+
+                        {%- include components/tables/transactions-single.html-%}
+                    </div>
+                </div>
+
+            </div> -->
+    </div>
 </section>
+    
+    
+    
+    

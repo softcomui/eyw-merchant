@@ -3,7 +3,7 @@
     <div class="d-flx al-i-c j-c-sb">
         <a href="" class="primarytext d-flx al-i-c">
             {%- include tools/icons.html icon="arrow-left" -%}
-            Back
+            <span class="suffix">Back</span>
         </a>
         {%- include components/dropdown.html dropdown="business-dropdown" -%}
     </div>
@@ -12,9 +12,15 @@
 
     {%- include single-business/branches/single-branch/branch-overview.html -%}
 
-    {%- include single-business/branches/single-branch/branch-table.html -%}
-
-    {%- include single-business/branches/single-branch/branch-tills.html -%}
+    <div class="pt-1h">
+        <div class="d-flx al-i-c j-c-sb">
+            <h3 class="fw-medium m-0 mt-h smalltext co-black">Transaction history</h3>
+            <button class="btn btn-badge btn-dark p-0 mt-h d-flx al-i-c ">
+                <span class="prefix">{%- include tools/icons.html icon="downloads" -%}</span>
+                <span>EXPORT CSV</span>
+            </button>
+        </div>
+        
+        {%- include single-business/branches/single-branch/branch-table.html -%}
+    </div>
 </section>
-
-{%- include components/modals/add-till.html -%}

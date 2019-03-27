@@ -22,10 +22,6 @@ layout: default
                 </a>
             {%- endif -%}
 
-            {%- if page.step_progress_bar -%}
-                {%- include components/progress-meter.html  -%}
-            {%- endif -%}
-
             {%- if page.progress_indicator -%}
                 <p class="m-0 mediumtext co-primary fw-medium mt-3 pb-h">{{ page.progress_indicator }}</p>
             {%- endif -%}

@@ -1,14 +1,28 @@
 <nav class="bg-white show-largeup is-raised nanotext z-depth-3 navigation">
     <h2 class="sr">Desktop Navigation</h2>
-    <div class="d-flx j-c-sb al-i-c wrapper-x maxwidth-xl mx-auto">
-        <a href=" {{ site.url }}" class="logo-holder show-xlargeup">
-           {%- include tools/icons.html icon="logo" -%}
-        </a> 
-        <a href=" {{ site.url }}" class="logo-holder hide-xlargeup">
+    <div class="d-flx flx-dir-c j-c-sb height-100-pc wrapper-x mainnav">
+        <div class="d-flx j-c-sb al-i-c height-100-pc">
+            <a href=" {{ site.url }}" class="logo-holder show-xlargeup">
             {%- include tools/icons.html icon="logo" -%}
-        </a> 
+            </a> 
+            <a href=" {{ site.url }}" class="logo-holder hide-xlargeup">
+                {%- include tools/icons.html icon="logo" -%}
+            </a> 
 
-        <div class="d-flx al-i-c">
+
+            <button class="d-flx al-i-c p-0 suffix is-wider">
+                <div class="avatar is-nano">
+                    <img src="{{ site.url }}/uploads/onboarding.jpeg" alt="" class="width-100-pc height-100-pc avatar is-nano">
+                </div>
+                
+                <div class="d-iflx al-i-c co-readable-gray nanotext suffix">
+                    Jaykay S.
+                    <span class="suffix">{%- include tools/icons.html icon="arrow-dropdown" -%}</span>
+                </div>
+            </button>
+        </div>
+
+        <!-- <div class="d-flx al-i-c">
             {%- include components/buttons.html buttons="premium"-%}
             <button class="d-flx al-i-c p-0 suffix is-even-wider">
                 <div class="avatar is-nano">
@@ -20,7 +34,7 @@
                     <span class="suffix">{%- include tools/icons.html icon="arrow-dropdown" -%}</span>
                 </div>
             </button>
-        </div>
+        </div> -->
     </div>
 </nav>
 

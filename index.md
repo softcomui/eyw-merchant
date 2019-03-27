@@ -1,3 +1,3 @@
 ---
-layout: dashboard-filled
+layout: overview
 ---

@@ -4,9 +4,26 @@ layout: default
 
 <div class="page-layout">
     <div class="sidebar-navigation show-mediumup"> 
-        <div class="d-flx al-i-c j-c-sb co-rich-black your-business">
-            <h2 class="m-0 smalltext fw-medium">Obiwezy Gadgets</h2>
-            {%- include tools/icons.html icon="chevron-down" -%}
+        <div class="pos-rel your-business">
+            <button class="d-flx al-i-c j-c-sb co-black width-100-pc height-100-pc px-1h bg-transparent">
+                <h2 class="m-0 smalltext co-black">Obiwezy Gadgets</h2>
+                {%- include tools/icons.html icon="chevron-down" -%}
+            </button>
+            <div uk-dropdown="pos: bottom-center; mode: click" class="bg-platinum px-1h your-business-dropdown">
+                <ul class="none m-0">
+                    <li class="border-bottom pt-1 pb-1 co-black smalltext ff-heading">
+                        Obiwezy Furnitures
+                    </li>
+                </ul>
+
+                <button class="btn btn-nostling co-black"  type="button" uk-toggle="target: #add-business">
+                    <span class="btn btn-dark px-h py-h"  type="button">
+                        {%- include tools/icons.html icon="plus" -%}
+                    </span>
+                    <span class="ml-h fw-medium nanofont">Add a Business</span>
+                </button>
+
+            </div>
         </div>
         
         <div class="pt-2 pb-2">
@@ -14,10 +31,10 @@ layout: default
             <div class="navigation-section">
                 {%- assign class = nil -%}
                 {%- assign url = page.url | remove: 'index.html' -%}
-                {%- if url == '/overview/' -%}
+                {%- if url == '/' -%}
                     {%- assign class = class | append: 'is-active' -%}
                 {%- endif -%}
-                <a href="{{ site.url }}/overview/" class="{{ class }} co-readable-gray">
+                <a href="{{ site.url }}" class="{{ class }} co-readable-gray">
                     {%- include tools/icons.html icon="overview" -%}
                     <span class="suffix d-blk width-100-pc">Overview</span>
                 </a>
@@ -105,7 +122,7 @@ layout: default
         {%- include shell/logobar.html -%}
         <main>
             <div class="is-page">
-                <div class="content-wrap maxwidth-xl mx-auto wrapper-x">
+                <div class="content-wrap wrapper-x">
                     <!-- <div class="width-100-pc bg-primary">
                         <div class="mx-auto maxwidth-sl wrapper-x">
                             <div class="d-flx al-i-c j-c-sb py-1h">
@@ -125,3 +142,6 @@ layout: default
         </main>
     </div>
 </div>
+
+
+{%- include components/modals/add-business.html -%}

@@ -1,0 +1,41 @@
+<div class="uk-overflow-auto preferred-radius borderline">
+    <table class="uk-table uk-table-striped">
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>Reference</th>
+                <th>Customer mobile</th>
+                <th>Branch</th>
+                <th>Amount</th>
+                <th>Channel</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%- for entry in site.data.table.transactions -%}
+            <tr>
+                <td>
+                    <div class="d-flx al-i-c">
+                        <span class="d-blk">
+                            {%- if entry.status == "Success" -%}
+                                {%- include tools/icons.html icon="success" -%}
+                            {%- elsif entry.status == "Failed" -%}
+                                {%- include tools/icons.html icon="failed" -%}
+                            {%- elsif entry.status == "Pending" -%}
+                                {%- include tools/icons.html icon="pending" -%}
+                            {%- endif -%}
+                        </span>
+                        <span class="d-blk suffix">{{ entry.status }}</span>
+                    </div>
+                </td>
+                <td>{{ entry.reference }}</td>
+                <td>{{ entry.mobile }}</td>
+                <td>{{ entry.branch }}</td>
+                <td>{{ entry.amount }}</td>
+                <td>{{ entry.channel }}</td>
+                <td>{{ entry.date }}</td>
+            </tr>
+            {%- endfor -%}
+        </tbody>
+    </table>
+</div>
