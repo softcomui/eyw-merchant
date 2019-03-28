@@ -18,22 +18,260 @@ layout: page
         {% endfor %}
         </ul>
             
-        <ul class="uk-switcher px-1h py-1h">
+        <ul class="uk-switcher px-2 py-2">
             <li>
-                <section class="float-wrap d-flx-md">
-                    <div class="inline-shadow borderline py-1 pl-1 pr-h preferred-radius bg-white float-item classic-card">
-                        <p class="fw-medium m-0 largetext">16</p>
-                        <p class="m-0 co-sweet-gray pico-caps">Products</p>
+                <!-- <div>
+                    <section class="float-wrap d-flx-md">
+                        <div class="inline-shadow borderline py-1 pl-1 pr-h preferred-radius bg-white float-item classic-card">
+                            <p class="fw-medium m-0 largetext">16</p>
+                            <p class="m-0 co-sweet-gray pico-caps">Products</p>
+                        </div>
+                    
+                        <div class="inline-shadow borderline py-1 pl-1 pr-h preferred-radius bg-white float-item classic-card">
+                            <p class="fw-medium m-0 largetext">16</p>
+                            <p class="m-0 co-sweet-gray pico-caps">Nearby Products</p>
+                        </div>
+                    </section>
+                    
+                    <section class="mt-2">
+                        <label for="business-summary" class="">Show products in </label>
+                        <div class="pt-h d-flx-xlg al-i-c j-c-sb">
+                            <div class="float-wrap d-flx-md">
+                                <div class="float-item">
+                                    <div class="uk-inline width-100-pc pos-rel">
+                                        <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
+                                            All branches
+                                            <a href="" class="co-sweet-gray">
+                                                {%- include tools/icons.html icon="dropdown" -%}
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="pos-rel input-icons search-input my-h float-item">
+                                    {%- include tools/icons.html icon="search" -%}
+                                    <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search product">
+                                </div>
+                            </div>
+                            
+                            <div class="d-flx-md al-i-c">
+                                <div class="prefix is-wider d-flx al-i-c mt-h-for-filter">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="product1" checked>
+                                        <label class="onoffswitch-label" for="product1"></label>
+                                    </div>
+                                    <span class="suffix is-wider co-black ff-heading">Enable Nearby</span>
+                                </div>
+                                <button class="btn btn-dark btn-badge mt-h-for-filter">
+                                    + CREATE PRODUCTS
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="mt-2">
+                        {%- include components/tables/products.html-%}
+                    </section>
+                </div> -->
+
+                <div>
+                    <a href="" class="primarytext d-flx al-i-c">
+                        {%- include tools/icons.html icon="arrow-left" -%}
+                        <span class="suffix">Back</span>
+                    </a>
+                    
+                    <div class="border-bottom pt-1h d-flx al-i-c j-c-sb flx-wrap">
+                        <h3 class="m-0 fw-normal after-border mediumtext pb-h">Create product</h3>
+
+                        <div class="pb-h">
+                            <a href="" class="primarytext">+ Import products</a>
+
+                            <span class="suffix prefix primarytext">or</span>
+
+                            <a href="" class="primarytext">Download CSV Sample</a>
+                        </div>
                     </div>
+
+                    <section class="mt-1h">
+                        <h3 class="m-0 nanotext fw-medium co-black">Details</h3>
+
+                        <div class="mt-1 stock-details-layout">
+                            <div class="bg-platinum dashed-border edit-product">
+                                <a href="" class="d-flx al-i-c flx-dir-c height-100-pc width-100-pc py-1 px-1h">
+                                    <span class="thumbnail is-nano">
+                                        <img src="{{site.url}}/uploads/galaxy-s8-plus.png" alt="" class="height-100-pc obj-fit-contain">
+                                    </span>
+                                    <span class="co-primary underline mt-h fw-normal">Edit</span>
+                                </a>
+                            </div>
+
+                            <div class="three-grid-float">
+                                <div class="d-flx flx-dir-c float-item">
+                                    <label for="name" class="mb-h co-sweet-gray">Name</label>
+                                    <input type="text" name="name" id="name" class="px-h" placeholder="Samsung S8 (Ash)">
+                                </div>
+                                
+                                <div class="d-flx flx-dir-c float-item">
+                                    <label for="branches" class="mb-h co-sweet-gray">Branches</label>
+                                    <button class="input tx-l co-primary px-1" uk-toggle="target: #edit-branches">All locations</button>
+                                </div>
+                                
+                                <div class="d-flx flx-dir-c float-item">
+                                    <label for="ussd-code" class="mb-h co-sweet-gray">USSD Code</label>
+                                    <input type="text" name="ussd-code" id="ussd-code" class="px-h" placeholder="*4255*50*5*2#">
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+                    <section class="mt-2 mb-1">
+                        <h3 class="m-0 nanotext fw-medium co-black">Price and Inventory </h3>
+
+                        <div class="three-grid-float mt-h">
+                            
+                            <div class="d-flx flx-dir-c float-item without-top-spacing">
+                                <label for="price" class="mb-h co-sweet-gray">Price</label>
+                                <input type="text" name="price" id="price" class="px-h">
+                            </div>
                 
-                    <div class="inline-shadow borderline py-1 pl-1 pr-h preferred-radius bg-white float-item classic-card">
-                        <p class="fw-medium m-0 largetext">16</p>
-                        <p class="m-0 co-sweet-gray pico-caps">Nearby Products</p>
+                            <div class="d-flx flx-dir-c float-item without-top-spacing">
+                                <label for="sku" class="mb-h co-sweet-gray">SKU</label>
+                                <input type="text" name="sku" id="sku" class="px-h" placeholder="SKU">
+                            </div>
+
+                            <div class="d-flx flx-dir-c float-item without-top-spacing">
+                                <label for="discount" class="mb-h co-sweet-gray">Discount</label>
+                                <input type="text" name="discount" id="discount" class="px-h" placeholder="₦0.00">
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <div>
+                        <div class="pb-2 two-grid-float">
+                            <label class="float-item"><input class="uk-radio" type="radio" name="radio2" checked>Track Inventory for this product by business</label>
+                            <label class="float-item"><input class="uk-radio" type="radio" name="radio2"> Track Inventory for this product by branch</label>
+                        </div>
+
+                        <!-- Track by Business -->
+                        <div class="pb-2">
+                            <div class="three-grid-float">
+                            
+                                <p class="fw-normal nanotext ff-heading co-black float-item without-top-spacing">Branch</p>
+                                <p class="fw-normal nanotext ff-heading co-black float-item without-top-spacing">Current Inventory</p>
+                                <p class="fw-normal nanotext ff-heading co-black float-item without-top-spacing">Low stock alert</p>
+                                
+                            
+                            </div>
+                            
+                            <div class="mt-h pt-1h border-top">
+                            
+                                <div class="three-grid-float">
+                                    <p class="fw-normal nanotext fw-normal ff-body float-item without-top-spacing">Ikeja city mall</p>
+                            
+                                    <div class="float-item without-top-spacing">
+                                        <input type="text" name="sku" id="sku" class="px-h" placeholder="SKU">
+                                        <span class="co-primary underline mt-h primarytext ff-body fw-normal">Apply to all</span>
+                                    </div>
+                            
+                                    <div class="float-item without-top-spacing">
+                                        <input type="text" name="discount" id="discount" class="px-h" placeholder="₦0.00">
+                                        <span class="co-primary underline mt-h primarytext ff-body fw-normal">Apply to all</span>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="mt-1h pt-1h border-top">
+                            
+                                <div class="three-grid-float">
+                                    <p class="fw-normal nanotext fw-normal ff-body float-item without-top-spacing">Ikeja city mall</p>
+                            
+                                    <div class="float-item without-top-spacing">
+                                        <input type="text" name="sku" id="sku" class="px-h" placeholder="SKU">
+                                    </div>
+                            
+                                    <div class="float-item without-top-spacing">
+                                        <input type="text" name="discount" id="discount" class="px-h" placeholder="₦0.00">
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="mt-1h pt-1h border-top">
+                            
+                                <div class="three-grid-float">
+                                    <p class="fw-normal nanotext fw-normal ff-body float-item without-top-spacing">Ikeja city mall</p>
+                            
+                                    <div class="float-item without-top-spacing">
+                                        <input type="text" name="sku" id="sku" class="px-h" placeholder="SKU">
+                                    </div>
+                            
+                                    <div class="float-item without-top-spacing">
+                                        <input type="text" name="discount" id="discount" class="px-h" placeholder="₦0.00">
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            
+                            <div class="mt-1h pt-1h border-top">
+                            
+                                <div class="three-grid-float">
+                                    <p class="fw-normal nanotext fw-normal ff-body float-item without-top-spacing">Ikeja city mall</p>
+                            
+                                    <div class="float-item without-top-spacing">
+                                        <input type="text" name="sku" id="sku" class="px-h" placeholder="SKU">
+                                    </div>
+                            
+                                    <div class="float-item without-top-spacing">
+                                        <input type="text" name="discount" id="discount" class="px-h" placeholder="₦0.00">
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+
+                        <!-- Track by branch -->
+                        <!-- <div class="pb-2">
+                            <div class="three-grid-float">
+                            
+                                <p class="fw-normal nanotext ff-heading co-black float-item without-top-spacing">Branch</p>
+                                <p class="fw-normal nanotext ff-heading co-black float-item without-top-spacing">Current Inventory</p>
+                                <p class="fw-normal nanotext ff-heading co-black float-item without-top-spacing">Low stock alert</p>
+                                
+                            
+                            </div>
+                            
+                            
+                            <div class="mt-1h pt-1h border-top">
+                            
+                                <div class="three-grid-float">
+                                    <p class="fw-normal nanotext fw-normal ff-body float-item without-top-spacing">Obiwezy gadgets</p>
+                            
+                                    <div class="float-item without-top-spacing">
+                                        <input type="text" name="sku" id="sku" class="px-h" placeholder="SKU">
+                                    </div>
+                            
+                                    <div class="float-item without-top-spacing">
+                                        <input type="text" name="discount" id="discount" class="px-h" placeholder="₦0.00">
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            
+                        </div> -->
+
+                        <div class="pt-2 d-flx al-i-c">
+                            <a href="" class="btn btn-standard">DELETE</a>
+    
+                            <a href="" class="btn btn-standard btn-dark suffix is-wider">SAVE</a>
+                        </div>
                     </div>
-                </section>
-                
-                <section class="mt-2">
-                    <label for="business-summary" class="">Show products in </label>
+                </div>
+            </li>
+            <li>
+                <!-- <div>
                     <div class="pt-h d-flx-xlg al-i-c j-c-sb">
                         <div class="float-wrap d-flx-md">
                             <div class="float-item">
@@ -48,84 +286,119 @@ layout: page
                             </div>
                             <div class="pos-rel input-icons search-input my-h float-item">
                                 {%- include tools/icons.html icon="search" -%}
-                                <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search product">
+                                <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search discounts">
                             </div>
                         </div>
                         
-                        <div class="d-flx-md al-i-c">
-                            <div class="prefix is-wider d-flx al-i-c mt-h-for-filter">
-                                <div class="onoffswitch">
-                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="product1" checked>
-                                    <label class="onoffswitch-label" for="product1"></label>
+                        <button class="btn btn-dark btn-badge mt-h-for-filter" uk-toggle="target: #create-discounts">+ CREATE DISCOUNTS</button>
+                    </div>
+                    
+                    {%- include components/modals/create-discounts.html -%}
+                    
+                    <section class="mt-2">
+                        {%- include components/tables/discount.html-%}
+                    </section>
+                </div> -->
+
+               <div>
+                    <a href="" class="primarytext d-flx al-i-c">
+                        {%- include tools/icons.html icon="arrow-left" -%}
+                        <span class="suffix">Back</span>
+                    </a>
+
+                    <div class="border-bottom pb-h pt-1h">
+                        <h3 class="m-0 fw-normal after-border mediumtext">Edit Discount</h3>
+                    </div>
+
+                    <div class="three-grid-float">
+                        <div class="d-flx flx-dir-c float-item">
+                            <label for="name" class="mb-h">Name</label>
+                            <input type="text" name="name" id="name" class="px-h" autofocus>
+                        </div>
+            
+                        <div class="d-flx flx-dir-c float-item">
+                            <label for="amount" class="mb-h">Amount</label>
+                            <input type="text" name="amount" id="amount" class="px-h"  class="co-primary">
+                        </div>
+            
+                        <div class="d-flx flx-dir-c float-item">
+                            <label for="branches" class="mb-h">Branches</label>
+                            <button class="input tx-l co-primary px-1" uk-toggle="target: #edit-branches">3 branches</button>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 d-flx al-i-c">
+                        <a href="" class="btn btn-standard">DELETE</a>
+
+                        <a href="" class="btn btn-standard btn-dark suffix is-wider">SAVE</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="pt-h d-flx-xlg al-i-c j-c-sb">
+                        <div class="float-wrap d-flx-md">
+                            <div class="float-item">
+                                <div class="uk-inline width-100-pc pos-rel">
+                                    <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
+                                        All branches
+                                        <a href="" class="co-sweet-gray">
+                                            {%- include tools/icons.html icon="dropdown" -%}
+                                        </a>
+                                    </button>
                                 </div>
-                                <span class="suffix is-wider co-black ff-heading">Enable Nearby</span>
                             </div>
-                            <button class="btn btn-dark btn-badge mt-h-for-filter">
-                                + CREATE PRODUCTS
-                            </button>
-                        </div>
-                    </div>
-                </section>
-                
-                <section class="mt-2">
-                    {%- include components/tables/products.html-%}
-                </section>
-            </li>
-            <li>
-                <div class="pt-h d-flx-xlg al-i-c j-c-sb">
-                    <div class="float-wrap d-flx-md">
-                        <div class="float-item">
-                            <div class="uk-inline width-100-pc pos-rel">
-                                <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
-                                    All branches
-                                    <a href="" class="co-sweet-gray">
-                                        {%- include tools/icons.html icon="dropdown" -%}
-                                    </a>
-                                </button>
+                            <div class="pos-rel input-icons search-input my-h float-item">
+                                {%- include tools/icons.html icon="search" -%}
+                                <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search taxes">
                             </div>
                         </div>
-                        <div class="pos-rel input-icons search-input my-h float-item">
-                            {%- include tools/icons.html icon="search" -%}
-                            <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search discounts">
-                        </div>
+                        
+                        <button class="btn btn-dark btn-badge mt-h-for-filter" uk-toggle="target: #create-tax">+ CREATE TAX</button>
                     </div>
                     
-                    <button class="btn btn-dark btn-badge mt-h-for-filter" uk-toggle="target: #create-discounts">+ CREATE DISCOUNTS</button>
+                    {%- include components/modals/create-tax.html -%}
+                    
+                    <section class="pt-1">
+                        {%- include components/tables/taxes.html-%}
+                    </section>
                 </div>
-
-                {%- include components/modals/create-discounts.html -%}
                 
-                <section class="mt-2">
-                    {%- include components/tables/discount.html-%}
-                </section>
-            </li>
-            <li>
-                <div class="pt-h d-flx-xlg al-i-c j-c-sb">
-                    <div class="float-wrap d-flx-md">
-                        <div class="float-item">
-                            <div class="uk-inline width-100-pc pos-rel">
-                                <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
-                                    All branches
-                                    <a href="" class="co-sweet-gray">
-                                        {%- include tools/icons.html icon="dropdown" -%}
-                                    </a>
-                                </button>
-                            </div>
+                <!-- <div>
+                    <a href="" class="primarytext d-flx al-i-c">
+                        {%- include tools/icons.html icon="arrow-left" -%}
+                        <span class="suffix">Back</span>
+                    </a>
+
+                    <div class="border-bottom pb-h pt-1h">
+                        <h3 class="m-0 fw-normal after-border mediumtext">Edit Tax</h3>
+                    </div>
+
+                    <div class="three-grid-float">
+                        <div class="d-flx flx-dir-c float-item">
+                            <label for="name" class="mb-h">Name</label>
+                            <input type="text" name="name" id="name" class="px-h" autofocus>
                         </div>
-                        <div class="pos-rel input-icons search-input my-h float-item">
-                            {%- include tools/icons.html icon="search" -%}
-                            <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search taxes">
+            
+                        <div class="d-flx flx-dir-c float-item">
+                            <label for="percentage" class="mb-h">Percentage</label>
+                            <input type="text" name="percentage" id="percentage" class="px-h"  class="co-primary">
+                        </div>
+            
+                        <div class="d-flx flx-dir-c float-item">
+                            <label for="branches" class="mb-h">Branches</label>
+                            <button class="input tx-l co-primary px-1" uk-toggle="target: #edit-branches">3 branches</button>
                         </div>
                     </div>
-                    
-                    <button class="btn btn-dark btn-badge mt-h-for-filter" uk-toggle="target: #create-tax">+ CREATE TAX</button>
-                </div>
 
-                {%- include components/modals/create-tax.html -%}
-                
-                <section class="pt-1">
-                    {%- include components/tables/taxes.html-%}
-                </section>
+                    {%- include components/modals/edit-branches.html -%}
+
+                    <div class="pt-2 d-flx al-i-c">
+                        <a href="" class="btn btn-standard">DELETE</a>
+
+                        <a href="" class="btn btn-standard btn-dark suffix is-wider">SAVE</a>
+                    </div>
+                </div> -->
             </li>
         </ul>
     </div>

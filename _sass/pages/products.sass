@@ -1,3 +1,25 @@
+
+// Products Stock Page
+.stock-details-layout
+    @media #{ $largeup }
+        display: flex
+        align-items: flex-end
+
+    .three-grid-float
+        margin: 0
+        @media #{ $mediumup }
+            margin-left: -10px
+            margin-right: -10px
+        @media #{ $largeup }
+            width: calc(100% - 100px)
+
+    .edit-product
+        width: 100%
+        @media #{$largeup}
+            max-width: 100px
+            margin-right: 40px
+    
+    
 .bill-by-products
     @media #{ $mediumup}
         display: flex

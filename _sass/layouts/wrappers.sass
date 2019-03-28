@@ -92,7 +92,7 @@
         width: 100%
         float: left
         margin: 0 0 20px 0
-        @media #{ $mediumup}
+        @media #{ $largeup}
             margin: 0 10px
             width: auto
         &:last-child
@@ -101,6 +101,28 @@
                 margin: 0 10px
         &.button
             width: 150px
+
+.two-grid-float
+    margin: 0
+    @media #{ $mediumup}
+        margin: 0 -10px
+    @media #{ $largeup}
+        margin: 0 -20px
+    &:after
+        content: ""
+        display: block
+        clear: both
+    
+    .float-item
+        margin-top: 1.5rem
+        @media #{ $mediumup}
+            float: left
+            margin: 2rem 10px 0
+        @media #{ $largeup}
+            margin: 2rem 20px 0
+        &.without-top-spacing
+            @media #{ $largeup}
+                margin-top: 0
 
 .three-grid-float
     margin: 0
@@ -122,6 +144,9 @@
         @media #{ $largeup}
             margin: 2rem 20px 0
             width: calc(33.33% - 40px)
+        &.without-top-spacing
+            @media #{ $largeup}
+                margin-top: 0
 
 .four-grid-float
     margin: 0
@@ -140,6 +165,9 @@
             margin-top: 1.5rem
         @media #{ $xlargeup}
             width: calc(25% - 32px)
+        &.without-top-spacing
+            @media #{ $largeup}
+                margin-top: 0
 
 
 .five-grid-float
