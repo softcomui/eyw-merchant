@@ -1,0 +1,51 @@
+<section id="create-user" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <div class="d-flx al-i-c j-c-sb pb-h border-bottom">
+            <h3 class="m-0 fw-normal after-border">Cretate User</h3>
+            <button class="uk-modal-close-default without-abs-pos" type="button">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </button>
+        </div>
+        
+        <div class="grid is-multi-col al-i-c mostly-2 pt-1h">
+            <div class="d-flx flx-dir-c">
+                <label for="phone-number" class="mb-h">Phone Number</label>
+                <input type="tel" name="phone-number" id="phone-number" class="px-h" autofocus>
+            </div>
+
+            <div class="d-flx flx-dir-c">
+                <label for="email" class="mb-h">Email Address</label>
+                <input type="email" name="email" id="email" class="px-h">
+            </div>
+
+            <div class="d-flx flx-dir-c">
+                <label for="business-name" class="mt-h mb-h">Select Location</label>
+                <div class="uk-inline pos-rel">
+                    <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
+                        Select location
+                        <a href="" class="co-sweet-gray">
+                            {%- include tools/icons.html icon="arrow-dropdown" -%}
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="d-flx flx-dir-c">
+                <label for="business-name" class="mt-h mb-h">Role</label>
+                <div class="uk-inline pos-rel">
+                    <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
+                        Select role
+                        <a href="" class="co-sweet-gray">
+                            {%- include tools/icons.html icon="arrow-dropdown" -%}
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-2">
+            <a href="" class="btn btn-standard btn-dark">CREATE USER</a>
+        </div>
+    </div>
+</section>

@@ -3,5 +3,28 @@ layout: page
 ---
 
 <section class="bg-white borderline inline-shadow section">
-    {%- include components/tabs/account_tab.html -%} 
+    
+    <ul uk-tab class="m-0 tabs">
+        {% for entry in site.data.tabs.account %}
+            <li class="tab px-1 pt-1 pb-h">
+                <a href="tab px-1h py-1">{{ entry.tab-item }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+        
+        <ul class="uk-switcher px-2 py-2">
+            <li class="">
+            {%- include account/settings.html -%}
+            </li>
+            <li>
+            {%- include account/team.html -%}
+            </li>
+            <li>
+            {%- include account/subscription.html -%}
+            </li>
+            <li>
+            {%- include account/danger.html -%}
+            </li>
+        </ul>
+
 </section>

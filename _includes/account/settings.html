@@ -1,50 +1,63 @@
 <section>
-    <div class="d-flx al-i-c j-c-sb">
-        <h3 class="fw-normal smalltext m-0 pb-1">General Information</h3>
-        <a href="{{site.url}}/login" class="co-red picotext prefix is-xsmall d-flx al-i-c">
-            {%- include tools/icons.html icon="logout" -%}
-            Logout
-        </a>
-    </div>
+    <h3 class="fw-normal smalltext m-0 pb-1">General Information</h3>
     <p class="nanotext m-0">Here you can edit your business information.
         <span class="d-blk">Contact us at <a href="mailto:support@eyowo.com">support@eyowo.com</a> incase you need any help.</span>
     </p>
 
-    <div class="grid is-multi-col mostly-3 py-1">
-        <div class="d-flx flx-dir-c">
-            <label for="business-name" class="mt-h mb-h picotext">Business name</label>
-            <input type="text" name="business-name" id="business-name" value="ObiweezyGadget Ltd" class="px-h">
+    <div class="three-grid-float d-flx-md al-i-fe flx-wrap">
+        <div class="d-flx flx-dir-c float-item">
+            <label for="business-name" class="mb-h">Business name</label>
+            <input type="text" name="business-name" id="business-name" value="ObiweezyGadget Ltd" class="px-h" autofocus>
         </div>
-        {%- include components/input-fields.html input_fields="phone-input" -%} 
-        <div class="d-flx flx-dir-c">
-            <label for="email-address" class="mt-h mb-h picotext">Email address</label>
+        <div class="d-flx flx-dir-c float-item">
+            <label for="phone-number" class="mb-h">Phone number</label>
+            <input type="tel" name="phone-number" id="phone-number" value="ObiweezyGadget Ltd" class="px-h">
+        </div>
+        <div class="d-flx flx-dir-c float-item">
+            <label for="email-address" class="mb-h">Email address</label>
             <input type="email" name="email-address" id="email-address" value="obiweezy@phone.com" class="px-h">
         </div>
-        <div class="d-flx flx-dir-c">
-            <label for="business-address" class="mt-h mb-h picotext">Business address</label>
+        <div class="d-flx flx-dir-c float-item">
+            <label for="business-address" class="mb-h">Business address</label>
             <input type="text" name="business-address" id="business-address" value="43 computer village, Ikeja Lagos" class="px-h">
         </div>
-        <div class="d-flx flx-dir-c">
-            <label for="user-role" class="mt-h mb-h picotext">User role</label>
+        <div class="d-flx flx-dir-c float-item">
+            <label for="user-role" class="mb-h">User role</label>
             <input type="text" name="user-role" id="user-role" value="Super Admin" class="px-h" disabled>
         </div>
+
+        <div class="float-item">
+            <button class="btn btn-badge btn-big btn-dark p-0">Save Changes</button>
+        </div>
     </div>
 
-    <div>
-        <h3 class="fw-normal smalltext m-0 pt-h pb-1">Security</h3>
-        <div class="grid is-multi-col mostly-2 pb-1">
-            <div class="d-flx flx-dir-c">
-                <label for="current-pin" class="mt-h mb-h picotext">Current pin</label>
+    <div class="mt-2 border-top pt-2">
+        <h3 class="fw-normal mediumtext m-0">Security</h3>
+        <div class="three-grid-float d-flx-md al-i-fe flx-wrap">
+            <div class="d-flx flx-dir-c float-item mt-0">
+                <label for="current-pin" class="mb-h">Current pin</label>
                 <input type="text" name="current-pin" id="current-pin" class="px-h" autofocus placeholder="Enter current pin">
             </div>
-            <div class="d-flx flx-dir-c">
-                <label for="new-pin" class="mt-h mb-h picotext">New pin</label>
+            <div class="d-flx flx-dir-c float-item mt-0">
+                <label for="new-pin" class="mb-h">New pin</label>
                 <input type="tel" name="new-pin" id="new-pin" class="px-h" placeholder="Enter new pin">
+            </div>
+            <div class="float-item without-top-spacing">
+                <button class="btn btn-badge btn-big btn-dark p-0">Save Changes</button>
             </div>
         </div>
     </div>
 
-    <div class="d-flx j-c-fe pt-2 pb-1">
-        {%- include components/buttons.html buttons="active-big" -%}
+    <div class="mt-2 border-top pt-2">
+        <h3 class="fw-normal mediumtext m-0">Eyowo Account</h3>
+        <div class="three-grid-float d-flx-md al-i-fe">
+            <div class="d-flx flx-dir-c float-item mt-0">
+                <label for="current-pin" class="mb-h">Eyowo Phone number</label>
+                <input type="text" name="current-pin" id="current-pin" class="px-h" autofocus placeholder="Enter Eyowo Phone number">
+            </div>
+            <div class="float-item without-top-spacing">
+                <button class="btn btn-badge btn-big btn-dark p-0">SUBMIT</button>
+            </div>
+        </div>
     </div>
 </section>

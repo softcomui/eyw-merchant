@@ -2,211 +2,379 @@
 layout: page
 ---
 
-<section class="bg-white borderline inline-shadow section px-1h py-1h">
-    <div class="pos-rel input-icons search-input my-h">
-        {%- include tools/icons.html icon="search" -%}
-        <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search product">
+<section class="section">
+    <h3 class="mediumtext m-0 fw-medium">Bill by Products</h3>
+
+    <div class="borderline inline-shadow preferred-radius mt-1 bg-white">
+        <!-- <div class="px-2 py-2">
+            <div class="pos-rel input-icons search-input my-h maxwidth-xxs">
+                {%- include tools/icons.html icon="search" -%}
+                <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search product">
+            </div>
+            
+            <section class="mt-2 bill-by-products">
+                <ul class="m-0 none products">
+            
+                    <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
+                        <div class="d-flx al-i-c">
+                            <div class="thumbnail is-micro">
+                                <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
+                            </div>
+                            <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
+                        </div>
+            
+                        <p class=" d-flx al-i-c co-black fw-bold m-0">
+                            {%- include tools/icons.html icon="naira" -%}
+                            <span>2,500</span>
+                        </p>
+                    </li>
+            
+                    <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
+                        <div class="d-flx al-i-c">
+                            <div class="thumbnail is-micro">
+                                <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
+                            </div>
+                            <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
+                        </div>
+            
+                        <p class=" d-flx al-i-c co-black fw-bold m-0">
+                            {%- include tools/icons.html icon="naira" -%}
+                            <span>2,500</span>
+                        </p>
+                    </li>
+            
+                    <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
+                        <div class="d-flx al-i-c">
+                            <div class="thumbnail is-micro">
+                                <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
+                            </div>
+                            <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
+                        </div>
+            
+                        <p class=" d-flx al-i-c co-black fw-bold m-0">
+                            {%- include tools/icons.html icon="naira" -%}
+                            <span>2,500</span>
+                        </p>
+                    </li>
+            
+            
+                    <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
+                        <div class="d-flx al-i-c">
+                            <div class="thumbnail is-micro">
+                                <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
+                            </div>
+                            <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
+                        </div>
+            
+                        <p class=" d-flx al-i-c co-black fw-bold m-0">
+                            {%- include tools/icons.html icon="naira" -%}
+                            <span>2,500</span>
+                        </p>
+                    </li>
+            
+                    <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
+                        <div class="d-flx al-i-c">
+                            <div class="thumbnail is-micro">
+                                <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
+                            </div>
+                            <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
+                        </div>
+            
+                        <p class=" d-flx al-i-c co-black fw-bold m-0">
+                            {%- include tools/icons.html icon="naira" -%}
+                            <span>2,500</span>
+                        </p>
+                    </li>
+            
+                    <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
+                        <div class="d-flx al-i-c">
+                            <div class="thumbnail is-micro">
+                                <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
+                            </div>
+                            <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
+                        </div>
+            
+                        <p class=" d-flx al-i-c co-black fw-bold m-0">
+                            {%- include tools/icons.html icon="naira" -%}
+                            <span>2,500</span>
+                        </p>
+                    </li>
+            
+                    <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
+                        <div class="d-flx al-i-c">
+                            <div class="thumbnail is-micro">
+                                <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
+                            </div>
+                            <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
+                        </div>
+            
+                        <p class=" d-flx al-i-c co-black fw-bold m-0">
+                            {%- include tools/icons.html icon="naira" -%}
+                            <span>2,500</span>
+                        </p>
+                    </li>
+                </ul>
+            
+                <div class="borderline billing bg-white borderline inline-shadow">
+                    <h3 class="m-0 fw-medium co-black nanotext border-bottom px-1h pt-1h pb-1">Selected Products</h3>
+            
+                    <ul uk-accordion class="m-0 none billing-list">
+                        <li class="pl-1h selected-products uk-accordion-item">
+                            <a class="uk-accordion-title d-flx al-i-c j-c-sb py-1" href="#">
+                                <div class="d-flx al-i-c">
+                                    <span class="co-really-gray">{%- include tools/icons.html icon="chevron-right" -%}</span>
+                                    <p class="m-0 ml-1 fw-medium nanotext co-black">1</p>
+                                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
+                                </div>
+                
+                                <div class="d-flx al-i-c pr-1h">
+                                    <p class="d-flx al-i-c co-black fw-medium m-0 prefix is-wider">
+                                        {%- include tools/icons.html icon="naira" -%}
+                                        <span>2,500</span>
+                                    </p>
+                                    <button class="p-0 mt--p3">{%- include tools/icons.html icon="rubbish-bin" -%}</button>
+                                </div>
+                            </a>
+                            <div class="m-0 uk-accordion-content pr-1h pb-1h d-flx al-i-c">
+                                <div class="pos-rel width-100-pc">
+                                    <label for="" class="primarytext co-sweet-gray">Quantity</label>
+                                    <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
+                                        All branches
+                                        <a href="" class="co-sweet-gray">
+                                            {%- include tools/icons.html icon="dropdown" -%}
+                                        </a>
+                                    </button>
+                                </div>
+            
+                                <div class="pos-rel width-100-pc suffix is-wider">
+                                    <label for="" class="primarytext co-sweet-gray">Discount</label>
+                                    <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
+                                        <a href="" class="co-sweet-gray d-flx j-c-fe height-100-pc width-100-pc">
+                                            {%- include tools/icons.html icon="dropdown" -%}
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pl-1h selected-products uk-accordion-item">
+                            <a class="uk-accordion-title d-flx al-i-c j-c-sb py-1" href="#">
+                                <div class="d-flx al-i-c">
+                                    <span class="co-really-gray">{%- include tools/icons.html icon="chevron-right" -%}</span>
+                                    <p class="m-0 ml-1 fw-medium nanotext co-black">1</p>
+                                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
+                                </div>
+                
+                                <div class="d-flx al-i-c pr-1h">
+                                    <p class="d-flx al-i-c co-black fw-medium m-0 prefix is-wider">
+                                        {%- include tools/icons.html icon="naira" -%}
+                                        <span>2,500</span>
+                                    </p>
+                                    <button class="p-0 mt--p3">{%- include tools/icons.html icon="rubbish-bin" -%}</button>
+                                </div>
+                            </a>
+                            <div class="m-0 uk-accordion-content pr-1h pb-1h d-flx al-i-c">
+                                <div class="pos-rel width-100-pc">
+                                    <label for="" class="primarytext co-sweet-gray">Quantity</label>
+                                    <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
+                                        All branches
+                                        <a href="" class="co-sweet-gray">
+                                            {%- include tools/icons.html icon="dropdown" -%}
+                                        </a>
+                                    </button>
+                                </div>
+            
+                                <div class="pos-rel width-100-pc suffix is-wider">
+                                    <label for="" class="primarytext co-sweet-gray">Discount</label>
+                                    <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
+                                        <a href="" class="co-sweet-gray d-flx j-c-fe height-100-pc width-100-pc">
+                                            {%- include tools/icons.html icon="dropdown" -%}
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="uk-open selected-products pl-1h uk-accordion-item">
+                            <a class="uk-accordion-title d-flx al-i-c j-c-sb py-1" href="#">
+                                <div class="d-flx al-i-c">
+                                    <span class="co-really-gray pl-hh">{%- include tools/icons.html icon="chevron-down" -%}</span>
+                                    <p class="m-0 ml-1 fw-medium nanotext co-black">1</p>
+                                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
+                                </div>
+                
+                                <div class="d-flx al-i-c pr-1h">
+                                    <p class="d-flx al-i-c co-black fw-medium m-0 prefix is-wider">
+                                        {%- include tools/icons.html icon="naira" -%}
+                                        <span>2,500</span>
+                                    </p>
+                                    <button class="p-0 mt--p3">{%- include tools/icons.html icon="rubbish-bin" -%}</button>
+                                </div>
+                            </a>
+            
+                            <div class="m-0 uk-accordion-content pr-1h pb-1h d-flx al-i-c">
+                                <div class="pos-rel width-100-pc">
+                                    <label for="" class="primarytext co-sweet-gray">Quantity</label>
+                                    <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
+                                        All branches
+                                        <a href="" class="co-sweet-gray">
+                                            {%- include tools/icons.html icon="dropdown" -%}
+                                        </a>
+                                    </button>
+                                </div>
+            
+                                <div class="pos-rel width-100-pc suffix is-wider">
+                                    <label for="" class="primarytext co-sweet-gray">Discount</label>
+                                    <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
+                                        <a href="" class="co-sweet-gray d-flx j-c-fe height-100-pc width-100-pc">
+                                            {%- include tools/icons.html icon="dropdown" -%}
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+            
+                    <div class="px-1h py-1h border-top border-bottom">
+                        <div class="d-flx al-i-c">
+                            <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius prefix is-even-wider" type="button">
+                                Select Discount Code
+                                <a href="" class="co-sweet-gray">
+                                    {%- include tools/icons.html icon="dropdown" -%}
+                                </a>
+                            </button>
+                            <a href="" class="btn btn-is-disabled btn-small">APPLY</a>
+                        </div>
+            
+                        <div class="d-flx al-i-c mt-1">
+                            <div class="width-100-pc prefix is-even-wider">
+                                <input type="text" name="promo-code" id="promo-code" class="px-h" placeholder="Enter promo code">
+                            </div>
+                            <a href="" class="btn btn-is-disabled btn-small">APPLY</a>
+                        </div>
+                    </div>
+            
+                    <div class="px-1h py-1 border-bottom">
+                        <p class="d-flx al-i-c j-c-sb m-0 co-black primarytext m-0 fw-medium">
+                            <span>Tax</span>
+                            <span>NGN 340.00</span>
+                        </p>
+            
+                        <p class="d-flx al-i-c j-c-sb m-0 co-black primarytext m-0 mt-h fw-medium">
+                            <span>Discount</span>
+                            <span>10%</span>
+                        </p>
+                    </div>
+            
+                    <div class="px-1h py-1">
+                        <button class="btn btn-dark preferred-radius mt-hh width-100-pc height-100-pc submit-button">
+                            BILL NGN7,500
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div> -->
+    
+        <div class="payment-information">
+            <div class="width-100-pc px-2 pt-2 border-right payment-summary">
+                <a href="" class="primarytext d-flx al-i-c">
+                    {%- include tools/icons.html icon="arrow-left" -%}
+                    <span class="suffix">Back</span>
+                </a>
+                
+                <div class="border-bottom pb-h pt-1h">
+                    <h3 class="m-0 fw-normal after-border mediumtext">Sale Summary</h3>
+                </div>
+
+                <ul class="m-0 none py-h">
+                    <li class="d-flx al-i-c j-c-sb py-1 width-100-pc">
+                        <div class="d-flx al-i-c">
+                            <p class="m-0 fw-medium nanotext co-black">1</p>
+                            <p class="m-0 ml-1 fw-medium nanotext co-black ml-1">Blank Panther</p>
+                        </div>
+            
+                        <p class=" d-flx al-i-c co-black fw-medium m-0 nanotext">
+                            {%- include tools/icons.html icon="naira" -%}
+                            <span>2,500</span>
+                        </p>
+                    </li>
+
+                    <li class="d-flx al-i-c j-c-sb py-1 width-100-pc">
+                        <div class="d-flx al-i-c">
+                            <p class="m-0 fw-medium nanotext co-black">1</p>
+                            <p class="m-0 ml-1 fw-medium nanotext co-black ml-1">Blank Panther</p>
+                        </div>
+            
+                        <p class=" d-flx al-i-c co-black fw-medium m-0 nanotext">
+                            {%- include tools/icons.html icon="naira" -%}
+                            <span>2,500</span>
+                        </p>
+                    </li>
+
+                    <li class="d-flx al-i-c j-c-sb py-1 width-100-pc">
+                        <div class="d-flx al-i-c">
+                            <p class="m-0 fw-medium nanotext co-black">1</p>
+                            <p class="m-0 ml-1 fw-medium nanotext co-black ml-1">Blank Panther</p>
+                        </div>
+            
+                        <p class=" d-flx al-i-c co-black fw-medium m-0 nanotext">
+                            {%- include tools/icons.html icon="naira" -%}
+                            <span>2,500</span>
+                        </p>
+                    </li>
+
+                    <li class="d-flx al-i-c j-c-sb py-1 width-100-pc border-top">
+                        <p class="m-0 ff-body nanotext co-black">Total</p>
+            
+                        <p class=" d-flx al-i-c co-black fw-bold mediumtext m-0">
+                            {%- include tools/icons.html icon="naira" -%}
+                            <span>7500</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="width-100-pc px-2 pb-2 payment-methods">
+                <h3 class="mediumtext m-0 fw-normal co-primary mt-3">Select Payment Method:</h3>
+
+                <div class="mt-1h">
+                    <button class="bg-gainsboro borderline preferred-radius py-1 no-outline px-1 width-100-pc d-flx al-i-c j-c-sb" uk-toggle="target: #pay-with-eyowo">
+                        <div class="d-flx al-i-c">
+                            <div class="prefix">
+                                <img src="{{site.url}}/uploads/eyw-payment.svg" alt="">
+                            </div>
+                            <span class="co-black smalltext">Eyowo</span>
+                        </div>
+
+                        <span class="co-really-gray">{%- include tools/icons.html icon="chevron-right" -%}</span>
+                    </button>
+
+                    <button class="mt-1h bg-gainsboro borderline preferred-radius py-1 no-outline px-1 width-100-pc d-flx al-i-c j-c-sb" uk-toggle="target: #pay-with-pos">
+                        <div class="d-flx al-i-c">
+                            <div class="prefix">
+                                <img src="{{site.url}}/uploads/pos-payment.svg" alt="">
+                            </div>
+                            <span class="co-black smalltext">POS</span>
+                        </div>
+
+                        <span class="co-really-gray">{%- include tools/icons.html icon="chevron-right" -%}</span>
+                    </button>
+
+                    <button class="mt-1h bg-gainsboro borderline preferred-radius py-1 no-outline px-1 width-100-pc d-flx al-i-c j-c-sb" uk-toggle="target: #pay-with-cash">
+                        <div class="d-flx al-i-c">
+                            <div class="prefix">
+                                <img src="{{site.url}}/uploads/cash-payment.svg" alt="">
+                            </div>
+                            <span class="co-black smalltext">Cash</span>
+                        </div>
+
+                        <span class="co-really-gray">{%- include tools/icons.html icon="chevron-right" -%}</span>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <section class="mt-2 bill-by-products">
-        <ul class="m-0 none products">
-            <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
-                <div class="d-flx al-i-c">
-                    <div class="thumbnail is-micro">
-                        <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
-                    </div>
-                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                </div>
-
-                <p class=" d-flx al-i-c co-black fw-medium m-0">
-                    {%- include tools/icons.html icon="naira" -%}
-                    <span>2,500</span>
-                </p>
-            </li>
-
-            <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
-                <div class="d-flx al-i-c">
-                    <div class="thumbnail is-micro">
-                        <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
-                    </div>
-                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                </div>
-
-                <p class=" d-flx al-i-c co-black fw-medium m-0">
-                    {%- include tools/icons.html icon="naira" -%}
-                    <span>2,500</span>
-                </p>
-            </li>
-
-            <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
-                <div class="d-flx al-i-c">
-                    <div class="thumbnail is-micro">
-                        <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
-                    </div>
-                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                </div>
-
-                <p class=" d-flx al-i-c co-black fw-medium m-0">
-                    {%- include tools/icons.html icon="naira" -%}
-                    <span>2,500</span>
-                </p>
-            </li>
-
-            <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
-                <div class="d-flx al-i-c">
-                    <div class="thumbnail is-micro">
-                        <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
-                    </div>
-                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                </div>
-
-                <p class=" d-flx al-i-c co-black fw-medium m-0">
-                    {%- include tools/icons.html icon="naira" -%}
-                    <span>2,500</span>
-                </p>
-            </li>
-
-            <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
-                <div class="d-flx al-i-c">
-                    <div class="thumbnail is-micro">
-                        <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
-                    </div>
-                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                </div>
-
-                <p class=" d-flx al-i-c co-black fw-medium m-0">
-                    {%- include tools/icons.html icon="naira" -%}
-                    <span>2,500</span>
-                </p>
-            </li>
-
-            <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
-                <div class="d-flx al-i-c">
-                    <div class="thumbnail is-micro">
-                        <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
-                    </div>
-                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                </div>
-
-                <p class=" d-flx al-i-c co-black fw-medium m-0">
-                    {%- include tools/icons.html icon="naira" -%}
-                    <span>2,500</span>
-                </p>
-            </li>
-
-
-            <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
-                <div class="d-flx al-i-c">
-                    <div class="thumbnail is-micro">
-                        <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
-                    </div>
-                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                </div>
-
-                <p class=" d-flx al-i-c co-black fw-medium m-0">
-                    {%- include tools/icons.html icon="naira" -%}
-                    <span>2,500</span>
-                </p>
-            </li>
-    
-            <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
-                <div class="d-flx al-i-c">
-                    <div class="thumbnail is-micro">
-                        <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
-                    </div>
-                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                </div>
-
-                <p class=" d-flx al-i-c co-black fw-medium m-0">
-                    {%- include tools/icons.html icon="naira" -%}
-                    <span>2,500</span>
-                </p>
-            </li>
-    
-            <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
-                <div class="d-flx al-i-c">
-                    <div class="thumbnail is-micro">
-                        <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
-                    </div>
-                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                </div>
-
-                <p class=" d-flx al-i-c co-black fw-medium m-0">
-                    {%- include tools/icons.html icon="naira" -%}
-                    <span>2,500</span>
-                </p>
-            </li>
-    
-            <li class="d-flx al-i-c j-c-sb px-1 py-h width-100-pc product">
-                <div class="d-flx al-i-c">
-                    <div class="thumbnail is-micro">
-                        <img src="{{ site.url }}/uploads/bill-by-product.svg" alt="" class="width-100-pc height-100-pc">
-                    </div>
-                    <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                </div>
-
-                <p class=" d-flx al-i-c co-black fw-medium m-0">
-                    {%- include tools/icons.html icon="naira" -%}
-                    <span>2,500</span>
-                </p>
-            </li>
-        </ul>
-        <div class="borderline billing bg-white borderline inline-shadow">
-            <h3 class="m-0 fw-medium co-black nanotext border-bottom px-1h pt-1h pb-1">Selected Products</h3>
-
-            <ul uk-accordion class="m-0 none">
-                <li class="uk-open pl-1h">
-                    <a class="uk-accordion-title d-flx al-i-c j-c-sb border-bottom py-1" href="#">
-                        <div class="d-flx al-i-c">
-                            <p class="m-0 ml-1 fw-medium nanotext co-black">1</p>
-                            <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                        </div>
-        
-                        <p class=" d-flx al-i-c co-black fw-medium m-0 pr-1h">
-                            {%- include tools/icons.html icon="naira" -%}
-                            <span>2,500</span>
-                            <span class="suffix is-wider mt--p3">{%- include tools/icons.html icon="rubbish-bin" -%}</span>
-                        </p>
-                    </a>
-                    <div class="uk-accordion-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </li>
-                <li class="uk-open pl-1h">
-                    <a class="uk-accordion-title d-flx al-i-c j-c-sb border-bottom py-1" href="#">
-                        <div class="d-flx al-i-c">
-                            <p class="m-0 ml-1 fw-medium nanotext co-black">1</p>
-                            <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                        </div>
-        
-                        <p class=" d-flx al-i-c co-black fw-medium m-0 pr-1h">
-                            {%- include tools/icons.html icon="naira" -%}
-                            <span>2,500</span>
-                            <span class="suffix is-wider mt--p3">{%- include tools/icons.html icon="rubbish-bin" -%}</span>
-                        </p>
-                    </a>
-                    <div class="uk-accordion-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </li>
-                <li class="uk-open pl-1h pos-rel">
-                    <a class="uk-accordion-title d-flx al-i-c j-c-sb border-bottom py-1" href="#">
-                        <div class="d-flx al-i-c">
-                            <p class="m-0 ml-1 fw-medium nanotext co-black">1</p>
-                            <p class="m-0 ml-1 fw-medium nanotext co-black">Blank Panther</p>
-                        </div>
-        
-                        <p class=" d-flx al-i-c co-black fw-medium m-0 pr-1h">
-                            {%- include tools/icons.html icon="naira" -%}
-                            <span>2,500</span>
-                            <span class="suffix is-wider mt--p3">{%- include tools/icons.html icon="rubbish-bin" -%}</span>
-                        </p>
-                    </a>
-                    <div class="uk-accordion-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
 </section>
+
+{%- include components/modals/pay-with-eyowo.html -%}
+{%- include components/modals/pay-with-pos.html -%}
+{%- include components/modals/pay-with-cash.html -%}

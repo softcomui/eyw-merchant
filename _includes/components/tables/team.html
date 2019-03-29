@@ -1,0 +1,37 @@
+<div class="uk-overflow-auto preferred-radius borderline">
+    <table class="uk-table uk-table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email Address</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%- for entry in site.data.table.transactions -%}
+            <tr>
+                <td>Kayode Sholanke</td>
+                <td>ibinye@softcom.ng</td>
+                <td>
+                    <a href="" class="d-flx pt-h pb-h co-sweet-gray ff-body"  type="button">
+                        <span>Owner</span>
+                        <span class="ml-h">{%- include tools/icons.html icon="arrow-dropdown" -%}</span>
+                    </a>
+                </td>
+                <td>
+                    <div class="d-flx">
+                        <a href="" class="d-flx px-h pt-h pb-h co-black ff-body"  type="button">
+                            {%- include tools/icons.html icon="edit-two" -%}
+                        </a>
+
+                        <a href="" class="d-flx px-h pt-h pb-h co-black ff-body"  type="button">
+                            {%- include tools/icons.html icon="rubbish-bin-two" -%}
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            {%- endfor -%}
+        </tbody>
+    </table>
+</div>

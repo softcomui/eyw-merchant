@@ -51,8 +51,8 @@
             background: $platinum
 
 .uk-modal-dialog
-    width: 550px
-    min-height: 300px
+    width: 490px
+    min-height: 290px
     border-radius: 10px
     display: flex
     align-self: center
@@ -90,6 +90,8 @@
             color: #999
         &.thicker
             font-weight: 500
+        &.small
+            min-width: 20px
     & th
         padding: 1rem 1.2rem
         color: #000000
@@ -99,7 +101,11 @@
         top: 0px
         background: #fff
         z-index: 2
-        border-bottom: 1px solid #dadada
+
+.uk-table-striped tbody tr:nth-of-type(odd), .uk-table-striped>tr:nth-of-type(odd)
+    background: rgba(196, 196, 196, 0.1)
+    border-top: none
+    border-bottom: none
 
 .table-y-overflow
     max-height: 500px
@@ -141,14 +147,28 @@
     min-width: 0
     border: 2px solid #dadada
 
+
 .uk-accordion-title
+    border-top: 1px solid #e5e5e5
     &::after
         position: relative
         left: 0
         content: none
 
+.uk-accordion-item
+    &:first-of-type
+        .uk-accordion-title
+            border-top: none
+
+
+.uk-open
+    &.selected-products
+        border-left: 3px solid $primarycolor
+
 .uk-accordion>:nth-child(n+2)
     margin-top: 0
+
+
     
 
         

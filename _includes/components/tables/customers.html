@@ -1,0 +1,25 @@
+<div class="uk-overflow-auto preferred-radius borderline">
+    <table class="uk-table uk-table-striped">
+        <thead>
+            <tr>
+                <th class="d-flx al-i-c">
+                    <span><input class="uk-checkbox" type="checkbox"></span>
+                    <span class="ml-h">{%- include tools/icons.html icon="arrow-dropdown" -%}</span>
+                </th>
+                <th>Customer mobile </th>
+                <th>Customer Since</th>
+                <th>Transaction Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%- for entry in site.data.table.transactions -%}
+            <tr>
+                <td class="small"><span><input class="uk-checkbox" type="checkbox"></span></td>
+                <td>+2348100583876</td>
+                <td>February 7, 2019 6:40 PM</td>
+                <td>NGN 32,000</td>
+            </tr>
+            {%- endfor -%}
+        </tbody>
+    </table>
+</div>

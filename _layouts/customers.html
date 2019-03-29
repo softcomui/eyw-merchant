@@ -1,0 +1,53 @@
+---
+layout: page
+---
+
+
+<section class="section">
+    <h3 class="mediumtext m-0 fw-medium">Customers</h3>
+
+    
+    <div class="borderline inline-shadow preferred-radius mt-1 bg-white px-2 py-2">
+
+        <div>
+            <section>
+                <label for="business-summary" class="">Filter: </label>
+                <div class="d-flx-xlg al-i-c j-c-sb">
+                    <div class="d-flx mb-1 mt-h">
+                        <div class="prefix is-wider">{%- include components/dropdown.html dropdown="date-picker-filter" -%}</div>
+                        <div class="pos-rel input-icons search-input">
+                            {%- include tools/icons.html icon="search" -%}
+                            <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search directory">
+                        </div>
+                    </div>
+                    
+                    <div class="d-flx-md al-i-c mb-1">
+                        <button class="p-0 mt-h btn btn-dark px-1 py-h prefix is-wider">
+                            <img src="{{ site.url }}/uploads/edit-customer.svg" alt="" srcset="">
+                        </button>
+
+                        <button class="btn btn-badge btn-dark p-0 mt-h d-flx al-i-c prefix is-wider" uk-toggle="target: #personal-information">CREATE CUSTOMER</button>
+                        
+                        <button class="btn btn-badge btn-dark p-0 mt-h d-flx al-i-c">
+                            <span class="prefix">{%- include tools/icons.html icon="downloads" -%}</span>
+                            <span>EXPORT CSV</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="pt-1">
+                {%- include components/tables/customers.html-%}
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+{%- include components/modals/create-customer.html -%}
+
+{%- include components/modals/personal-information.html -%}
+    
+    
+    
+    

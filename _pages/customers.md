@@ -1,0 +1,4 @@
+---
+layout: customers
+permalink: /customers/ 
+---

@@ -2,35 +2,34 @@
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
 
         <div class="d-flx al-i-c j-c-sb pb-h border-bottom">
-            <h3 class="m-0 fw-normal after-border">Buy Premium</h3>
+            <h3 class="m-0 fw-normal after-border">Purchase Premium</h3>
             <button class="uk-modal-close-default without-abs-pos" type="button">
                 {%- include tools/icons.html icon="close-circle" -%}
             </button>
         </div>
 
-        <p class="m-0 nanotext py-1">
-            <span class="prefix is-standard readable-gray d-iflx al-i-c flx-wrapcd ">
-                {%- include tools/icons.html icon="naira" -%}
-                75,000 will be deducted from your eyowo account. 
-            </span> 
-            <span class="d-blk">Enter your six digit pin to confirm payment</span>
-        </p>
+        <div class="grid is-multi-col al-i-c mostly-2 mt-2h">
 
-        <div class="d-flx flx-dir-c">
-            <label for="security-pin" class="mt-h mb-h">Security Pin</label>
-            <input type="text" name="security-pin" id="security-pin" class="px-h" placeholder="Enter Pin..." autofocus>
+            <!-- When the user has linked account -->
+            <!-- <div class="d-flx flx-dir-c">
+                <label for="phone-name" class="mb-h">Phone Number to bill</label>
+                <input type="tel" name="phone-name" id="phone-name" class="px-h" value="08100583876" disabled>
+            </div> -->
+
+            <!-- When the user still needs to link the account -->
+            <div class="d-flx flx-dir-c float-item">
+                <label for="branches" class="mb-h">Phone Number to bill</label>
+                <a href="" class="input tx-l co-primary px-1 d-flx j-c-center flx-dir-c">Link Account</a>
+            </div>
+
+            <div class="d-flx flx-dir-c">
+                <label for="password" class="mb-h">Eyowo Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter eyowo password" class="px-h" autofocus>
+            </div>
         </div>
 
-        
-        <div class="pt-2 d-flx j-c-fe">
-            <div class="d-flx al-i-c j-c-sb">
-                <a href="{{site.url}}" class="co-readable-gray mr-1h">
-                    Cancel
-                </a>
-                <a href="#buy-premium" class="btn btn-standard btn-premium btn-dark prefix is-standard">
-                    CONFIRM
-                </a>
-            </div>
+        <div class="mt-2h">
+            <a href="" class="btn btn-standard btn-dark">BUY NOW</a>
         </div>
 
     </div>

@@ -16,12 +16,22 @@
 
             <div class="d-flx flx-dir-c">
                 <label for="amount" class="mt-h mb-h">Amount</label>
-                <input type="text" name="amount" id="amount" class="px-h"  class="co-primary">
+                <div class="d-flx al-i-c j-c-fe input pos-rel px-h">
+                    <input type="text" class="absolute-zero width-100-pc px-h no-border no-box-shadow" name="amount" id="amount" placeholder="₦0.00">
+                    <div class="naira-percent-toggle pos-rel z-depth-1">
+                        <a href="" class="naira-toggle">
+                            {%- include tools/icons.html icon="naira-toggle" -%}
+                        </a>
+                        <a href="" class="percent-toggle">
+                            {%- include tools/icons.html icon="percent-toggle" -%}
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="d-flx flx-dir-c">
                 <label for="branches" class="mt-h mb-h">Branches</label>
-                <button class="input tx-l co-primary px-1" uk-toggle="target: #edit-branches">All locations</button>
+                <a href="" class="input tx-l co-primary px-1 d-flx j-c-center flx-dir-c" uk-toggle="target: #edit-branches">All locations</a>
             </div>
         </div>
 

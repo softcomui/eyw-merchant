@@ -1,0 +1,82 @@
+<section id="pay-with-eyowo" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <div class="d-flx al-i-c j-c-sb pb-h border-bottom">
+            <h3 class="m-0 fw-normal after-border">Pay with Eyowo (2,500)</h3>
+            <button class="uk-modal-close-default without-abs-pos" type="button">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </button>
+        </div>
+
+        <div class="d-flx flx-dir-c al-i-c width-100-pc">
+            <div class="d-flx flx-dir-c al-i-c py-1h width-100-pc">
+                <h3 class="nanotext co-black m-0">BILL VIA QR</h3>
+                <p class="nanotext m-0 ff-heading mt-h">Scan This QR Code To Pay</p>
+            
+                <div class="bg-white is-raised mt-1 qr-code pos-rel">
+                    
+                </div>
+            </div>
+            
+            <div class="d-flx flx-dir-c al-i-c py-1h border-top border-bottom width-100-pc">
+                <h3 class="nanotext co-black m-0">BILL VIA USSD</h3>
+                <p class="nanotext m-0 ff-heading mt-h">Dial This Code To Pay</p>
+                <p class="largetext m-0 ff-heading mt-h co-primary">*4255*500*3*1265678#</p>
+            </div>
+            
+            <a href="#notify-customers" class="d-flx al-i-c pt-1h co-primary tx-c nanotext" uk-toggle>
+                <span>Push Notification To Customer</span>
+                <span class="suffix mt--p3">{%- include tools/icons.html icon="chevron-right" -%}</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="notify-customers" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <div class="d-flx al-i-c j-c-sb pb-h border-bottom">
+            <h3 class="m-0 fw-normal after-border">Notify Customer  </h3>
+            <button class="uk-modal-close-default without-abs-pos" type="button">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </button>
+        </div>
+
+        <div class="mt-1h">
+            <p class="m-0 nanotext ff-heading">Notify Customer Of Incurred Bill By Sending A Message or Placing Call.</p>
+
+            <div class="d-flx flx-dir-c mt-1h">
+                <label for="phone-number" class="mb-h co-primary">Phone Number</label>
+                <input type="text" name="phone-number" id="phone-number" class="px-h" autofocus>
+            </div>
+
+            <div class="pt-2 d-flx al-i-c j-c-sb">
+                <a href="" class="btn btn-standard btn-dark width-100-pc">Send Message</a>
+
+                <a href="#check-status" class="btn btn-standard btn-dark width-100-pc" uk-toggle>Place Call</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="check-status" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <button class="uk-modal-close-default" type="button">
+            {%- include tools/icons.html icon="close-circle" -%}
+        </button>
+
+
+        <div class="width-100-pc height-200-px d-flx al-i-c j-c-center flx-dir-c">
+            <div class="thumbnail is-nano">
+                <img src="{{ site.url }}/uploads/spinner.svg" alt="" srcset="">
+            </div>
+            <p class="m-0 mt-1 nanotext">Awaiting Bill Approval From Customer.</p>
+        </div>
+
+
+        <div class="d-flx al-i-c j-c-sb">
+            <a href="" class="btn btn-standard btn-dark width-100-pc">Cancel</a>
+
+            <a href="" class="btn btn-standard btn-green width-100-pc ">Check Status</a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,32 @@
+<section id="create-customer" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <div class="d-flx al-i-c j-c-sb pb-h border-bottom">
+            <h3 class="m-0 fw-normal after-border">Create Customer</h3>
+            <button class="uk-modal-close-default without-abs-pos" type="button">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </button>
+        </div>
+        
+        <div class="grid is-multi-col al-i-c mostly-2 pt-1h">
+            <div class="d-flx flx-dir-c">
+                <label for="name" class="mb-h">Name</label>
+                <input type="text" name="name" id="name" class="px-h" autofocus>
+            </div>
+
+            <div class="d-flx flx-dir-c">
+                <label for="phone-number" class="mb-h">Phone number</label>
+                <input type="tel" name="phone-number" id="phone-number" class="px-h">
+            </div>
+
+            <div class="d-flx flx-dir-c">
+                <label for="email" class="mb-h">Email Address</label>
+                <input type="email" name="email" id="email" class="px-h">
+            </div>
+        </div>
+
+        <div class="pt-2">
+            <a href="" class="btn btn-standard btn-dark">Save</a>
+        </div>
+    </div>
+</section>

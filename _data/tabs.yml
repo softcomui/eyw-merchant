@@ -26,7 +26,8 @@ reports:
   
 account:
   - tab-item: Account settings
-  - tab-item: Users
+  - tab-item: Team
+  - tab-item: Subscription
   - tab-item: Danger zone
   
   

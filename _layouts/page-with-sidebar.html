@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="page-layout">
-    <div class="sidebar-navigation show-mediumup"> 
+    <div class="sidebar-navigation show-mediumup pos-rel"> 
         <div class="pos-rel your-business">
             <button class="d-flx al-i-c j-c-sb co-black width-100-pc height-100-pc px-1h bg-transparent">
                 <h2 class="m-0 smalltext co-black">Obiwezy Gadgets</h2>
@@ -16,12 +16,12 @@ layout: default
                     </li>
                 </ul>
 
-                <button class="btn btn-nostling co-black ff-body"  type="button" uk-toggle="target: #add-business">
+                <a href="" class="d-flx pt-1 pb-1 co-black"  type="button" uk-toggle="target: #add-business">
                     <span class="btn btn-dark px-h py-h"  type="button">
                         {%- include tools/icons.html icon="plus" -%}
                     </span>
-                    <span class="suffix ff-body fw-medium nanofont">Add a Business</span>
-                </button>
+                    <span class="ml-h fw-medium nanofont">Add a Business</span>
+                </a>
 
             </div>
         </div>
@@ -114,6 +114,10 @@ layout: default
                     {%- endfor -%}
                 </ul>
             </div>
+        </div>
+
+        <div class="px-1h absolute-premium width-100-pc">
+            <a href="" class="btn btn-standard btn-dark">GO PREMIUM</a>
         </div>
     </div>
 

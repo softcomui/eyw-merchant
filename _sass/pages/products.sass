@@ -5,31 +5,98 @@
         display: flex
         align-items: flex-end
 
-    .three-grid-float
+    .two-grid-float
         margin: 0
         @media #{ $mediumup }
             margin-left: -10px
             margin-right: -10px
         @media #{ $largeup }
             width: calc(100% - 100px)
+            margin-left: -20px
+            margin-right: -20px
+        
+        .float-item
+            width: 100%
+            @media #{ $mediumup }
+                width: calc(50% - 20px)
+            @media #{ $largeup }
+                width: calc(50% - 40px)
 
     .edit-product
         width: 100%
         @media #{$largeup}
             max-width: 100px
             margin-right: 40px
-    
-    
-.bill-by-products
-    @media #{ $mediumup}
+
+
+.payment-information
+    @media #{$xlargeup}
         display: flex
+    .payment-summary
+        @media #{$xlargeup}
+            padding-bottom: 2rem
+            width: 65%
+    .payment-methods
+        @media #{$xlargeup}
+            padding-top: 2rem
+            width: 35%
+    
+
+.qr-code
+    width: 245px
+    height: 225px
+
+.naira-percent-toggle
+    max-width: 50px
+    height: 25px
+    width: 100%
+    border-radius: $preferredradius
+    display: flex
+    .naira-toggle
+        background: $primarycolor
+        color: #fff
+        width: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 1px solid $primarycolor
+        border-right: none
+        border-top-left-radius: $preferredradius
+        border-bottom-left-radius: $preferredradius
+        &:hover
+            background: lighten($primarycolor, 5%)
+            border: 1px solid lighten($primarycolor, 5%)
+            border-right: none
+    .percent-toggle
+        background: #fff
+        color: $primarycolor
+        width: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 1px solid #707070
+        border-left: none
+        border-top-right-radius: $preferredradius
+        border-bottom-right-radius: $preferredradius
+        &:hover
+            background: $platinum
+            border-left: none
+
+
+.bill-by-products
+    position: relative
+    @media #{ $xlargeup}
+        display: flex
+        height: 600px
         justify-content: space-between
 
     .products
-        max-width: 582px
-        max-height: 650px
-        overflow: auto
         width: 100%
+        overflow: auto
+        @media #{ $xlargeup}
+            max-width: 530px
+            height: 100%
+            margin-right: 40px
 
         .product
             background: #FCFCFC
@@ -40,9 +107,22 @@
 
             &:last-child
                 margin-bottom: 0
-
     .billing
-        max-width: 428px
         width: 100%
-        max-height: 600px
+        height: 100%
         overflow: auto
+        margin-top: 2rem
+        @media #{ $xlargeup}
+            max-width: 428px
+            max-height: 600px
+            overflow: hidden
+            position: sticky
+            margin-top: 0rem
+
+        .billing-list
+            max-height: 250px
+            height: 100%
+            overflow: auto
+
+        .submit-button
+            

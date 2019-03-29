@@ -1,0 +1,51 @@
+
+<section id="pay-with-cash" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical d-flx flx-dir-c j-c-sb">
+        <div class="d-flx al-i-c j-c-sb pb-h border-bottom">
+            <h3 class="m-0 fw-normal after-border">Pay with Cash</h3>
+            <button class="uk-modal-close-default without-abs-pos" type="button">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </button>
+        </div>
+
+        <div class="mt-1h">
+            <p class="m-0 nanotext ff-heading">Enter details of completed cash transaction.</p>
+
+            <div class="d-flx flx-dir-c mt-1h">
+                <label for="cash-received" class="mb-h co-primary">Cash Received</label>
+                <input type="text" name="cash-received" id="cash-received" class="px-h" autofocus>
+                <p class="m-0 picotext mt-h">Pay Customer ₦500 Change</p>
+            </div>
+
+            <div class="pt-2 d-flx al-i-c flx-dir-c">
+                <a href="" class="btn btn-dark width-100-pc smalltext py-h">Complete Transaction</a>
+
+                <a href="#pay-change" class="co-primary underline nanotext mt-1" uk-toggle>PAY CHANGE TO PHONE NUMBER</a>
+            </div>
+        </div>
+
+       
+    </div>
+</section>
+
+<section id="pay-change" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical d-flx flx-dir-c j-c-sb">
+        <div class="d-flx al-i-c j-c-sb pb-h border-bottom">
+            <h3 class="m-0 fw-normal after-border">Pay change to phone number</h3>
+            <button class="uk-modal-close-default without-abs-pos" type="button">
+                {%- include tools/icons.html icon="close-circle" -%}
+            </button>
+        </div>
+
+        <p class="m-0 pt-1h pb-1 ff-heading largetext co-primary">₦500</p>
+
+        <div class="d-flx flx-dir-c">
+            <label for="phone-number" class="mb-h co-primary">Enter customers phone number</label>
+            <input type="text" name="phone-number" id="phone-number" class="px-h" autofocus>
+        </div>
+
+        <a href="" class="btn btn-dark width-100-pc smalltext mt-2 py-h">Send</a>
+
+        
+    </div>
+</section>
