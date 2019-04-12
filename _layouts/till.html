@@ -9,6 +9,21 @@ layout: page
     
     <div class="borderline inline-shadow preferred-radius mt-1 bg-white px-2 py-2">
 
+        <!-- Empty State for Tills -->
+        <!-- <section class="height-500-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+            <div>
+                <img src="{{site.url}}/uploads/clipboard.svg" alt="">
+            </div>
+            <h3 class="m-0 co-black fw-medium nanotext">Nothing here yet</h3>
+            <p class="m-0 mt-h ff-heading primarytext">No till has been made created</p>
+            <button class="btn btn-badge btn-dark p-0 d-flx al-i-c mt-1" uk-toggle="target: #create-till">
+                <span class="prefix">{%- include tools/icons.html icon="plus" -%}</span>
+                <span>CREATE TILL</span>
+            </button>
+        </section> -->
+
+
+        <!-- TILLS TABLE AND FILTER -->
         <!-- <div>
             <div class="d-flx al-i-c flx-wrap j-c-sb">
                 <div class="pos-rel input-icons search-input mt-h mb-1">
@@ -26,6 +41,7 @@ layout: page
         </div> -->
 
 
+        <!-- TILL INNER PAGE -->
         <div>
             <div class="d-flx al-i-c j-c-sb">
                 <a href="" class="primarytext d-flx al-i-c">
@@ -61,15 +77,37 @@ layout: page
                     <p class="m-0 co-sweet-gray pico-caps">BRANCH</p>
                 </div>
 
-                <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                <!-- Active State for Total Sales -->
+                <!-- <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
                     <p class="m-0 co-black mediumtext fw-normal">1,530,000</p>
+                    <p class="m-0 co-sweet-gray pico-caps">TOTAL SALES</p>
+                </div> -->
+
+                <!-- Empty State for Total Sales -->
+                <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                    <p class="m-0 co-sweet-gray mediumtext fw-normal">0</p>
                     <p class="m-0 co-sweet-gray pico-caps">TOTAL SALES</p>
                 </div>
             </div>
 
-            <section class="mt-2">
+            <!-- Empty State for the filter section in tills -->
+            <section class="mt-2 d-flx j-c-fe">
+                <div class="button d-flx al-i-c mt-2">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="product1" checked>
+                        <label class="onoffswitch-label" for="product1"></label>
+                    </div>
+                    <span class="suffix prefix is-wider co-black d-flx al-i-c nanotext">
+                        <span class="prefix">{%- include tools/icons.html icon="helper-circle" -%}</span>
+                        Switch to two-step verification
+                    </span>
+                </div>
+            </section>
+
+            <!-- Filter section in tills -->
+            <!-- <section class="mt-2">
                 <label for="business-summary" class="">Filter: </label>
-                <div class="d-flx-xlg al-i-c j-c-sb">
+                <div class="d-flx-xlg al-i-c j-c-sb flx-wrap">
                     <div class="d-flx mb-1">
                         <div class="prefix is-wider">{%- include components/dropdown.html dropdown="date-picker-filter" -%}</div>
                         <div class="pos-rel input-icons search-input">
@@ -78,17 +116,19 @@ layout: page
                         </div>
                     </div>
                     
-                    <div class="d-flx-md al-i-c mb-1">
+                    <div class="d-flx-md al-i-c mb-1 flx-wrap">
                         <div class="button d-flx al-i-c mt-h-for-filter">
                             <div class="onoffswitch">
                                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="product1" checked>
                                 <label class="onoffswitch-label" for="product1"></label>
                             </div>
-                            <span class="suffix prefix is-wider co-black d-flx al-i-c">
+                            <span class="suffix prefix is-wider co-black d-flx al-i-c nanotext">
                                 <span class="prefix">{%- include tools/icons.html icon="helper-circle" -%}</span>
                                 Switch to two-step verification
                             </span>
                         </div>
+
+                        <button class="btn btn-badge btn-dark p-0 mt-h prefix is-wider" uk-toggle="target: #reset-password">RESET PASSWORD</button>
                         
                         <button class="btn btn-badge btn-dark p-0 mt-h d-flx al-i-c ">
                             <span class="prefix">{%- include tools/icons.html icon="downloads" -%}</span>
@@ -96,15 +136,28 @@ layout: page
                         </button>
                     </div>
                 </div>
-            </section>
+            </section> -->
             
-            {%- include single-business/branches/single-branch/branch-table.html -%}
+            <!-- Empty State for table in tills -->
+            <section class="height-500-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                <div>
+                    <img src="{{site.url}}/uploads/clipboard.svg" alt="">
+                </div>
+                <h3 class="m-0 co-black fw-medium nanotext">No till transactions yet</h3>
+                <p class="m-0 mt-h ff-heading primarytext">This till hasn’t made any trasaction yet</p>
+            </section>
+
+            <!-- Branch Table in tills -->
+            <!-- <section class="pt-1">
+                {%- include components/tables/branches.html-%}
+            </section> -->
         </div>
         
     </div>
 </section>
 
 {%- include components/modals/create-till.html -%}
+{%- include components/modals/reset-password.html -%}
 {%- include components/modals/created-till.html -%}
     
     

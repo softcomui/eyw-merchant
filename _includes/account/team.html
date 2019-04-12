@@ -1,4 +1,14 @@
-<div>
+<!-- Empty State for team -->
+<div class="height-500-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+    <div>
+        <img src="{{site.url}}/uploads/clipboard.svg" alt="">
+    </div>
+    <h3 class="m-0 co-black fw-medium nanotext">No team has been created yet</h3>
+    <button class="btn btn-badge btn-dark p-0 mt-h mb-1" uk-toggle="target: #create-user">+ CREATE USER</button>
+</div>
+
+<!-- Filled State for team -->
+<!-- <div>
     <section>
         <label for="business-summary" class="">Filter: </label>
         <div class="d-flx-xlg al-i-c j-c-sb">
@@ -18,6 +28,8 @@
     <div class="pt-1">
         {%- include components/tables/team.html-%}
     </div>
-</div>
+</div> -->
+
+
 
 {%- include components/modals/create-user.html -%}

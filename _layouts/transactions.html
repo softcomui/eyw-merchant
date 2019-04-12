@@ -10,7 +10,7 @@ layout: page
     <div class="borderline inline-shadow preferred-radius mt-1 bg-white px-2 py-2">
 
             <div>
-                <section>
+                <!-- <section>
                     <label for="business-summary" class="">Filter: </label>
                     <div class="d-flx-xlg al-i-c j-c-sb">
                         <div class="d-flx mt-h">
@@ -26,10 +26,34 @@ layout: page
                             <span>EXPORT CSV</span>
                         </button>
                     </div>
-                </section>
+                </section> -->
                 
+                <!-- Empty States for transaction overview -->
+                <!-- <ul class="none three-grid-float overflow-auto">
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium co-sweet-gray m-0 largetext d-flx al-i-c">0</p>
+                        <p class="m-0 co-sweet-gray pico-caps">TRANSACTIONS</p>
+                    </li>
                 
-                <ul class="none three-grid-float overflow-auto">
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext co-sweet-gray d-flx al-i-c">
+                            <span class="co-sweet-gray mt--p3">{%- include tools/icons.html icon="naira-big" -%}</span>
+                            0.00
+                        </p>
+                        <p class="m-0 co-sweet-gray pico-caps">TOTAL SALES</p>
+                    </li>
+                
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext co-sweet-gray d-flx al-i-c">
+                            <span class="co-sweet-gray mt--p3">{%- include tools/icons.html icon="naira-big" -%}</span>
+                            0.00
+                        </p>
+                        <p class="m-0 co-sweet-gray pico-caps">TOTAL CHANGE DISBURSED</p>
+                    </li>
+                </ul> -->
+                
+                <!-- Transaction Overview -->
+                <!-- <ul class="none three-grid-float overflow-auto">
                     <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
                         <p class="fw-medium m-0 largetext d-flx al-i-c">
                             344
@@ -55,14 +79,25 @@ layout: page
                         </p>
                         <p class="m-0 co-sweet-gray pico-caps">TOTAL CHANGE DISBURSED</p>
                     </li>
-                </ul>
+                </ul> -->
                 
-                <section class="mt-2">
+
+                <!-- Empty State for Transaction Table -->
+                <!-- <section class="mt-1 height-500-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                    <div>
+                        <img src="{{site.url}}/uploads/clipboard.svg" alt="">
+                    </div>
+                    <h3 class="m-0 co-black fw-medium nanotext">Nothing here yet</h3>
+                    <p class="m-0 mt-h ff-heading primarytext">No transaction has been made so far</p>
+                </section> -->
+
+                <!-- Transaction Table -->
+                <!-- <section class="mt-2">
                     {%- include components/tables/transactions.html-%}
-                </section>
+                </section> -->
             </div>
             
-            <!-- <div>
+            <div>
                 <a href="" class="primarytext d-flx al-i-c">
                     {%- include tools/icons.html icon="arrow-left" -%}
                     <span class="suffix">Back</span>
@@ -132,13 +167,13 @@ layout: page
                     </ul>
 
                     <div class="borderline inline-shadow preferred-radius mt-1 bg-white pt-1h transaction-overview">
-                        <h3 class="m-0 none co-black mediumtext fw-normal pt-h pb-1 px-1h bg-white">Items Purchased</h3>
+                        <h3 class="m-0 none co-black mediumtext fw-normal pt-h pb-1 px-1 bg-white border-bottom">Items Purchased</h3>
 
                         {%- include components/tables/transactions-single.html-%}
                     </div>
                 </div>
 
-            </div> -->
+            </div>
     </div>
 </section>
     

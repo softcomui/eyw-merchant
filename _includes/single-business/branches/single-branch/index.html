@@ -12,7 +12,18 @@
 
     {%- include single-business/branches/single-branch/branch-overview.html -%}
 
-    <div class="pt-1h">
+
+    <!-- Empty State for Branches Table -->
+    <section class="mt-1 height-500-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+        <div>
+            <img src="{{site.url}}/uploads/clipboard.svg" alt="">
+        </div>
+        <h3 class="m-0 co-black fw-medium nanotext">Nothing here yet</h3>
+        <p class="m-0 mt-h ff-heading primarytext">No transaction has been made so far</p>
+    </section>
+
+    <!-- Branches Table -->
+    <!-- <div class="pt-1h">
         <div class="d-flx al-i-c j-c-sb">
             <h3 class="fw-medium m-0 mt-h smalltext co-black">Transaction history</h3>
             <button class="btn btn-badge btn-dark p-0 mt-h d-flx al-i-c ">
@@ -21,6 +32,8 @@
             </button>
         </div>
         
-        {%- include single-business/branches/single-branch/branch-table.html -%}
-    </div>
+        <section class="pt-1">
+            {%- include components/tables/branches.html-%}
+        </section>
+    </div> -->
 </section>

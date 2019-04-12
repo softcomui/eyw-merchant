@@ -4,7 +4,35 @@
         <span class="d-blk pt-h">{%- include components/dropdown.html dropdown="date-picker-filter" -%}</span>
     </div>
 
+
+    <!-- Empty State for Branches Overview -->
     <div class="four-grid-float overflow-auto">
+        <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+            <p class="fw-medium co-sweet-gray m-0 largetext d-flx al-i-c">
+                <span class="prefix is-big readable-gray">{%- include tools/icons.html icon="naira" -%}</span>
+                0
+            </p>
+            <p class="m-0 co-sweet-gray pico-caps">Total Sales</p>
+        </div>
+    
+        <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+            <p class="fw-medium m-0 largetext co-sweet-gray d-flx al-i-c">0</p>
+            <p class="m-0 co-sweet-gray pico-caps">Transactions</p>
+        </div>
+    
+        <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+            <p class="fw-medium m-0 largetext co-sweet-gray d-flx al-i-c">0</p>
+            <p class="m-0 co-sweet-gray pico-caps">Customers</p>
+        </div>
+
+        <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+            <p class="fw-medium m-0 largetext co-sweet-gray d-flx al-i-c">0</p>
+            <p class="m-0 co-sweet-gray pico-caps">Success Count</p>
+        </div>
+    </div>
+
+    <!-- Branches Overview -->
+    <!-- <div class="four-grid-float overflow-auto">
         <div class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
             <p class="fw-medium m-0 largetext d-flx al-i-c">
                 <span class="prefix is-big readable-gray">{%- include tools/icons.html icon="naira" -%}</span>
@@ -37,5 +65,5 @@
             </p>
             <p class="m-0 co-sweet-gray pico-caps">SUCCESS COUNT</p>
         </div>
-    </div>
+    </div> -->
 </section>

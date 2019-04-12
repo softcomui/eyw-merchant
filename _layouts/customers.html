@@ -7,9 +7,21 @@ layout: page
     <h3 class="mediumtext m-0 fw-medium">Customers</h3>
 
     
-    <div class="borderline inline-shadow preferred-radius mt-1 bg-white px-2 py-2">
+    <div class="borderline inline-shadow preferred-radius mt-1 bg-white">
 
-        <div>
+
+        <!-- Empty State for customers -->
+        <div class="height-500-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+            <div>
+                <img src="{{site.url}}/uploads/clipboard.svg" alt="">
+            </div>
+            <h3 class="m-0 co-black fw-medium nanotext">Nothing here yet</h3>
+            <p class="m-0 mt-h ff-heading primarytext">No product has been created</p>
+            <button class="btn btn-badge btn-dark p-0 mt-h" uk-toggle="target: #create-customer">+ CREATE CUSTOMER</button>
+        </div>
+
+        <!-- Filled State for customers -->
+        <!-- <div class="px-2 py-2">
             <section>
                 <label for="business-summary" class="">Filter: </label>
                 <div class="d-flx-xlg al-i-c j-c-sb">
@@ -39,8 +51,41 @@ layout: page
             <div class="pt-1">
                 {%- include components/tables/customers.html-%}
             </div>
-        </div>
+        </div> -->
         
+        <!-- Customer send sms view -->
+        <!-- <div class="px-2 py-1h">
+            <a href="" class="primarytext d-flx al-i-c">
+                {%- include tools/icons.html icon="arrow-left" -%}
+                <span class="suffix">Back</span>
+            </a>
+        
+            <form action="" class="email-template-form mt-1">
+                <div class="d-flx al-i-c pos-rel email-template-input">
+                    <label for="recipient" class="co-black ff-body">To:</label>
+                    <input type="text" name="recipient" id="recipient" class="px-h" placeholder="+2348100583876, +2348154123676">
+                </div>
+
+                <div class="d-flx al-i-c pos-rel email-template-input">
+                    <label for="business-name" class="co-black ff-body">Subject:</label>
+                    <input type="text" name="business-name" id="business-name" class="px-h">
+                </div>
+
+                <textarea name="" id="" placeholder="Compose Message"></textarea>
+
+                <div class="d-flx al-i-c j-c-sb flx-wrap">
+                    <a href="#modal-center" class="btn btn-standard btn-big btn-dark mt-1">
+                        SEND SMS
+                    </a>
+
+                    <p class="m-0 co-black nanotext ff-heading pt-1">
+                        SMS CHARGES: 
+                        <span class="co-primary smalltext fw-medium">2,500</span>
+                    </p>
+                </div>
+            </form>
+        </div> -->
+
     </div>
 </section>
 

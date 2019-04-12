@@ -10,14 +10,14 @@ layout: page
     
     <div class="borderline inline-shadow preferred-radius mt-1 bg-white">
 
-        <!-- <div>
-            <ul uk-tab class="m-0 tabs">
+        <div>
+            <!-- <ul uk-tab class="m-0 tabs">
             {% for entry in site.data.tabs.products %}
                 <li class="tab px-1 pt-1 pb-h">
                     <a href="tab px-1h py-1">{{ entry.tab-item }}</a>
                 </li>
             {% endfor %}
-            </ul>
+            </ul> -->
                 
             <ul class="uk-switcher px-2 py-2">
                 <li>
@@ -33,45 +33,61 @@ layout: page
                                 <p class="m-0 co-sweet-gray pico-caps">Nearby Products</p>
                             </div>
                         </section>
-                        
-                        <section class="mt-2">
-                            <label for="business-summary" class="">Show products in </label>
-                            <div class="pt-h d-flx-xlg al-i-c j-c-sb">
-                                <div class="float-wrap d-flx-md">
-                                    <div class="float-item">
-                                        <div class="uk-inline width-100-pc pos-rel">
-                                            <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
-                                                All branches
-                                                <a href="" class="co-sweet-gray">
-                                                    {%- include tools/icons.html icon="dropdown" -%}
-                                                </a>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="pos-rel input-icons search-input my-h float-item">
-                                        {%- include tools/icons.html icon="search" -%}
-                                        <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search product">
-                                    </div>
-                                </div>
-                                
-                                <div class="d-flx-md al-i-c">
-                                    <div class="prefix is-wider d-flx al-i-c mt-h-for-filter">
-                                        <div class="onoffswitch">
-                                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="product1" checked>
-                                            <label class="onoffswitch-label" for="product1"></label>
-                                        </div>
-                                        <span class="suffix is-wider co-black ff-heading">Enable Nearby</span>
-                                    </div>
-                                    <button class="btn btn-dark btn-badge mt-h-for-filter">
-                                        + CREATE PRODUCTS
-                                    </button>
-                                </div>
+
+                        <!-- Empty State for products -->
+                        <section class="height-500-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                            <div>
+                                <img src="{{site.url}}/uploads/clipboard.svg" alt="">
                             </div>
+                            <h3 class="m-0 co-black fw-medium nanotext">No product here</h3>
+                            <p class="m-0 mt-h ff-heading primarytext">No product has been created</p>
+                            <button class="btn btn-dark btn-badge mt-h">
+                                + CREATE PRODUCTS
+                            </button>
                         </section>
                         
-                        <section class="mt-2">
-                            {%- include components/tables/products.html-%}
-                        </section>
+
+                        <!-- Filled State for products -->
+                        <!-- <div>
+                            <section class="mt-2">
+                                <label for="business-summary" class="">Show products in </label>
+                                <div class="pt-h d-flx-xlg al-i-c j-c-sb">
+                                    <div class="float-wrap d-flx-md">
+                                        <div class="float-item">
+                                            <div class="uk-inline width-100-pc pos-rel">
+                                                <button class="d-flx al-i-c j-c-sb px-h input co-sweet-gray inline-shadow preferred-radius" type="button">
+                                                    All branches
+                                                    <a href="" class="co-sweet-gray">
+                                                        {%- include tools/icons.html icon="dropdown" -%}
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="pos-rel input-icons search-input my-h float-item">
+                                            {%- include tools/icons.html icon="search" -%}
+                                            <input type="tel" name="search" id="search" class="pl-2h pr-1" placeholder="Search product">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flx-md al-i-c">
+                                        <div class="prefix is-wider d-flx al-i-c mt-h-for-filter">
+                                            <div class="onoffswitch">
+                                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="product1" checked>
+                                                <label class="onoffswitch-label" for="product1"></label>
+                                            </div>
+                                            <span class="suffix is-wider co-black ff-heading">Enable Nearby</span>
+                                        </div>
+                                        <button class="btn btn-dark btn-badge mt-h-for-filter">
+                                            + CREATE PRODUCTS
+                                        </button>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <section class="mt-2">
+                                {%- include components/tables/products.html-%}
+                            </section>
+                        </div> -->
                     </div>
                 </li>
                 <li>
@@ -94,17 +110,30 @@ layout: page
                                 </div>
                             </div>
                             
-                            <button class="btn btn-dark btn-badge mt-h-for-filter" uk-toggle="target: #create-discounts">+ CREATE DISCOUNTS</button>
+                            <!-- Remove this button on empty state, add it on filled state -->
+                            <!-- <button class="btn btn-dark btn-badge mt-h-for-filter" uk-toggle="target: #create-discounts">+ CREATE DISCOUNTS</button> -->
                         </div>
+
+                        <!-- Empty State for discounts -->
+                        <section class="height-500-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                            <div>
+                                <img src="{{site.url}}/uploads/clipboard.svg" alt="">
+                            </div>
+                            <h3 class="m-0 co-black fw-medium nanotext">Nothing here yet</h3>
+                            <p class="m-0 mt-h ff-heading primarytext">No discounts has has been created</p>
+                            <button class="btn btn-dark btn-badge mt-h" uk-toggle="target: #create-discounts">+ CREATE DISCOUNTS</button>
+                        </section>
                         
                         {%- include components/modals/create-discounts.html -%}
                         
-                        <section class="mt-2">
+                        <!-- Filled State for discounts -->
+                        <!-- <section class="mt-2">
                             {%- include components/tables/discount.html-%}
-                        </section>
+                        </section> -->
                     </div>
-            
-                   <div>
+                    
+                    <!-- Edit Discount View -->
+                   <!-- <div>
                         <a href="" class="primarytext d-flx al-i-c">
                             {%- include tools/icons.html icon="arrow-left" -%}
                             <span class="suffix">Back</span>
@@ -146,10 +175,23 @@ layout: page
             
                             <a href="" class="btn btn-standard btn-dark suffix is-wider">SAVE</a>
                         </div>
-                    </div>
+                    </div> -->
                 </li>
                 <li>
-                    <div>
+                    <!-- Empty State for Taxes -->
+                    <section class="height-500-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                        <div>
+                            <img src="{{site.url}}/uploads/clipboard.svg" alt="">
+                        </div>
+                        <h3 class="m-0 co-black fw-medium nanotext">Nothing here yet</h3>
+                        <p class="m-0 mt-h ff-heading primarytext">No tax has has been created</p>
+                        <button class="btn btn-dark btn-badge mt-h" uk-toggle="target: #create-tax">+ CREATE TAX</button>
+                    </section>
+
+                    {%- include components/modals/create-tax.html -%}
+
+                    <!-- Filled state for taxes -->
+                    <!-- <div>
                         <div class="pt-h d-flx-xlg al-i-c j-c-sb">
                             <div class="float-wrap d-flx-md">
                                 <div class="float-item">
@@ -171,14 +213,13 @@ layout: page
                             <button class="btn btn-dark btn-badge mt-h-for-filter" uk-toggle="target: #create-tax">+ CREATE TAX</button>
                         </div>
                         
-                        {%- include components/modals/create-tax.html -%}
-                        
                         <section class="pt-1">
                             {%- include components/tables/taxes.html-%}
                         </section>
-                    </div>
+                    </div> -->
                     
-                    <div>
+                    <!-- Edit Tax View -->
+                    <!-- <div>
                         <a href="" class="primarytext d-flx al-i-c">
                             {%- include tools/icons.html icon="arrow-left" -%}
                             <span class="suffix">Back</span>
@@ -212,10 +253,10 @@ layout: page
             
                             <a href="" class="btn btn-standard btn-dark suffix is-wider">SAVE</a>
                         </div>
-                    </div>
+                    </div> -->
                 </li>
             </ul>
-        </div> -->
+        </div>
 
 
         <div class="px-2 py-2">

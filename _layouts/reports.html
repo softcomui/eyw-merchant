@@ -20,7 +20,47 @@ layout: page
             
         <ul class="uk-switcher px-1h pb-1h">
             <li>
+
+                <!-- ================
+                Empty State for Reports Overview
+                ================= -->
                 <ul class="none three-grid-float overflow-auto">
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext co-sweet-gray d-flx al-i-c">
+                            <span class="co-sweet-gray mt--p3">{%- include tools/icons.html icon="naira-big" -%}</span>
+                            0.00
+                        </p>
+                        <p class="m-0 co-sweet-gray pico-caps">TOTAL SALES</p>
+                    </li>
+
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext  co-sweet-gray">0</p>
+                        <p class="m-0 co-sweet-gray pico-caps">TRANSACTIONS</p>
+                    </li>
+            
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext co-sweet-gray tt-uppercase">NIL</p>
+                        <p class="m-0 co-sweet-gray pico-caps">MOST PAID DAY</p>
+                    </li>
+            
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext co-sweet-gray d-flx al-i-c">
+                            <span class="co-sweet-gray mt--p3">{%- include tools/icons.html icon="naira-big" -%}</span>
+                            0.00
+                        </p>
+                        <p class="m-0 co-sweet-gray pico-caps">TOTAL EYOWO CHANGE</p>
+                    </li>
+
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext  co-sweet-gray">0</p>
+                        <p class="m-0 co-sweet-gray pico-caps">TOTAL CASH CHANGE</p>
+                    </li>
+                </ul>
+
+                <!-- ================
+                Filled State for Reports Overview
+                ================= -->
+                <!-- <ul class="none three-grid-float overflow-auto">
                     <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
                         <p class="fw-medium m-0 largetext d-flx al-i-c">
                             <span class="co-readable-gray mt--p3">{%- include tools/icons.html icon="naira-big" -%}</span>
@@ -62,7 +102,9 @@ layout: page
                         </p>
                         <p class="m-0 co-sweet-gray pico-caps">TOTAL CASH CHANGE</p>
                     </li>
-                </ul>
+                </ul> -->
+
+
 
                 <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
                     <div class="d-flx al-i-c">
@@ -70,14 +112,39 @@ layout: page
                         <span class="d-blk suffix is-wider">{%- include components/dropdown.html dropdown="date-picker" -%}</span>
                     </div>
                     
+
+                    <!-- ================
+                    Empty State for Reports Graph
+                    ================= -->
+                    <div class="height-300-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                        <p class="m-0 mt-h ff-heading co-sweet-gray primarytext tx-c maxwidth-xs tt-uppercase">NO ACTIVITY FOR THIS PERIOD</p>
+                    </div>
+                </div>
+
+
+                <!-- ================
+                Empty State for Reports Table
+                ================= -->
+                <div class="height-300-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                    <div>
+                        <img src="{{site.url}}/uploads/clipboard.svg" alt="">
+                    </div>
+                    <h3 class="m-0 co-black fw-medium nanotext">No sales yet</h3>
+                    <p class="m-0 mt-h ff-heading co-sweet-gray primarytext tx-c maxwidth-xs">When you start making sales, your gross and net income will appear here</p>
                 </div>
                 
-                <section class="mt-1h">
+                <!-- ================
+                Filled State for Reports Table
+                ================= -->
+                <!-- <section class="mt-1h">
                     {%- include components/tables/reports.html-%}
-                </section>
+                </section> -->
             </li>
             <li>
-                <ul class="none three-grid-float overflow-auto">
+                <!-- ================
+                Filled State for Reports Branch Overview
+                ================= -->
+                <!-- <ul class="none three-grid-float overflow-auto">
                     <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
                         <p class="fw-medium m-0 largetext d-flx al-i-c">Wednesday</p>
                         <p class="m-0 co-sweet-gray pico-caps">BUSIEST DAY OF THE WEEK</p>
@@ -85,18 +152,46 @@ layout: page
 
                     <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
                         <p class="fw-medium m-0 largetext d-flx al-i-c">12pm - 3pm</p>
-                        <p class="m-0 co-sweet-gray pico-caps">TRANSACTIONS</p>
+                        <p class="m-0 co-sweet-gray pico-caps">BUSIEST TIME OF THE DAY</p>
+                    </li>
+                </ul> -->
+
+                <!-- ================
+                Empty State for Reports Branch Overview
+                ================= -->
+                <ul class="none three-grid-float overflow-auto">
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext d-flx al-i-c co-sweet-gray">NIL</p>
+                        <p class="m-0 co-sweet-gray pico-caps">BUSIEST DAY OF THE WEEK</p>
+                    </li>
+
+                    <li class="inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius float-item classic-card">
+                        <p class="fw-medium m-0 largetext d-flx al-i-c co-sweet-gray">NIL</p>
+                        <p class="m-0 co-sweet-gray pico-caps">BUSIEST TIME OF THE DAY</p>
                     </li>
                 </ul>
 
                 <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
-                    
+                    <!-- ================
+                    Empty State for Reports Graph
+                    ================= -->
+                    <div class="height-300-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                        <p class="m-0 mt-h ff-heading co-sweet-gray primarytext tx-c maxwidth-xs tt-uppercase">NO ACTIVITY FOR THIS PERIOD</p>
+                    </div>
                 </div>
 
                 <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
-                    
+                    <!-- ================
+                    Empty State for Reports Graph
+                    ================= -->
+                    <div class="height-300-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                        <p class="m-0 mt-h ff-heading co-sweet-gray primarytext tx-c maxwidth-xs tt-uppercase">NO ACTIVITY FOR THIS PERIOD</p>
+                    </div>
                 </div>
 
+                <!-- =======================
+                This does not exist in the empty State
+                ======================= -->
                 <section class="mt-1h">
                     {%- include components/tables/reports-branches.html-%}
                 </section>
@@ -104,13 +199,26 @@ layout: page
             <li>
 
                 <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
-                    
+                    <!-- ================
+                    Empty State for Reports Graph
+                    ================= -->
+                    <div class="height-300-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                        <p class="m-0 mt-h ff-heading co-sweet-gray primarytext tx-c maxwidth-xs tt-uppercase">NO ACTIVITY FOR THIS PERIOD</p>
+                    </div>
                 </div>
 
                 <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
-                    
+                    <!-- ================
+                    Empty State for Reports Graph
+                    ================= -->
+                    <div class="height-300-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                        <p class="m-0 mt-h ff-heading co-sweet-gray primarytext tx-c maxwidth-xs tt-uppercase">NO ACTIVITY FOR THIS PERIOD</p>
+                    </div>
                 </div>
 
+                <!-- =======================
+                This does not exist in the empty State
+                ======================= -->
                 <section class="mt-1h">
                     {%- include components/tables/reports-tills.html -%}
                 </section>
@@ -118,13 +226,27 @@ layout: page
             <li>
 
                 <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
-                    
+                    <!-- ================
+                    Empty State for Reports Graph
+                    ================= -->
+                    <div class="height-300-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                        <p class="m-0 mt-h ff-heading co-sweet-gray primarytext tx-c maxwidth-xs tt-uppercase">NO ACTIVITY FOR THIS PERIOD</p>
+                    </div>
                 </div>
 
                 <div class="mt-1h inline-shadow borderline pb-1 px-1 py-1 mb-h preferred-radius overflow-auto width-100-pc">
-                    
+                    <!-- ================
+                    Empty State for Reports Graph
+                    ================= -->
+                    <div class="height-300-px d-flx al-i-c j-c-center flx-dir-c al-i-c">
+                        <p class="m-0 mt-h ff-heading co-sweet-gray primarytext tx-c maxwidth-xs tt-uppercase">NO ACTIVITY FOR THIS PERIOD</p>
+                    </div>
                 </div>
 
+
+                <!-- =======================
+                This does not exist in the empty State
+                ======================= -->
                 <section class="mt-1h">
                     {%- include components/tables/reports-products.html -%}
                 </section>

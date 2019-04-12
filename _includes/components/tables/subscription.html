@@ -1,0 +1,41 @@
+<div class="uk-overflow-auto preferred-radius borderline">
+    <table class="uk-table uk-table-striped">
+        <thead>
+            <tr>
+                <th>Business name</th>
+                <th>Verification status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%- for entry in site.data.table.transactions -%}
+            <tr>
+                <td>Obiwezy Gadget</td>
+                <td>
+                    <div class="d-flx al-i-c">
+                        <span class="d-blk">
+                            {%- if entry.status == "Success" -%}
+                                {%- include tools/icons.html icon="success" -%}
+                            {%- elsif entry.status == "Failed" -%}
+                                {%- include tools/icons.html icon="failed" -%}
+                            {%- elsif entry.status == "Pending" -%}
+                                {%- include tools/icons.html icon="pending" -%}
+                            {%- endif -%}
+                        </span>
+                        <span class="d-blk suffix">{{ entry.status }}</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="d-flx al-i-c">
+                        <a href="" class="d-flx px-h pt-h pb-h co-primary ff-body primarytext"  type="button">
+                            {%- include tools/icons.html icon="edit-two" -%}
+
+                            <span class="ml-h">Edit</span>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            {%- endfor -%}
+        </tbody>
+    </table>
+</div>

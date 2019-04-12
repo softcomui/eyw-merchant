@@ -2,6 +2,114 @@
 layout: page
 ---
 
-<section class="bg-white borderline inline-shadow section py-2">
-    
+<!-- ========================
+More Options Section
+======================== -->
+<!-- <section class="section">
+    <h3 class="mediumtext m-0 fw-medium">More Options</h3>
+
+    <div class="borderline inline-shadow preferred-radius mt-1 bg-white pb-1h px-2">
+        <div class="five-grid-float">
+           <div class="borderline float-item preferred-radius inline-shadow">
+               <a href="#pay-change" class="d-blk width-100-pc height-100-pc py-1h d-flx flx-dir-c al-i-c" uk-toggle>
+                    <div class="thumbnail is-small">
+                        <img src="{{ site.url }}/uploads/pay-change.svg" alt="">
+                    </div>
+                    <p class="smalltext co-black tx-c lh-1-3h m-0 mt-h">Pay change</br> to phone</p>
+               </a>
+           </div>
+
+           <div class="borderline float-item preferred-radius inline-shadow">
+                <a href="" class="d-blk width-100-pc height-100-pc py-1h d-flx flx-dir-c al-i-c">
+                    <div class="thumbnail is-small">
+                        <img src="{{ site.url }}/uploads/print-receipt.svg" alt="">
+                    </div>
+                    <p class="smalltext co-black tx-c lh-1-3h m-0 mt-h">Print</br>  Receipt</p>
+                </a>
+           </div>
+
+           <div class="borderline float-item preferred-radius inline-shadow">
+                <a href="#email-receipt" class="d-blk width-100-pc height-100-pc py-1h d-flx flx-dir-c al-i-c" uk-toggle>
+                    <div class="thumbnail is-small">
+                        <img src="{{ site.url }}/uploads/email-receipt.svg" alt="">
+                    </div>
+                    <p class="smalltext co-black tx-c lh-1-3h m-0 mt-h">Email</br>  Receipt</p>
+                </a>
+           </div>
+
+           <div class="borderline float-item preferred-radius inline-shadow">
+                <a href="" class="d-blk width-100-pc height-100-pc py-1h d-flx flx-dir-c al-i-c">
+                    <div class="thumbnail is-small">
+                        <img src="{{ site.url }}/uploads/new-sale.svg" alt="">
+                    </div>
+                    <p class="smalltext co-black tx-c lh-1-3h m-0 mt-h">New</br> Sale</p>
+                </a>
+           </div>
+        </div>
+    </div>
+</section> -->
+
+
+<!-- ========================
+Bill by Amount Section
+======================== -->
+<section class="section">
+    <h3 class="mediumtext m-0 fw-medium">Bill by Amount</h3>
+
+    <div class="borderline inline-shadow preferred-radius mt-1 bg-white py-2">
+        <div class="payment-information al-i-c">
+            <div class="px-2 py-2 payment-summary">
+                <div class="width-100-pc pos-rel height-300-px borderline is-raised preferred-radius">
+                    <textarea name="" id="" class="absolute-zero height-100-pc width-100-pc co-sweet-gray largetext no-outline no-border px-1 py-1 bg-gainsboro" placeholder="₦0.00" resize></textarea>
+                </div>
+            </div>
+            
+            <div class="width-100-pc px-2 py-2 payment-methods">
+                <h3 class="mediumtext m-0 fw-normal co-primary">Select Payment Method:</h3>
+            
+                <div class="mt-1h">
+                    <button class="bg-gainsboro borderline preferred-radius py-1 no-outline px-1 width-100-pc d-flx al-i-c j-c-sb" uk-toggle="target: #pay-with-eyowo">
+                        <div class="d-flx al-i-c">
+                            <div class="prefix">
+                                <img src="{{site.url}}/uploads/eyw-payment.svg" alt="">
+                            </div>
+                            <span class="co-black smalltext">Eyowo</span>
+                        </div>
+            
+                        <span class="co-really-gray">{%- include tools/icons.html icon="chevron-right" -%}</span>
+                    </button>
+            
+                    <button class="mt-1h bg-gainsboro borderline preferred-radius py-1 no-outline px-1 width-100-pc d-flx al-i-c j-c-sb" uk-toggle="target: #pay-with-pos">
+                        <div class="d-flx al-i-c">
+                            <div class="prefix">
+                                <img src="{{site.url}}/uploads/pos-payment.svg" alt="">
+                            </div>
+                            <span class="co-black smalltext">POS</span>
+                        </div>
+            
+                        <span class="co-really-gray">{%- include tools/icons.html icon="chevron-right" -%}</span>
+                    </button>
+            
+                    <button class="mt-1h bg-gainsboro borderline preferred-radius py-1 no-outline px-1 width-100-pc d-flx al-i-c j-c-sb" uk-toggle="target: #pay-with-cash">
+                        <div class="d-flx al-i-c">
+                            <div class="prefix">
+                                <img src="{{site.url}}/uploads/cash-payment.svg" alt="">
+                            </div>
+                            <span class="co-black smalltext">Cash</span>
+                        </div>
+            
+                        <span class="co-really-gray">{%- include tools/icons.html icon="chevron-right" -%}</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+{%- include components/modals/pay-with-eyowo.html -%}
+
+{%- include components/modals/email-receipt.html -%}
+
+{%- include components/modals/pay-with-pos.html -%}
+
+{%- include components/modals/pay-with-cash.html -%}

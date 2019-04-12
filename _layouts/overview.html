@@ -8,22 +8,51 @@ layout: page-with-sidebar
     <h3 class="mediumtext m-0 fw-medium">Overview</h3>
     
     <div class="borderline inline-shadow preferred-radius mt-1 bg-white">
+        <!-- =====================
+        Empty State for overview
+        ===================== -->
+        <div class="px-2 py-2 height-500-pc d-flx flx-dir-c al-i-c">
+            <h3 class="m-0 co-black mt-2">Start your retail success with Eyowo</h3>
+            <h3 class="smalltext fw-medium m-0 mb-1 co-sweet-gray">Get to know the basics in three easy ways.</h3>
 
-        <div class="px-2 py-2">
+            <ul class="none m-0 three-grid-float primarytext co-readable-gray tx-c mb-2">
+                <li class="borderline px-1 py-1h preferred-radius float-item d-flx flx-dir-c al-i-c overview-cards">
+                    <div class="px-2 py-1h icons">
+                        <img src="{{site.url}}/uploads/make-sale.svg" alt="">
+                    </div>
+                    <p class="none m-0 fw-medium my-1 co-sweet-gray">Explore the Sell screen, and learn how to make your first sale in seconds.</p>
+                    <button class="btn btn-dark btn-badge">MAKE SALE</button>
+                </li>
+
+                <li class="borderline px-1 py-1h preferred-radius float-item d-flx flx-dir-c al-i-c overview-cards">
+                    <div class="px-2 py-1h icons">
+                        <img src="{{site.url}}/uploads/add-product.svg" alt="">
+                    </div>
+                    <p class="none m-0 fw-medium my-1 co-sweet-gray">Manage your products easily, whether you want to add one or import one thousand.</p>
+                    <button class="btn btn-dark btn-badge">ADD PRODUCT</button>
+                </li>
+
+                <li class="borderline px-1 py-1h preferred-radius float-item d-flx flx-dir-c al-i-c overview-cards">
+                    <div class="px-2 py-1h icons">
+                        <img src="{{site.url}}/uploads/add-customer.svg" alt="">
+                    </div>
+                    <p class="none m-0 fw-medium my-1 co-sweet-gray">Start a customer base to grow repeat business or simply upload existing customers.</p>
+                    <button class="btn btn-dark btn-badge">ADD PRODUCT</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- =====================
+        Filled State for overview
+        ===================== -->
+        <!-- <div class="px-2 py-2">
             <div class="d-flx al-i-c j-c-sb">
                 <label for="business-summary" class="co-rich-black">Filter: </label> 
                 {%- include components/dropdown.html dropdown="business-dropdown" -%}
             </div>
         
             <div class="pt-h d-flx j-c-sb al-i-c">
-                <div class="d-flx al-i-c j-c-sb">
-                    {%- include components/dropdown.html dropdown="date-picker-filter" -%}
-                    <!-- <div class="suffix is-even-wider d-flx al-i-c co-readable-gray">
-                        <span>{%- include components/dropdown.html dropdown="date-picker" -%}</span>
-                        <span class="prefix suffix is-wider">to</span>
-                        <span>{%- include components/dropdown.html dropdown="date-picker" -%}</span>
-                    </div> -->
-                </div>
+                {%- include components/dropdown.html dropdown="date-picker-filter" -%}
 
                 <div class="borderline j-s-end ussd-code-box">
                     <p class="primarytext m-0 fw-medium">
@@ -63,9 +92,8 @@ layout: page-with-sidebar
             </div>
         
             <div class="mt-1h inline-shadow borderline pb-1 px-1 pt-h mb-h preferred-radius overflow-auto width-100-pc">
-                <!-- {%- include tools/icons.html icon="business-stats" -%} -->
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 
